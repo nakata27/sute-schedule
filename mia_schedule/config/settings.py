@@ -4,8 +4,8 @@ import os
 from pathlib import Path
 
 BASE_DIR = Path(__file__).parent.parent
-DATA_DIR = BASE_DIR / "data"
-GROUPS_FILE = BASE_DIR.parent / "Get Groups" / "sute_structure.json"
+DATA_DIR = Path(os.getenv("DATA_DIR", str(BASE_DIR / "data")))
+GROUPS_FILE = BASE_DIR.parent / "Get Groups" / "mia_structure.json"
 
 APP_NAME = "SUTE Schedule"
 APP_VERSION = "1.0.0"

@@ -1,3 +1,18 @@
 {
-  "outputDirectory": "mia_schedule/frontend/static"
+  "version": 2,
+  "builds": [
+    {
+      "src": "mia_schedule/app.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "mia_schedule/app.py"
+    }
+  ],
+  "env": {
+    "DATA_DIR": "/tmp/sute_data"
+  }
 }
