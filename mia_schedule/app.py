@@ -5,6 +5,7 @@ from flask_cors import CORS
 import json
 import logging
 import os
+import requests as http_requests
 
 from backend.schedule_service import ScheduleService
 from config.settings import (
@@ -129,15 +130,27 @@ def get_translations(lang):
         }), 500
 
 
-@app.route('/api/announcement/')
+@app.route('/api/announcement')
 def get_announcement():
-    """Get current announcement."""
-    return jsonify({
-        'success': True,
-        'data': {
-            'text': os.getenv('ANNOUNCEMENT_TEXT', '')
-        }
-    })
+    """Proxy announcement request to upstream MIA server."""
+    r1 = request.args.get('r1', '')
+    try:
+        resp = http_requests.get(
+            'https://mia1.knute.edu.ua/time-table/show-ads',
+            params={'r1': r1},
+            timeout=10
+        )
+        resp.raise_for_status()
+        return jsonify({
+            'success': True,
+            'html': resp.text
+        })
+    except Exception as e:
+        logger.error(f"Error in /api/announcement: {e}")
+        return jsonify({
+            'success': False,
+            'error': str(e)
+        }), 500
 
 
 @app.route('/api/contacts')

@@ -87,8 +87,16 @@ class MIAScheduleApp {
             });
         });
 
-        // Announcement button in lesson modal
-        document.getElementById('btn-show-announcement').addEventListener('click', () => this.showAnnouncementModal());
+        // Announcement button in lesson modal (event delegation)
+        document.getElementById('lesson-modal').addEventListener('click', (e) => {
+            const btn = e.target.closest('.btn-show-ads');
+            if (btn) {
+                e.preventDefault();
+                e.stopPropagation();
+                const r1 = btn.dataset.r1;
+                if (r1) this.showAnnouncementModal(r1);
+            }
+        });
 
         // Announcement back button
         document.getElementById('btn-announcement-back').addEventListener('click', () => this.backToLessonModal());
@@ -342,6 +350,7 @@ class MIAScheduleApp {
         card.addEventListener('click', () => this.showLessonModal(lesson));
 
         const periodLabel = this.getLessonPeriodLabel(lesson.lesson_number);
+        const bellIcon = lesson.announcement ? '<div class="lesson-bell-icon">🔔</div>' : '';
 
         card.innerHTML = `
             <div class="lesson-header-info">
@@ -352,6 +361,7 @@ class MIAScheduleApp {
             <div class="lesson-subject">${lesson.subject}</div>
             <div class="lesson-room">${lesson.room || 'Аудиторія не вказана'}</div>
             <div class="lesson-info-icon">ℹ️</div>
+            ${bellIcon}
         `;
 
         return card;
@@ -384,31 +394,35 @@ class MIAScheduleApp {
             document.getElementById('modal-notes-container').style.display = 'none';
         }
 
+        // Show/hide announcement button and set r1 value
+        const adsBtn = modal.querySelector('.btn-show-ads');
+        if (lesson.announcement && lesson.announcement.startsWith('ads:')) {
+            adsBtn.dataset.r1 = lesson.announcement.slice(4);
+            adsBtn.style.display = '';
+        } else {
+            adsBtn.style.display = 'none';
+        }
+
         modal.classList.add('active');
         document.body.classList.add('modal-open');
     }
 
 
-    async showAnnouncementModal() {
+    async showAnnouncementModal(r1) {
         const lessonModal = document.getElementById('lesson-modal');
         const announcementModal = document.getElementById('announcement-modal');
 
-        // Slide lesson modal left
-        lessonModal.classList.add('slide-left');
-
-        // Fetch announcement text
+        // Fetch announcement HTML
         try {
-            const response = await fetch('/api/announcement/');
+            const response = await fetch(`/api/announcement?r1=${encodeURIComponent(r1)}`);
             const data = await response.json();
-            const t = this.translations;
-            const text = (data.success && data.data.text) ? data.data.text : (t.no_announcements || 'Оголошень немає');
-            document.getElementById('modal-announcement').textContent = text;
+            document.getElementById('announcement-content').innerHTML = data.html || '';
         } catch (error) {
-            const t = this.translations;
-            document.getElementById('modal-announcement').textContent = t.loading_error || 'Помилка завантаження';
+            document.getElementById('announcement-content').textContent = 'Помилка завантаження';
         }
 
-        // Show announcement modal (slides in from right)
+        // Slide lesson modal out to left, announcement modal in from right
+        lessonModal.classList.add('slide-left');
         announcementModal.classList.add('active');
     }
 
@@ -416,10 +430,8 @@ class MIAScheduleApp {
         const lessonModal = document.getElementById('lesson-modal');
         const announcementModal = document.getElementById('announcement-modal');
 
-        // Hide announcement modal
+        // Slide announcement modal out to right, lesson modal back from left
         announcementModal.classList.remove('active');
-
-        // Restore lesson modal
         lessonModal.classList.remove('slide-left');
     }
 
