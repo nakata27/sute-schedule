@@ -568,6 +568,7 @@ class MIAScheduleApp {
             document.getElementById('ios-install-guide').style.display = isIOS ? 'block' : 'none';
             document.getElementById('generic-install-guide').style.display = isIOS ? 'none' : 'block';
             document.getElementById('install-guide-modal').classList.add('active');
+            document.body.classList.add('modal-open');
         }
     }
 
@@ -582,6 +583,7 @@ class MIAScheduleApp {
 
         document.getElementById('contacts-modal').classList.add('active');
         this.toggleSidebar();
+        document.body.classList.add('modal-open');
     }
 
     showLanguageModal() {
@@ -590,6 +592,7 @@ class MIAScheduleApp {
         });
         document.getElementById('language-modal').classList.add('active');
         this.toggleSidebar();
+        document.body.classList.add('modal-open');
     }
 
     async changeLanguage(lang) {
