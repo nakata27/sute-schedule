@@ -3,7 +3,7 @@
   "outputDirectory": ".",
   "framework": "flask",
   "functions": {
-    "mia_schedule/app.py": {
+    "wsgi.py": {
       "memory": 512,
       "maxDuration": 30
     }
@@ -22,4 +22,3 @@
     "PORT": "3000"
   }
 }
-
