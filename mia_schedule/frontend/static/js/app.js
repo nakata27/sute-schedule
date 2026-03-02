@@ -87,6 +87,12 @@ class MIAScheduleApp {
             });
         });
 
+        // Announcement button in lesson modal
+        document.getElementById('btn-show-announcement').addEventListener('click', () => this.showAnnouncementModal());
+
+        // Announcement back button
+        document.getElementById('btn-announcement-back').addEventListener('click', () => this.backToLessonModal());
+
         // Language options
         document.querySelectorAll('.language-option').forEach(el => {
             el.addEventListener('click', (e) => {
@@ -383,6 +389,40 @@ class MIAScheduleApp {
     }
 
 
+    async showAnnouncementModal() {
+        const lessonModal = document.getElementById('lesson-modal');
+        const announcementModal = document.getElementById('announcement-modal');
+
+        // Slide lesson modal left
+        lessonModal.classList.add('slide-left');
+
+        // Fetch announcement text
+        try {
+            const response = await fetch('/api/announcement/');
+            const data = await response.json();
+            const t = this.translations;
+            const text = (data.success && data.data.text) ? data.data.text : (t.no_announcements || 'Оголошень немає');
+            document.getElementById('modal-announcement').textContent = text;
+        } catch (error) {
+            const t = this.translations;
+            document.getElementById('modal-announcement').textContent = t.loading_error || 'Помилка завантаження';
+        }
+
+        // Show announcement modal (slides in from right)
+        announcementModal.classList.add('active');
+    }
+
+    backToLessonModal() {
+        const lessonModal = document.getElementById('lesson-modal');
+        const announcementModal = document.getElementById('announcement-modal');
+
+        // Hide announcement modal
+        announcementModal.classList.remove('active');
+
+        // Restore lesson modal
+        lessonModal.classList.remove('slide-left');
+    }
+
     getLessonTypeText(type) {
         // Используем переводы если они загружены
         if (this.translations) {
@@ -608,6 +648,7 @@ class MIAScheduleApp {
         document.querySelectorAll('.modal').forEach(modal => {
             modal.classList.remove('active');
         });
+        document.getElementById('lesson-modal').classList.remove('slide-left');
         document.body.classList.remove('modal-open');
     }
 

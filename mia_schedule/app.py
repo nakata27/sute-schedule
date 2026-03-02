@@ -129,6 +129,17 @@ def get_translations(lang):
         }), 500
 
 
+@app.route('/api/announcement/')
+def get_announcement():
+    """Get current announcement."""
+    return jsonify({
+        'success': True,
+        'data': {
+            'text': os.getenv('ANNOUNCEMENT_TEXT', '')
+        }
+    })
+
+
 @app.route('/api/contacts')
 def get_contacts():
     """Get developer contacts."""
