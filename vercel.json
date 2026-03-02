@@ -1,5 +1,5 @@
 {
-  "buildCommand": "pip install -r mia_schedule/requirements.txt",
+  "buildCommand": "pip install --break-system-packages -r mia_schedule/requirements.txt",
   "functions": {
     "api/index.py": {
       "memory": 512,
