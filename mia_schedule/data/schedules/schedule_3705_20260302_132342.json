@@ -1,0 +1,350 @@
+{
+  "group_info": {
+    "group_id": "3705",
+    "group_name": "ФТБ 1-1м",
+    "faculty_id": "3",
+    "faculty_name": "Факультет технологій та бізнесу",
+    "course": "1",
+    "last_updated": "2026-03-02T13:23:41.548832"
+  },
+  "weeks": [
+    {
+      "week_number": 1,
+      "week_start": "2026-03-04",
+      "week_end": "2026-03-05",
+      "days": [
+        {
+          "day_date": "2026-03-04",
+          "day_of_week": 2,
+          "lessons": [
+            {
+              "lesson_number": 3,
+              "start_time": "12:05",
+              "end_time": "13:25",
+              "lesson_date": "2026-03-04",
+              "subject": "Філософія мистецтва і дизайну",
+              "lesson_type": "practice",
+              "room": "on-line",
+              "teacher": null,
+              "teacher_full": "Слівінська Аліна Францівна",
+              "notes": null,
+              "announcement": "ads:396828",
+              "added_date": null,
+              "raw_html": "<div class=\"lesson-2\">\n<a class=\"btn-show-ads btn btn-secondary btn-sm\" data-r1=\"396828\" data-r2=\"04.03.2026\" href=\"#\">Оголошення</a>\n<div data-content='\"В\"Філософія мистецтва і дизайну[Пз]&lt;br&gt;ауд. on-line&lt;br&gt;ФТБ 1-1м&lt;br&gt;Слівінська Аліна Францівна&lt;br&gt;Додано:  19.01.2026' data-toggle=\"popover\" title=\"04.03.2026 3 пара\">\n            \"В\"Філософія МіД<strong>[Пз]</strong><br/>\n<strong>ауд. on-line</strong><br/>\n<i>Слівінська А.Ф.</i>\n</div>\n</div>"
+            },
+            {
+              "lesson_number": 4,
+              "start_time": "13:50",
+              "end_time": "15:10",
+              "lesson_date": "2026-03-04",
+              "subject": "Філософія мистецтва і дизайну",
+              "lesson_type": "practice",
+              "room": "on-line",
+              "teacher": null,
+              "teacher_full": "Слівінська Аліна Францівна",
+              "notes": null,
+              "announcement": "ads:396828",
+              "added_date": null,
+              "raw_html": "<div class=\"lesson-2\">\n<a class=\"btn-show-ads btn btn-secondary btn-sm\" data-r1=\"396828\" data-r2=\"04.03.2026\" href=\"#\">Оголошення</a>\n<div data-content='\"В\"Філософія мистецтва і дизайну[Пз]&lt;br&gt;ауд. on-line&lt;br&gt;ФТБ 1-1м&lt;br&gt;Слівінська Аліна Францівна&lt;br&gt;Додано:  19.01.2026' data-toggle=\"popover\" title=\"04.03.2026 4 пара\">\n            \"В\"Філософія МіД<strong>[Пз]</strong><br/>\n<strong>ауд. on-line</strong><br/>\n<i>Слівінська А.Ф.</i>\n</div>\n</div>"
+            }
+          ]
+        },
+        {
+          "day_date": "2026-03-05",
+          "day_of_week": 3,
+          "lessons": [
+            {
+              "lesson_number": 3,
+              "start_time": "12:05",
+              "end_time": "13:25",
+              "lesson_date": "2026-03-05",
+              "subject": "Методологія сучасних наукових досліджень",
+              "lesson_type": "lecture",
+              "room": "on-line",
+              "teacher": null,
+              "teacher_full": "Безугла Руслана Іванівна",
+              "notes": null,
+              "announcement": null,
+              "added_date": null,
+              "raw_html": "<div class=\"lesson-1\">\n<div data-content=\"Методологія сучасних наукових досліджень[Лк]&lt;br&gt;ауд. on-line&lt;br&gt;ФТБ 1-1м&lt;br&gt;Безугла Руслана Іванівна&lt;br&gt;Додано:  19.01.2026\" data-toggle=\"popover\" title=\"05.03.2026 3 пара\">\n            МСНД<strong>[Лк]</strong><br/>\n<strong>ауд. on-line</strong><br/>\n<i>Безугла Р.І.</i>\n</div>\n</div>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week_number": 2,
+      "week_start": "2026-03-09",
+      "week_end": "2026-03-12",
+      "days": [
+        {
+          "day_date": "2026-03-09",
+          "day_of_week": 0,
+          "lessons": [
+            {
+              "lesson_number": 1,
+              "start_time": "08:20",
+              "end_time": "09:40",
+              "lesson_date": "2026-03-09",
+              "subject": "Інфографіка",
+              "lesson_type": "practice",
+              "room": "on-line",
+              "teacher": null,
+              "teacher_full": "Лєжнєв Олександр Олександрович",
+              "notes": null,
+              "announcement": null,
+              "added_date": null,
+              "raw_html": "<div class=\"lesson-2\">\n<div data-content='\"В\"Інфографіка[Пз]&lt;br&gt;ауд. on-line&lt;br&gt;ФТБ 1-1м&lt;br&gt;Лєжнєв Олександр Олександрович&lt;br&gt;Додано:  19.01.2026' data-toggle=\"popover\" title=\"09.03.2026 1 пара\">\n            \"В\"Інфограф<strong>[Пз]</strong><br/>\n<strong>ауд. on-line</strong><br/>\n<i>Лєжнєв О.О.</i>\n</div>\n</div>"
+            },
+            {
+              "lesson_number": 2,
+              "start_time": "10:05",
+              "end_time": "11:25",
+              "lesson_date": "2026-03-09",
+              "subject": "Інфографіка",
+              "lesson_type": "practice",
+              "room": "on-line",
+              "teacher": null,
+              "teacher_full": "Лєжнєв Олександр Олександрович",
+              "notes": null,
+              "announcement": null,
+              "added_date": null,
+              "raw_html": "<div class=\"lesson-2\">\n<div data-content='\"В\"Інфографіка[Пз]&lt;br&gt;ауд. on-line&lt;br&gt;ФТБ 1-1м&lt;br&gt;Лєжнєв Олександр Олександрович&lt;br&gt;Додано:  19.01.2026' data-toggle=\"popover\" title=\"09.03.2026 2 пара\">\n            \"В\"Інфограф<strong>[Пз]</strong><br/>\n<strong>ауд. on-line</strong><br/>\n<i>Лєжнєв О.О.</i>\n</div>\n</div>"
+            }
+          ]
+        },
+        {
+          "day_date": "2026-03-11",
+          "day_of_week": 2,
+          "lessons": [
+            {
+              "lesson_number": 5,
+              "start_time": "15:25",
+              "end_time": "16:45",
+              "lesson_date": "2026-03-11",
+              "subject": "Філософія мистецтва і дизайну",
+              "lesson_type": "lecture",
+              "room": "on-line",
+              "teacher": null,
+              "teacher_full": "Слівінська Аліна Францівна",
+              "notes": null,
+              "announcement": null,
+              "added_date": null,
+              "raw_html": "<div class=\"lesson-1\">\n<div data-content='\"В\"Філософія мистецтва і дизайну[Лк]&lt;br&gt;ауд. on-line&lt;br&gt;ФТБ 1-1м&lt;br&gt;Слівінська Аліна Францівна&lt;br&gt;Додано:  19.01.2026' data-toggle=\"popover\" title=\"11.03.2026 5 пара\">\n            \"В\"Філософія МіД<strong>[Лк]</strong><br/>\n<strong>ауд. on-line</strong><br/>\n<i>Слівінська А.Ф.</i>\n</div>\n</div>"
+            },
+            {
+              "lesson_number": 6,
+              "start_time": "17:00",
+              "end_time": "18:20",
+              "lesson_date": "2026-03-11",
+              "subject": "Педагогічні технології в підготовці дизайнерів",
+              "lesson_type": "lecture",
+              "room": "on-line",
+              "teacher": null,
+              "teacher_full": "Слівінська Аліна Францівна",
+              "notes": null,
+              "announcement": null,
+              "added_date": null,
+              "raw_html": "<div class=\"lesson-1\">\n<div data-content=\"Педагогічні технології в підготовці дизайнерів[Лк]&lt;br&gt;ауд. on-line&lt;br&gt;ФТБ 1-1м&lt;br&gt;Слівінська Аліна Францівна&lt;br&gt;Додано:  19.01.2026\" data-toggle=\"popover\" title=\"11.03.2026 6 пара\">\n            Педаг.ТвПД<strong>[Лк]</strong><br/>\n<strong>ауд. on-line</strong><br/>\n<i>Слівінська А.Ф.</i>\n</div>\n</div>"
+            }
+          ]
+        },
+        {
+          "day_date": "2026-03-12",
+          "day_of_week": 3,
+          "lessons": [
+            {
+              "lesson_number": 3,
+              "start_time": "12:05",
+              "end_time": "13:25",
+              "lesson_date": "2026-03-12",
+              "subject": "Методологія сучасних наукових досліджень",
+              "lesson_type": "practice",
+              "room": "on-line",
+              "teacher": null,
+              "teacher_full": "Безугла Руслана Іванівна",
+              "notes": null,
+              "announcement": null,
+              "added_date": null,
+              "raw_html": "<div class=\"lesson-2\">\n<div data-content=\"Методологія сучасних наукових досліджень[Пз]&lt;br&gt;ауд. on-line&lt;br&gt;ФТБ 1-1м&lt;br&gt;Безугла Руслана Іванівна&lt;br&gt;Додано:  19.01.2026\" data-toggle=\"popover\" title=\"12.03.2026 3 пара\">\n            МСНД<strong>[Пз]</strong><br/>\n<strong>ауд. on-line</strong><br/>\n<i>Безугла Р.І.</i>\n</div>\n</div>"
+            },
+            {
+              "lesson_number": 4,
+              "start_time": "13:50",
+              "end_time": "15:10",
+              "lesson_date": "2026-03-12",
+              "subject": "Методологія сучасних наукових досліджень",
+              "lesson_type": "practice",
+              "room": "on-line",
+              "teacher": null,
+              "teacher_full": "Безугла Руслана Іванівна",
+              "notes": null,
+              "announcement": null,
+              "added_date": null,
+              "raw_html": "<div class=\"lesson-2\">\n<div data-content=\"Методологія сучасних наукових досліджень[Пз]&lt;br&gt;ауд. on-line&lt;br&gt;ФТБ 1-1м&lt;br&gt;Безугла Руслана Іванівна&lt;br&gt;Додано:  19.01.2026\" data-toggle=\"popover\" title=\"12.03.2026 4 пара\">\n            МСНД<strong>[Пз]</strong><br/>\n<strong>ауд. on-line</strong><br/>\n<i>Безугла Р.І.</i>\n</div>\n</div>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week_number": 3,
+      "week_start": "2026-03-18",
+      "week_end": "2026-03-18",
+      "days": [
+        {
+          "day_date": "2026-03-18",
+          "day_of_week": 2,
+          "lessons": [
+            {
+              "lesson_number": 3,
+              "start_time": "12:05",
+              "end_time": "13:25",
+              "lesson_date": "2026-03-18",
+              "subject": "Філософія мистецтва і дизайну",
+              "lesson_type": "practice",
+              "room": "on-line",
+              "teacher": null,
+              "teacher_full": "Слівінська Аліна Францівна",
+              "notes": null,
+              "announcement": null,
+              "added_date": null,
+              "raw_html": "<div class=\"lesson-2\">\n<div data-content='\"В\"Філософія мистецтва і дизайну[Пз]&lt;br&gt;ауд. on-line&lt;br&gt;ФТБ 1-1м&lt;br&gt;Слівінська Аліна Францівна&lt;br&gt;Додано:  19.01.2026' data-toggle=\"popover\" title=\"18.03.2026 3 пара\">\n            \"В\"Філософія МіД<strong>[Пз]</strong><br/>\n<strong>ауд. on-line</strong><br/>\n<i>Слівінська А.Ф.</i>\n</div>\n</div>"
+            },
+            {
+              "lesson_number": 4,
+              "start_time": "13:50",
+              "end_time": "15:10",
+              "lesson_date": "2026-03-18",
+              "subject": "Філософія мистецтва і дизайну",
+              "lesson_type": "practice",
+              "room": "on-line",
+              "teacher": null,
+              "teacher_full": "Слівінська Аліна Францівна",
+              "notes": null,
+              "announcement": null,
+              "added_date": null,
+              "raw_html": "<div class=\"lesson-2\">\n<div data-content='\"В\"Філософія мистецтва і дизайну[Пз]&lt;br&gt;ауд. on-line&lt;br&gt;ФТБ 1-1м&lt;br&gt;Слівінська Аліна Францівна&lt;br&gt;Додано:  19.01.2026' data-toggle=\"popover\" title=\"18.03.2026 4 пара\">\n            \"В\"Філософія МіД<strong>[Пз]</strong><br/>\n<strong>ауд. on-line</strong><br/>\n<i>Слівінська А.Ф.</i>\n</div>\n</div>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week_number": 4,
+      "week_start": "2026-03-23",
+      "week_end": "2026-03-26",
+      "days": [
+        {
+          "day_date": "2026-03-23",
+          "day_of_week": 0,
+          "lessons": [
+            {
+              "lesson_number": 1,
+              "start_time": "08:20",
+              "end_time": "09:40",
+              "lesson_date": "2026-03-23",
+              "subject": "Інфографіка",
+              "lesson_type": "practice",
+              "room": "on-line",
+              "teacher": null,
+              "teacher_full": "Лєжнєв Олександр Олександрович",
+              "notes": null,
+              "announcement": null,
+              "added_date": null,
+              "raw_html": "<div class=\"lesson-2\">\n<div data-content='\"В\"Інфографіка[Пз]&lt;br&gt;ауд. on-line&lt;br&gt;ФТБ 1-1м&lt;br&gt;Лєжнєв Олександр Олександрович&lt;br&gt;Додано:  19.01.2026' data-toggle=\"popover\" title=\"23.03.2026 1 пара\">\n            \"В\"Інфограф<strong>[Пз]</strong><br/>\n<strong>ауд. on-line</strong><br/>\n<i>Лєжнєв О.О.</i>\n</div>\n</div>"
+            },
+            {
+              "lesson_number": 2,
+              "start_time": "10:05",
+              "end_time": "11:25",
+              "lesson_date": "2026-03-23",
+              "subject": "Інфографіка",
+              "lesson_type": "practice",
+              "room": "on-line",
+              "teacher": null,
+              "teacher_full": "Лєжнєв Олександр Олександрович",
+              "notes": null,
+              "announcement": null,
+              "added_date": null,
+              "raw_html": "<div class=\"lesson-2\">\n<div data-content='\"В\"Інфографіка[Пз]&lt;br&gt;ауд. on-line&lt;br&gt;ФТБ 1-1м&lt;br&gt;Лєжнєв Олександр Олександрович&lt;br&gt;Додано:  19.01.2026' data-toggle=\"popover\" title=\"23.03.2026 2 пара\">\n            \"В\"Інфограф<strong>[Пз]</strong><br/>\n<strong>ауд. on-line</strong><br/>\n<i>Лєжнєв О.О.</i>\n</div>\n</div>"
+            }
+          ]
+        },
+        {
+          "day_date": "2026-03-25",
+          "day_of_week": 2,
+          "lessons": [
+            {
+              "lesson_number": 5,
+              "start_time": "15:25",
+              "end_time": "16:45",
+              "lesson_date": "2026-03-25",
+              "subject": "Педагогічні технології в підготовці дизайнерів",
+              "lesson_type": "practice",
+              "room": "on-line",
+              "teacher": null,
+              "teacher_full": "Слівінська Аліна Францівна",
+              "notes": null,
+              "announcement": null,
+              "added_date": null,
+              "raw_html": "<div class=\"lesson-2\">\n<div data-content=\"Педагогічні технології в підготовці дизайнерів[Пз]&lt;br&gt;ауд. on-line&lt;br&gt;ФТБ 1-1м&lt;br&gt;Слівінська Аліна Францівна&lt;br&gt;Додано:  19.01.2026\" data-toggle=\"popover\" title=\"25.03.2026 5 пара\">\n            Педаг.ТвПД<strong>[Пз]</strong><br/>\n<strong>ауд. on-line</strong><br/>\n<i>Слівінська А.Ф.</i>\n</div>\n</div>"
+            },
+            {
+              "lesson_number": 6,
+              "start_time": "17:00",
+              "end_time": "18:20",
+              "lesson_date": "2026-03-25",
+              "subject": "Педагогічні технології в підготовці дизайнерів",
+              "lesson_type": "practice",
+              "room": "on-line",
+              "teacher": null,
+              "teacher_full": "Слівінська Аліна Францівна",
+              "notes": null,
+              "announcement": null,
+              "added_date": null,
+              "raw_html": "<div class=\"lesson-2\">\n<div data-content=\"Педагогічні технології в підготовці дизайнерів[Пз]&lt;br&gt;ауд. on-line&lt;br&gt;ФТБ 1-1м&lt;br&gt;Слівінська Аліна Францівна&lt;br&gt;Додано:  19.01.2026\" data-toggle=\"popover\" title=\"25.03.2026 6 пара\">\n            Педаг.ТвПД<strong>[Пз]</strong><br/>\n<strong>ауд. on-line</strong><br/>\n<i>Слівінська А.Ф.</i>\n</div>\n</div>"
+            }
+          ]
+        },
+        {
+          "day_date": "2026-03-26",
+          "day_of_week": 3,
+          "lessons": [
+            {
+              "lesson_number": 3,
+              "start_time": "12:05",
+              "end_time": "13:25",
+              "lesson_date": "2026-03-26",
+              "subject": "Методологія сучасних наукових досліджень",
+              "lesson_type": "practice",
+              "room": "on-line",
+              "teacher": null,
+              "teacher_full": "Безугла Руслана Іванівна",
+              "notes": null,
+              "announcement": null,
+              "added_date": null,
+              "raw_html": "<div class=\"lesson-2\">\n<div data-content=\"Методологія сучасних наукових досліджень[Пз]&lt;br&gt;ауд. on-line&lt;br&gt;ФТБ 1-1м&lt;br&gt;Безугла Руслана Іванівна&lt;br&gt;Додано:  19.01.2026\" data-toggle=\"popover\" title=\"26.03.2026 3 пара\">\n            МСНД<strong>[Пз]</strong><br/>\n<strong>ауд. on-line</strong><br/>\n<i>Безугла Р.І.</i>\n</div>\n</div>"
+            },
+            {
+              "lesson_number": 4,
+              "start_time": "13:50",
+              "end_time": "15:10",
+              "lesson_date": "2026-03-26",
+              "subject": "Методологія сучасних наукових досліджень",
+              "lesson_type": "practice",
+              "room": "on-line",
+              "teacher": null,
+              "teacher_full": "Безугла Руслана Іванівна",
+              "notes": null,
+              "announcement": null,
+              "added_date": null,
+              "raw_html": "<div class=\"lesson-2\">\n<div data-content=\"Методологія сучасних наукових досліджень[Пз]&lt;br&gt;ауд. on-line&lt;br&gt;ФТБ 1-1м&lt;br&gt;Безугла Руслана Іванівна&lt;br&gt;Додано:  19.01.2026\" data-toggle=\"popover\" title=\"26.03.2026 4 пара\">\n            МСНД<strong>[Пз]</strong><br/>\n<strong>ауд. on-line</strong><br/>\n<i>Безугла Р.І.</i>\n</div>\n</div>"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "fetched_at": "2026-03-02T13:23:42.958064"
+}

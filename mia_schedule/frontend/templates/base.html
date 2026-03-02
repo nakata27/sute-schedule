@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#2c3e50">
+    <meta name="description" content="SUTE Schedule - Dynamic university schedule management system">
+    <title>{% block title %}SUTE Розклад{% endblock %}</title>
+
+    <link rel="manifest" href="{{ url_for('static', filename='manifest.json') }}">
+
+    <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='icons/icon.svg') }}">
+    <link rel="icon" type="image/png" sizes="192x192" href="{{ url_for('static', filename='icons/icon-192x192.png') }}">
+    <link rel="apple-touch-icon" href="{{ url_for('static', filename='icons/icon-192x192.png') }}">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="SUTE">
+
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="SUTE Schedule">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <!-- Loading Spinner -->
+    <div id="loading-spinner" class="loading-spinner">
+        <div class="spinner"></div>
+        <p class="loading-text">Завантаження...</p>
+    </div>
+
+    <!-- Sidebar Menu -->
+    <div id="sidebar" class="sidebar">
+        <div class="sidebar-header">
+            <h2 id="sidebar-title">MIA Розклад</h2>
+            <button id="sidebar-close" class="sidebar-close-btn" aria-label="Close menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+
+        <div class="sidebar-content">
+            <button id="btn-change-group" class="sidebar-btn">
+                <svg class="sidebar-btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+                <span class="sidebar-btn-text">Змінити групу</span>
+            </button>
+
+            <button id="btn-show-schedule" class="sidebar-btn">
+                <svg class="sidebar-btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+                <span class="sidebar-btn-text">Показати розклад</span>
+            </button>
+
+            <div class="sidebar-divider"></div>
+
+            <button id="btn-language" class="sidebar-btn">
+                <svg class="sidebar-btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="2" y1="12" x2="22" y2="12"></line>
+                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                </svg>
+                <span class="sidebar-btn-text" id="current-language">Українська</span>
+            </button>
+
+            <button id="btn-theme" class="sidebar-btn">
+                <svg class="sidebar-btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+                <span class="sidebar-btn-text" id="current-theme">Темна тема</span>
+            </button>
+        </div>
+
+        <div class="sidebar-footer">
+            <button id="btn-developer-contacts" class="sidebar-footer-btn">
+                <svg class="sidebar-btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                <span>Контакти розробника</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Sidebar Overlay -->
+    <div id="sidebar-overlay" class="sidebar-overlay"></div>
+
+    <!-- Main Content -->
+    <div id="main-content" class="main-content">
+        <header class="app-header">
+            <button id="menu-toggle" class="menu-toggle" aria-label="Open menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+
+            <h1 class="app-title">{% block header_title %}Розклад{% endblock %}</h1>
+
+            <button id="refresh-btn" class="refresh-btn" aria-label="Refresh">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="23 4 23 10 17 10"></polyline>
+                    <polyline points="1 20 1 14 7 14"></polyline>
+                    <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+                </svg>
+            </button>
+        </header>
+
+        <main class="app-main">
+            {% block content %}{% endblock %}
+        </main>
+    </div>
+
+    {% block modals %}{% endblock %}
+
+    <div id="pwa-install-prompt" class="pwa-install-prompt" style="display: none;">
+        <div class="pwa-install-content">
+            <button class="pwa-install-close" onclick="closePWAPrompt()">×</button>
+            <h3 data-i18n="install_app">Встановити додаток</h3>
+            <p data-i18n="install_desc">Встановіть SUTE Schedule на ваш пристрій для швидкого доступу</p>
+            <button class="pwa-install-btn" onclick="installPWA()">
+                <span data-i18n="install">Встановити</span>
+            </button>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+    {% block extra_js %}{% endblock %}
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(registration => {
+                        console.log('Service Worker registered:', registration.scope);
+                    })
+                    .catch(error => {
+                        console.error('Service Worker registration failed:', error);
+                    });
+            });
+        }
+
+        let deferredPrompt;
+
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+            document.getElementById('pwa-install-prompt').style.display = 'block';
+        });
+
+        function installPWA() {
+            if (deferredPrompt) {
+                deferredPrompt.prompt();
+                deferredPrompt.userChoice.then((choiceResult) => {
+                    if (choiceResult.outcome === 'accepted') {
+                        console.log('PWA installed');
+                    }
+                    deferredPrompt = null;
+                    closePWAPrompt();
+                });
+            }
+        }
+
+        function closePWAPrompt() {
+            document.getElementById('pwa-install-prompt').style.display = 'none';
+        }
+
+        window.addEventListener('appinstalled', () => {
+            console.log('PWA installed successfully');
+            closePWAPrompt();
+        });
+    </script>
+</body>
+</html>
+
