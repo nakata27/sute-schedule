@@ -4,6 +4,7 @@ from flask import Flask, render_template, request, jsonify
 from flask_cors import CORS
 import json
 import logging
+import os
 
 from backend.schedule_service import ScheduleService
 from config.settings import (
@@ -20,7 +21,11 @@ logging.basicConfig(
 
 logger = logging.getLogger(__name__)
 
-app = Flask(__name__)
+_BASE_APP_DIR = os.path.dirname(os.path.abspath(__file__))
+
+app = Flask(__name__,
+            template_folder=os.path.join(_BASE_APP_DIR, 'frontend', 'templates'),
+            static_folder=os.path.join(_BASE_APP_DIR, 'frontend', 'static'))
 app.config['SECRET_KEY'] = 'your-secret-key-here'
 CORS(app)
 

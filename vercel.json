@@ -1,0 +1,22 @@
+{
+  "buildCommand": "pip install -r mia_schedule/requirements.txt",
+  "functions": {
+    "mia_schedule/app.py": {
+      "memory": 512,
+      "maxDuration": 30
+    }
+  },
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "mia_schedule/app.py"
+    }
+  ],
+  "env": {
+    "DEBUG": "false",
+    "USE_CACHE": "true",
+    "CACHE_LIFETIME_HOURS": "24",
+    "HOST": "0.0.0.0",
+    "PORT": "3000"
+  }
+}
