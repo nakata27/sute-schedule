@@ -134,10 +134,14 @@ def get_translations(lang):
 def get_announcement():
     """Proxy announcement request to upstream MIA server."""
     r1 = request.args.get('r1', '')
+    r2 = request.args.get('r2', '')
     try:
+        params = {'r1': r1}
+        if r2:
+            params['r2'] = r2
         resp = http_requests.get(
             'https://mia1.knute.edu.ua/time-table/show-ads',
-            params={'r1': r1},
+            params=params,
             timeout=10
         )
         resp.raise_for_status()

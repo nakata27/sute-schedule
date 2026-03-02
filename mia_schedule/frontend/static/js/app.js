@@ -94,7 +94,8 @@ class MIAScheduleApp {
                 e.preventDefault();
                 e.stopPropagation();
                 const r1 = btn.dataset.r1;
-                if (r1) this.showAnnouncementModal(r1);
+                const r2 = btn.dataset.r2 || '';
+                if (r1) this.showAnnouncementModal(r1, r2);
                 return;
             }
         });
@@ -335,6 +336,7 @@ class MIAScheduleApp {
             lessonsContainer.className = 'day-lessons';
 
             day.lessons.forEach(lesson => {
+                lesson.day_date = day.day_date;
                 const lessonCard = this.createLessonCard(lesson);
                 lessonsContainer.appendChild(lessonCard);
             });
@@ -399,6 +401,10 @@ class MIAScheduleApp {
         const adsBtn = modal.querySelector('.btn-show-ads');
         if (lesson.announcement && lesson.announcement.startsWith('ads:')) {
             adsBtn.dataset.r1 = lesson.announcement.slice(4);
+            if (lesson.day_date) {
+                const [y, m, d] = lesson.day_date.split('-');
+                adsBtn.dataset.r2 = `${d}.${m}.${y}`;
+            }
             adsBtn.textContent = this.translations.announcement || 'Оголошення';
             adsBtn.style.display = '';
         } else {
@@ -410,14 +416,16 @@ class MIAScheduleApp {
     }
 
 
-    async showAnnouncementModal(r1) {
+    async showAnnouncementModal(r1, r2) {
         const lessonModal = document.getElementById('lesson-modal');
         const announcementModal = document.getElementById('announcement-modal');
         const contentEl = document.getElementById('announcement-content');
 
         // Fetch announcement HTML
         try {
-            const response = await fetch(`/api/announcement?r1=${encodeURIComponent(r1)}`);
+            let url = `/api/announcement?r1=${encodeURIComponent(r1)}`;
+            if (r2) url += `&r2=${encodeURIComponent(r2)}`;
+            const response = await fetch(url);
             const data = await response.json();
             if (data.html) {
                 contentEl.innerHTML = data.html;
