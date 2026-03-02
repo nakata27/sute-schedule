@@ -1,25 +1,4 @@
 {
-  "buildCommand": "pip install -r requirements.txt",
-  "outputDirectory": ".",
-  "framework": "flask",
-  "functions": {
-    "mia_schedule/app.py": {
-      "memory": 512,
-      "maxDuration": 30
-    }
-  },
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "wsgi.py"
-    }
-  ],
-  "env": {
-    "DEBUG": "false",
-    "USE_CACHE": "true",
-    "CACHE_LIFETIME_HOURS": "24",
-    "HOST": "0.0.0.0",
-    "PORT": "3000"
-  }
+  "outputDirectory": "frontend/static"
 }
 
