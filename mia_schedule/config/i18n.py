@@ -69,6 +69,9 @@ TRANSLATIONS = {
         "install1": "Натиснiть кнопку «Подiлитися» (кнопка Share) внизу браузера",
         "install2": "Оберiть «Додати на домашнiй екран»",
         "install3": "Натиснiть «Встановити як веб-додаток» та пiдтвердіть встановлення",
+        "install11": "Натиснiть кнопку «Подiлитися» (кнопка Share) внизу браузера",
+        "install22": "Оберiть «Додати на домашнiй екран»",
+        "install33": "Натиснiть «Встановити як веб-додаток» та пiдтвердіть встановлення",
     },
     "en": {
         "app_name": "SUTE Schedule",
@@ -138,6 +141,9 @@ TRANSLATIONS = {
         "install1": "Click the «Share» button at the bottom of the browser.",
         "install2": "Select «Add to Home Screen»",
         "install3": "Tap «Install as web app» and confirm the installation.",
+        "install11": "Click the «Share» button at the bottom of the browser.",
+        "install22": "Select «Add to Home Screen»",
+        "install33": "Tap «Install as web app» and confirm the installation.",
     }
 }
 
