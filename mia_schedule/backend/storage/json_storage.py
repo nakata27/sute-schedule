@@ -18,7 +18,7 @@ class JsonStorage:
     Хранилище расписания в JSON формате
     """
 
-    def __init__(self, base_dir: str = "data/schedules"):
+    def __init__(self, base_dir: str = "/tmp/mia_schedule/schedules"):
         """
         Args:
             base_dir: Базовая директория для хранения данных
