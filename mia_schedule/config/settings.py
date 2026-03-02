@@ -33,5 +33,4 @@ DEVELOPER_CONTACTS = {
     "telegram": "https://t.me/nakata27"
 }
 
-DATA_DIR.mkdir(parents=True, exist_ok=True)
-(DATA_DIR / "schedules").mkdir(exist_ok=True)
+
