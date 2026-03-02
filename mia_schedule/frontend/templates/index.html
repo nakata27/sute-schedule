@@ -266,5 +266,39 @@
         </div>
     </div>
 </div>
+
+<!-- Install Guide Modal -->
+<div id="install-guide-modal" class="modal">
+    <div class="modal-overlay"></div>
+    <div class="modal-content modal-small">
+        <div class="modal-header">
+            <h3 class="modal-title" id="install-guide-title">Додати на робочий стіл</h3>
+            <button class="modal-close" aria-label="Close">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+        <div class="modal-body install-guide-body">
+            <div id="ios-install-guide" class="install-guide-steps" style="display: none;">
+                <p class="install-guide-intro" id="ios-guide-intro">Щоб додати застосунок на головний екран Safari:</p>
+                <ol class="install-guide-list">
+                    <li id="ios-step-1">Натисніть кнопку <strong>«Поділитися»</strong> (кнопка Share) внизу браузера</li>
+                    <li id="ios-step-2">Оберіть <strong>«На екран "Додому"»</strong></li>
+                    <li id="ios-step-3">Натисніть <strong>«Додати»</strong></li>
+                </ol>
+            </div>
+            <div id="generic-install-guide" class="install-guide-steps">
+                <p class="install-guide-intro" id="generic-guide-intro">Щоб додати застосунок на робочий стіл:</p>
+                <ol class="install-guide-list">
+                    <li id="generic-step-1">Відкрийте меню браузера (⋮ або ···)</li>
+                    <li id="generic-step-2">Оберіть <strong>«Додати на робочий стіл»</strong> або <strong>«Встановити застосунок»</strong></li>
+                    <li id="generic-step-3">Підтвердьте встановлення</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
 

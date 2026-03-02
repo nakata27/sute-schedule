@@ -57,13 +57,10 @@ class MIAScheduleApp {
         document.getElementById('btn-theme').addEventListener('click', () => this.toggleTheme());
         document.getElementById('btn-developer-contacts').addEventListener('click', () => this.showContactsModal());
 
-        // Install app button (only visible when PWA install is available)
+        // Install app button
         const btnInstall = document.getElementById('btn-install-app');
         if (btnInstall) {
-            btnInstall.addEventListener('click', () => {
-                this.toggleSidebar();
-                installPWA();
-            });
+            btnInstall.addEventListener('click', () => this.installApp());
         }
 
         // Refresh button
@@ -561,6 +558,18 @@ class MIAScheduleApp {
         this.showScheduleScreen();
     }
 
+    installApp() {
+        this.toggleSidebar();
+        if (window.deferredPrompt) {
+            installPWA();
+        } else {
+            const isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
+            document.getElementById('ios-install-guide').style.display = isIOS ? 'block' : 'none';
+            document.getElementById('generic-install-guide').style.display = isIOS ? 'none' : 'block';
+            document.getElementById('install-guide-modal').classList.add('active');
+        }
+    }
+
     async showContactsModal() {
         const response = await fetch('/api/contacts');
         const data = await response.json();
@@ -661,6 +670,7 @@ class MIAScheduleApp {
         if (modalTitles[1]) modalTitles[1].textContent = t.announcement || 'Оголошення';
         if (modalTitles[2]) modalTitles[2].textContent = t.developer_contacts || 'Контакти розробника';
         if (modalTitles[3]) modalTitles[3].textContent = t.language || 'Мова';
+        if (modalTitles[4]) modalTitles[4].textContent = t.add_to_homescreen || 'Додати на робочий стіл';
 
         // Оновлюємо текст кнопки оголошення у lesson-modal
         const adsBtn = document.querySelector('.btn-show-ads');

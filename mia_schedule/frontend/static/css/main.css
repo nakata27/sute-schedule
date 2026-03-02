@@ -327,6 +327,29 @@ body {
     margin-bottom: 8px;
 }
 
+.install-guide-body {
+    padding: 8px 0;
+}
+
+.install-guide-intro {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 12px;
+}
+
+.install-guide-list {
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.install-guide-list li {
+    font-size: 14px;
+    color: var(--text-primary);
+    line-height: 1.5;
+}
+
 /* Main Content */
 .main-content {
     min-height: 100vh;
