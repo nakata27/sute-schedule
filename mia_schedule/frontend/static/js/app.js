@@ -52,6 +52,7 @@ class MIAScheduleApp {
         // Sidebar buttons
         document.getElementById('btn-change-group').addEventListener('click', () => this.changeGroup());
         document.getElementById('btn-show-schedule').addEventListener('click', () => this.showSchedule());
+        document.getElementById('btn-bell-schedule').addEventListener('click', () => this.showBellSchedule());
         document.getElementById('btn-language').addEventListener('click', () => this.showLanguageModal());
         document.getElementById('btn-theme').addEventListener('click', () => this.toggleTheme());
         document.getElementById('btn-developer-contacts').addEventListener('click', () => this.showContactsModal());
@@ -334,9 +335,11 @@ class MIAScheduleApp {
         card.className = `lesson-card type-${lesson.lesson_type}`;
         card.addEventListener('click', () => this.showLessonModal(lesson));
 
+        const periodLabel = this.getLessonPeriodLabel(lesson.lesson_number);
+
         card.innerHTML = `
             <div class="lesson-header-info">
-                <div class="lesson-number">${lesson.lesson_number} пара</div>
+                <div class="lesson-number">${periodLabel}</div>
                 <div class="lesson-time">${lesson.start_time} - ${lesson.end_time}</div>
             </div>
             <div class="lesson-type-badge">${this.getLessonTypeText(lesson.lesson_type)}</div>
@@ -348,11 +351,21 @@ class MIAScheduleApp {
         return card;
     }
 
+    getLessonPeriodLabel(num) {
+        if (this.currentLang === 'en') {
+            const ordinals = ['th', 'st', 'nd', 'rd'];
+            const v = num % 100;
+            const suffix = ordinals[(v - 20) % 10] || ordinals[v] || ordinals[0];
+            return `${num}${suffix} period`;
+        }
+        return `${num} пара`;
+    }
+
     showLessonModal(lesson) {
         const modal = document.getElementById('lesson-modal');
 
         document.getElementById('modal-subject').textContent = lesson.subject;
-        document.getElementById('modal-time').textContent = `${lesson.start_time} - ${lesson.end_time} (${lesson.lesson_number} пара)`;
+        document.getElementById('modal-time').textContent = `${lesson.start_time} - ${lesson.end_time} (${this.getLessonPeriodLabel(lesson.lesson_number)})`;
         document.getElementById('modal-type').textContent = this.getLessonTypeText(lesson.lesson_type);
         document.getElementById('modal-room').textContent = lesson.room || 'не вказано';
         document.getElementById('modal-teacher').textContent = lesson.teacher_full || lesson.teacher || 'не вказано';
@@ -366,6 +379,7 @@ class MIAScheduleApp {
         }
 
         modal.classList.add('active');
+        document.body.classList.add('modal-open');
     }
 
 
@@ -501,12 +515,16 @@ class MIAScheduleApp {
         const t = this.translations;
 
         // Обновляем заголовки
-        document.querySelector('.app-title').textContent = t.app_name || 'MIA Schedule';
-        document.querySelector('#sidebar-title').textContent = t.app_name || 'MIA Schedule';
+        document.querySelector('.app-title').textContent = t.app_name || 'SUTE Розклад';
+        document.querySelector('#sidebar-title').textContent = t.app_name || 'SUTE Розклад';
 
         // Обновляем текст кнопок меню напрямую
-        document.querySelector('#btn-change-group .sidebar-btn-text').textContent = t.change_group || 'Change group';
-        document.querySelector('#btn-show-schedule .sidebar-btn-text').textContent = t.show_schedule || 'Show schedule';
+        document.querySelector('#btn-change-group .sidebar-btn-text').textContent = t.change_group || 'Змінити групу';
+        document.querySelector('#btn-show-schedule .sidebar-btn-text').textContent = t.show_schedule || 'Розклад занять';
+        document.querySelector('#btn-bell-schedule .sidebar-btn-text').textContent = t.bell_schedule || 'Розклад дзвінків';
+
+        // Обновляем дату в сайдбаре
+        this.updateSidebarDate();
 
         // Обновляем название языка
         const langNames = {
@@ -521,54 +539,76 @@ class MIAScheduleApp {
         // Обновляем кнопку контактов
         const contactBtn = document.querySelector('#btn-developer-contacts span');
         if (contactBtn) {
-            contactBtn.textContent = t.developer_contacts || 'Developer contacts';
+            contactBtn.textContent = t.developer_contacts || 'Контакти розробника';
         }
 
         // Обновляем welcome screen
         const welcomeTitle = document.querySelector('.welcome-title');
-        if (welcomeTitle) welcomeTitle.textContent = t.welcome || 'Welcome!';
+        if (welcomeTitle) welcomeTitle.textContent = t.welcome || 'Ласкаво просимо!';
 
         const welcomeText = document.querySelector('.welcome-text');
-        if (welcomeText) welcomeText.textContent = t.welcome_text || 'Select your group';
+        if (welcomeText) welcomeText.textContent = t.welcome_text || 'Оберіть свою групу для відображення розкладу';
+
+        // Обновляем bell schedule screen
+        const bellHeading = document.getElementById('bell-schedule-heading');
+        if (bellHeading) bellHeading.textContent = t.bell_schedule || 'Розклад дзвінків';
+
+        const bellColPeriod = document.getElementById('bell-col-period');
+        if (bellColPeriod) bellColPeriod.textContent = t.lesson_number || 'Пара';
+
+        const bellColTime = document.getElementById('bell-col-time');
+        if (bellColTime) bellColTime.textContent = t.time || 'Час';
+
+        // Обновляем метки пар в bell schedule
+        for (let i = 1; i <= 6; i++) {
+            const el = document.getElementById(`bell-period-${i}`);
+            if (el) el.textContent = this.getLessonPeriodLabel(i);
+        }
 
         // Обновляем модальные окна заголовки
         const modalTitles = document.querySelectorAll('.modal-title');
-        if (modalTitles[0]) modalTitles[0].textContent = t.lesson_info || 'Lesson information';
-        if (modalTitles[1]) modalTitles[1].textContent = t.developer_contacts || 'Developer contacts';
-        if (modalTitles[2]) modalTitles[2].textContent = t.language || 'Language';
+        if (modalTitles[0]) modalTitles[0].textContent = t.lesson_info || 'Інформація про пару';
+        if (modalTitles[1]) modalTitles[1].textContent = t.developer_contacts || 'Контакти розробника';
+        if (modalTitles[2]) modalTitles[2].textContent = t.language || 'Мова';
 
-        // Обновляем labels в модальном окне занятия
-        // Используем data-i18n для точного определения
-        const subjectLabel = document.querySelector('[data-i18n="subject"]');
-        if (subjectLabel) subjectLabel.textContent = t.subject || 'Предмет';
-
-        // Находим остальные labels в модальном окне lesson-modal
+        // Находим labels в модальном окне lesson-modal
         const lessonModal = document.getElementById('lesson-modal');
         if (lessonModal) {
             const labels = lessonModal.querySelectorAll('.lesson-detail-label');
-            // Порядок: Предмет (0), Час (1), Тип (2), Аудиторія (3), Викладач (4), Коментар (5), Оголошення (6)
             if (labels[0]) labels[0].textContent = t.subject || 'Предмет';
             if (labels[1]) labels[1].textContent = t.time || 'Час';
             if (labels[2]) labels[2].textContent = t.type || 'Тип';
             if (labels[3]) labels[3].textContent = t.room || 'Аудиторія';
             if (labels[4]) labels[4].textContent = t.teacher || 'Викладач';
-            if (labels[5]) labels[5].textContent = 'Коментар'; // notes не часто используется
-            if (labels[6]) labels[6].textContent = t.announcement || 'Оголошення';
+            if (labels[5]) labels[5].textContent = t.notes || 'Коментар';
         }
 
         // Обновляем тексты загрузки
         const loadingText = document.querySelector('.loading-text');
-        if (loadingText) loadingText.textContent = t.loading || 'Loading...';
+        if (loadingText) loadingText.textContent = t.loading || 'Завантаження...';
 
         // Обновляем empty state
         const emptyStateTitle = document.querySelector('.empty-state h3');
-        if (emptyStateTitle) emptyStateTitle.textContent = t.no_lessons || 'No lessons';
+        if (emptyStateTitle) emptyStateTitle.textContent = t.no_lessons || 'Немає занять';
+    }
+
+    updateSidebarDate() {
+        const el = document.getElementById('sidebar-date');
+        if (!el) return;
+        const now = new Date();
+        const locale = this.currentLang === 'uk' ? 'uk-UA' : 'en-GB';
+        el.textContent = now.toLocaleDateString(locale, {
+            day: '2-digit',
+            month: 'long',
+            year: 'numeric'
+        });
     }
 
     closeAllModals() {
         document.querySelectorAll('.modal').forEach(modal => {
             modal.classList.remove('active');
         });
+        document.body.classList.remove('modal-open');
     }
 
     applyTheme() {
@@ -606,11 +646,20 @@ class MIAScheduleApp {
     showWelcomeScreen() {
         document.getElementById('welcome-screen').style.display = 'flex';
         document.getElementById('schedule-screen').style.display = 'none';
+        document.getElementById('bell-schedule-screen').style.display = 'none';
     }
 
     showScheduleScreen() {
         document.getElementById('welcome-screen').style.display = 'none';
         document.getElementById('schedule-screen').style.display = 'block';
+        document.getElementById('bell-schedule-screen').style.display = 'none';
+    }
+
+    showBellSchedule() {
+        this.toggleSidebar();
+        document.getElementById('welcome-screen').style.display = 'none';
+        document.getElementById('schedule-screen').style.display = 'none';
+        document.getElementById('bell-schedule-screen').style.display = 'block';
     }
 
     showLoading() {
