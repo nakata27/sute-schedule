@@ -3,6 +3,7 @@ JSON Storage - сохранение расписания в JSON файлы
 """
 
 import json
+import os
 from pathlib import Path
 from typing import Optional
 from datetime import datetime
@@ -18,11 +19,13 @@ class JsonStorage:
     Хранилище расписания в JSON формате
     """
 
-    def __init__(self, base_dir: str = "/tmp/mia_schedule/schedules"):
+    def __init__(self, base_dir: str = None):
         """
         Args:
             base_dir: Базовая директория для хранения данных
         """
+        if base_dir is None:
+            base_dir = os.environ.get("STORAGE_DIR", "/tmp/mia_schedule/schedules")
         self.base_dir = Path(base_dir)
         self.base_dir.mkdir(parents=True, exist_ok=True)
 
