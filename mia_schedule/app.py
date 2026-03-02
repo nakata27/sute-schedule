@@ -130,6 +130,36 @@ def get_translations(lang):
         }), 500
 
 
+_ANNOUNCEMENT_URL = 'https://mia1.knute.edu.ua/time-table/show-ads'
+_TIMETABLE_URL = 'https://mia1.knute.edu.ua/time-table/group'
+_AJAX_HEADERS = {
+    'X-Requested-With': 'XMLHttpRequest',
+    'Accept': 'application/json, text/javascript, */*; q=0.01',
+    'Referer': _TIMETABLE_URL,
+}
+
+
+def _parse_announcement_response(resp):
+    """Parse upstream response into a JSON-serialisable dict."""
+    content_type = resp.headers.get('Content-Type', '')
+    if 'json' in content_type:
+        try:
+            data = resp.json()
+            if 'html' in data:
+                return data
+            logger.warning(
+                "Unexpected JSON from upstream (no 'html' key): %s", list(data.keys())
+            )
+            return {'html': '<p>Оголошення недоступне (несподіваний формат відповіді)</p>'}
+        except ValueError:
+            pass
+    # Upstream returned HTML or plain text – wrap it
+    text = resp.text.strip()
+    if not text:
+        return {'html': '<p>Оголошення відсутнє</p>'}
+    return {'html': text}
+
+
 @app.route('/api/announcement')
 def get_announcement():
     """Proxy announcement request to upstream MIA server."""
@@ -141,40 +171,45 @@ def get_announcement():
         params = {'r1': r1}
         if r2:
             params['r2'] = r2
-        resp = http_requests.get(
-            'https://mia1.knute.edu.ua/time-table/show-ads',
-            params=params,
-            timeout=15,
-            headers={'Accept': 'application/json, text/html, */*'}
-        )
+
+        # Re-use the session established by the schedule fetcher so that the
+        # upstream Yii2 application recognises the request as coming from an
+        # authenticated browser session.  The session already holds any
+        # cookies set when the timetable page was last fetched.
+        session = schedule_service.fetcher.session
+
+        # If no cookies are present yet, visit the timetable page first to
+        # establish the session (mirrors what a browser does before the AJAX
+        # call fires).
+        if not session.cookies:
+            logger.info("No session cookies – visiting timetable page to establish session")
+            session.get(_TIMETABLE_URL, timeout=15)
+
+        resp = session.get(_ANNOUNCEMENT_URL, params=params, headers=_AJAX_HEADERS, timeout=15)
+
+        # On 400/403 the session cookie may have expired; refresh and retry once.
+        if resp.status_code in (400, 403):
+            logger.info(
+                "Got %s from announcement endpoint – refreshing session and retrying",
+                resp.status_code,
+            )
+            session.get(_TIMETABLE_URL, timeout=15)
+            resp = session.get(_ANNOUNCEMENT_URL, params=params, headers=_AJAX_HEADERS, timeout=15)
+
         resp.raise_for_status()
-        content_type = resp.headers.get('Content-Type', '')
-        if 'json' in content_type:
-            try:
-                data = resp.json()
-                if 'html' in data:
-                    return jsonify(data)
-                # JSON without html field – log and return readable fallback
-                logger.warning(f"Unexpected JSON from upstream (no 'html' key): {list(data.keys())}")
-                return jsonify({'html': '<p>Оголошення недоступне (несподіваний формат відповіді)</p>'})
-            except ValueError:
-                pass
-        # Upstream returned HTML or plain text – wrap it
-        text = resp.text.strip()
-        if not text:
-            return jsonify({'html': '<p>Оголошення відсутнє</p>'})
-        return jsonify({'html': text})
+        return jsonify(_parse_announcement_response(resp))
+
     except http_requests.exceptions.Timeout:
         logger.error("Announcement request timed out")
         return jsonify({'error': 'Сервер не відповідає (таймаут)'}), 504
     except http_requests.exceptions.ConnectionError as e:
-        logger.error(f"Announcement connection error: {e}")
-        return jsonify({'error': 'Помилка з\'єднання з сервером'}), 502
+        logger.error("Announcement connection error: %s", e)
+        return jsonify({'error': "Помилка з'єднання з сервером"}), 502
     except http_requests.exceptions.HTTPError as e:
-        logger.error(f"Announcement HTTP error: {e}")
+        logger.error("Announcement HTTP error: %s", e)
         return jsonify({'error': f'Сервер повернув помилку: {e.response.status_code}'}), 502
     except Exception as e:
-        logger.error(f"Error in /api/announcement: {e}")
+        logger.error("Error in /api/announcement: %s", e)
         return jsonify({'error': 'Помилка завантаження оголошення'}), 500
 
 
