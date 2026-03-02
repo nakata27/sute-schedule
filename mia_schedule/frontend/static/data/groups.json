@@ -1,0 +1,4181 @@
+{
+  "success": true,
+  "data": [
+    {
+      "faculty_name": "Факультет технологій та бізнесу",
+      "faculty_id": "3",
+      "courses": [
+        {
+          "course_number": "1",
+          "groups": [
+            {
+              "group_name": "ФТБ 1-1м",
+              "group_id": "3705"
+            },
+            {
+              "group_name": "ФТБ 1-1",
+              "group_id": "3407"
+            },
+            {
+              "group_name": "ФТБ 1-2",
+              "group_id": "3559"
+            },
+            {
+              "group_name": "ФТБ 1-2м",
+              "group_id": "3413"
+            },
+            {
+              "group_name": "ФТБ 1-3",
+              "group_id": "3561"
+            },
+            {
+              "group_name": "ФТБ 1-3м",
+              "group_id": "3411"
+            },
+            {
+              "group_name": "ФТБ 1-4",
+              "group_id": "3410"
+            },
+            {
+              "group_name": "ФТБ 1-4ам",
+              "group_id": "3480"
+            },
+            {
+              "group_name": "ФТБ 1-5",
+              "group_id": "3743"
+            },
+            {
+              "group_name": "ФТБ 1-5м",
+              "group_id": "3409"
+            },
+            {
+              "group_name": "ФТБ 1-6",
+              "group_id": "3408"
+            },
+            {
+              "group_name": "ФТБ 1-6ам",
+              "group_id": "3412"
+            },
+            {
+              "group_name": "ФТБ 1-7",
+              "group_id": "3744"
+            },
+            {
+              "group_name": "ФТБ 1-7м",
+              "group_id": "3415"
+            },
+            {
+              "group_name": "ФТБ 1-8а",
+              "group_id": "3747"
+            },
+            {
+              "group_name": "ФТБ 1-8м",
+              "group_id": "3416"
+            },
+            {
+              "group_name": "ФТБ 1-9",
+              "group_id": "3749"
+            },
+            {
+              "group_name": "ФТБ 1-9м",
+              "group_id": "3417"
+            },
+            {
+              "group_name": "ФТБ 1-10",
+              "group_id": "3780"
+            },
+            {
+              "group_name": "ФТБ 1-10м",
+              "group_id": "3418"
+            },
+            {
+              "group_name": "ФТБ 1-11",
+              "group_id": "3414"
+            },
+            {
+              "group_name": "ФТБ 1-11м",
+              "group_id": "3423"
+            },
+            {
+              "group_name": "ФТБ 1-12",
+              "group_id": "3560"
+            },
+            {
+              "group_name": "ФТБ 1-12ам",
+              "group_id": "3422"
+            },
+            {
+              "group_name": "ФТБ 1-13",
+              "group_id": "3774"
+            },
+            {
+              "group_name": "ФТБ 1-14",
+              "group_id": "3419"
+            },
+            {
+              "group_name": "ФТБ 1-15",
+              "group_id": "3420"
+            },
+            {
+              "group_name": "ФТБ 1-16",
+              "group_id": "3887"
+            },
+            {
+              "group_name": "ФТБ 1-17а",
+              "group_id": "3776"
+            },
+            {
+              "group_name": "ФТБ 1-18",
+              "group_id": "3421"
+            },
+            {
+              "group_name": "ФТБ 1-19",
+              "group_id": "3760"
+            },
+            {
+              "group_name": "ФТБ 1-20а",
+              "group_id": "3768"
+            },
+            {
+              "group_name": "ФТБ 1-1з",
+              "group_id": "3943"
+            },
+            {
+              "group_name": "ФТБ 1-1мз",
+              "group_id": "4057"
+            },
+            {
+              "group_name": "ФТБ 1-2з",
+              "group_id": "3944"
+            },
+            {
+              "group_name": "ФТБ 1-2мз",
+              "group_id": "4058"
+            },
+            {
+              "group_name": "ФТБ 1-3з",
+              "group_id": "3945"
+            },
+            {
+              "group_name": "ФТБ 1-3мз",
+              "group_id": "4059"
+            },
+            {
+              "group_name": "ФТБ 1-4з",
+              "group_id": "3946"
+            },
+            {
+              "group_name": "ФТБ 1-4мз",
+              "group_id": "4060"
+            },
+            {
+              "group_name": "ФТБ 1-5з",
+              "group_id": "3947"
+            },
+            {
+              "group_name": "ФТБ 1-5мз",
+              "group_id": "4061"
+            },
+            {
+              "group_name": "ФТБ 1-6з",
+              "group_id": "3948"
+            },
+            {
+              "group_name": "ФТБ 1-6мз",
+              "group_id": "4062"
+            },
+            {
+              "group_name": "ФТБ 1-7з",
+              "group_id": "3949"
+            },
+            {
+              "group_name": "ФТБ 1-7мз",
+              "group_id": "4063"
+            },
+            {
+              "group_name": "ФТБ 1-8з",
+              "group_id": "3950"
+            },
+            {
+              "group_name": "ФТБ 1-8мз",
+              "group_id": "4064"
+            },
+            {
+              "group_name": "ФТБ 1-9з",
+              "group_id": "3951"
+            },
+            {
+              "group_name": "ФТБ 1-9мз",
+              "group_id": "4106"
+            },
+            {
+              "group_name": "ФТБ 1-10мз",
+              "group_id": "4107"
+            }
+          ]
+        },
+        {
+          "course_number": "2",
+          "groups": [
+            {
+              "group_name": "ФТБ 2-1",
+              "group_id": "2340"
+            },
+            {
+              "group_name": "ФТБ 2-1м",
+              "group_id": "2358"
+            },
+            {
+              "group_name": "ФТБ 2-2",
+              "group_id": "2341"
+            },
+            {
+              "group_name": "ФТБ 2-2м",
+              "group_id": "2360"
+            },
+            {
+              "group_name": "ФТБ 2-3",
+              "group_id": "2342"
+            },
+            {
+              "group_name": "ФТБ 2-3м",
+              "group_id": "2362"
+            },
+            {
+              "group_name": "ФТБ 2-4",
+              "group_id": "3022"
+            },
+            {
+              "group_name": "ФТБ 2-4м",
+              "group_id": "2363"
+            },
+            {
+              "group_name": "ФТБ 2-5",
+              "group_id": "2343"
+            },
+            {
+              "group_name": "ФТБ 2-5ам",
+              "group_id": "2364"
+            },
+            {
+              "group_name": "ФТБ 2-6",
+              "group_id": "3021"
+            },
+            {
+              "group_name": "ФТБ 2-6м",
+              "group_id": "2365"
+            },
+            {
+              "group_name": "ФТБ 2-7",
+              "group_id": "2344"
+            },
+            {
+              "group_name": "ФТБ 2-7м",
+              "group_id": "2366"
+            },
+            {
+              "group_name": "ФТБ 2-8",
+              "group_id": "3020"
+            },
+            {
+              "group_name": "ФТБ 2-8м",
+              "group_id": "2370"
+            },
+            {
+              "group_name": "ФТБ 2-9",
+              "group_id": "2345"
+            },
+            {
+              "group_name": "ФТБ 2-9м",
+              "group_id": "2368"
+            },
+            {
+              "group_name": "ФТБ 2-10",
+              "group_id": "2346"
+            },
+            {
+              "group_name": "ФТБ 2- 10м",
+              "group_id": "2369"
+            },
+            {
+              "group_name": "ФТБ 2-11",
+              "group_id": "2347"
+            },
+            {
+              "group_name": "ФТБ 2-11ам",
+              "group_id": "2371"
+            },
+            {
+              "group_name": "ФТБ 2-12",
+              "group_id": "2348"
+            },
+            {
+              "group_name": "ФТБ 2-12м",
+              "group_id": "2372"
+            },
+            {
+              "group_name": "ФТБ 2-13",
+              "group_id": "2349"
+            },
+            {
+              "group_name": "ФТБ 2-13ам",
+              "group_id": "2373"
+            },
+            {
+              "group_name": "ФТБ 2-14",
+              "group_id": "2350"
+            },
+            {
+              "group_name": "ФТБ 2-15",
+              "group_id": "2351"
+            },
+            {
+              "group_name": "ФТБ 2-16а",
+              "group_id": "2352"
+            },
+            {
+              "group_name": "ФТБ 2-17",
+              "group_id": "2354"
+            },
+            {
+              "group_name": "ФТБ 2-18",
+              "group_id": "3019"
+            },
+            {
+              "group_name": "ФТБ 2-19а",
+              "group_id": "2357"
+            },
+            {
+              "group_name": "ФТБ 2-1з",
+              "group_id": "2882"
+            },
+            {
+              "group_name": "ФТБ 2-1мз",
+              "group_id": "2883"
+            },
+            {
+              "group_name": "ФТБ 2-2з",
+              "group_id": "2946"
+            },
+            {
+              "group_name": "ФТБ 2-2мз",
+              "group_id": "2885"
+            },
+            {
+              "group_name": "ФТБ 2-3з",
+              "group_id": "2947"
+            },
+            {
+              "group_name": "ФТБ 2-3мз",
+              "group_id": "2887"
+            },
+            {
+              "group_name": "ФТБ 2-4з",
+              "group_id": "2884"
+            },
+            {
+              "group_name": "ФТБ 2-4мз",
+              "group_id": "2889"
+            },
+            {
+              "group_name": "ФТБ 2-5з",
+              "group_id": "2888"
+            },
+            {
+              "group_name": "ФТБ 2-5мз",
+              "group_id": "2890"
+            },
+            {
+              "group_name": "ФТБ 2-6з",
+              "group_id": "2891"
+            },
+            {
+              "group_name": "ФТБ 2-6мз",
+              "group_id": "2949"
+            },
+            {
+              "group_name": "ФТБ 2-7з",
+              "group_id": "2893"
+            },
+            {
+              "group_name": "ФТБ 2-7мз",
+              "group_id": "2892"
+            },
+            {
+              "group_name": "ФТБ 2-8мз",
+              "group_id": "2972"
+            },
+            {
+              "group_name": "ФТБ 2-8з",
+              "group_id": "3969"
+            },
+            {
+              "group_name": "ФТБ 2-9мз",
+              "group_id": "2894"
+            },
+            {
+              "group_name": "ФТБ 2-9з",
+              "group_id": "3962"
+            },
+            {
+              "group_name": "ФТБ 2-10з",
+              "group_id": "4119"
+            }
+          ]
+        },
+        {
+          "course_number": "3",
+          "groups": [
+            {
+              "group_name": "ФТБ 3-1",
+              "group_id": "1624"
+            },
+            {
+              "group_name": "ФТБ 3-2",
+              "group_id": "1940"
+            },
+            {
+              "group_name": "ФТБ 3-3",
+              "group_id": "1626"
+            },
+            {
+              "group_name": "ФТБ 3-4",
+              "group_id": "1627"
+            },
+            {
+              "group_name": "ФТБ 3-5",
+              "group_id": "1628"
+            },
+            {
+              "group_name": "ФТБ 3-6",
+              "group_id": "1629"
+            },
+            {
+              "group_name": "ФТБ 3-7",
+              "group_id": "1630"
+            },
+            {
+              "group_name": "ФТБ 3-8",
+              "group_id": "2795"
+            },
+            {
+              "group_name": "ФТБ 3-9",
+              "group_id": "1631"
+            },
+            {
+              "group_name": "ФТБ 3-10",
+              "group_id": "1634"
+            },
+            {
+              "group_name": "ФТБ 3-11",
+              "group_id": "1633"
+            },
+            {
+              "group_name": "ФТБ 3-12",
+              "group_id": "1632"
+            },
+            {
+              "group_name": "ФТБ 3-13",
+              "group_id": "2797"
+            },
+            {
+              "group_name": "ФТБ 3-14а",
+              "group_id": "2798"
+            },
+            {
+              "group_name": "ФТБ 3-15",
+              "group_id": "1636"
+            },
+            {
+              "group_name": "ФТБ 3-16",
+              "group_id": "1635"
+            },
+            {
+              "group_name": "ФТБ 3-17а",
+              "group_id": "2800"
+            },
+            {
+              "group_name": "ФТБ 3-1з",
+              "group_id": "2051"
+            },
+            {
+              "group_name": "ФТБ 3-2з",
+              "group_id": "1672"
+            },
+            {
+              "group_name": "ФТБ 3-3з",
+              "group_id": "2049"
+            },
+            {
+              "group_name": "ФТБ 3-4з",
+              "group_id": "1673"
+            },
+            {
+              "group_name": "ФТБ 3-5з",
+              "group_id": "1674"
+            },
+            {
+              "group_name": "ФТБ 3-6з",
+              "group_id": "2044"
+            },
+            {
+              "group_name": "ФТБ 3-7з",
+              "group_id": "1675"
+            },
+            {
+              "group_name": "ФТБ 3-8з",
+              "group_id": "1676"
+            },
+            {
+              "group_name": "ФТБ 3-9з",
+              "group_id": "3226"
+            }
+          ]
+        },
+        {
+          "course_number": "4",
+          "groups": [
+            {
+              "group_name": "ФТБ 4-1",
+              "group_id": "917"
+            },
+            {
+              "group_name": "ФТБ 4-2",
+              "group_id": "924"
+            },
+            {
+              "group_name": "ФТБ 4-3",
+              "group_id": "1302"
+            },
+            {
+              "group_name": "ФТБ 4-4",
+              "group_id": "925"
+            },
+            {
+              "group_name": "ФТБ 4-5",
+              "group_id": "1311"
+            },
+            {
+              "group_name": "ФТБ 4-6",
+              "group_id": "928"
+            },
+            {
+              "group_name": "ФТБ 4-7",
+              "group_id": "1303"
+            },
+            {
+              "group_name": "ФТБ 4-8",
+              "group_id": "934"
+            },
+            {
+              "group_name": "ФТБ 4-9",
+              "group_id": "996"
+            },
+            {
+              "group_name": "ФТБ 4-10",
+              "group_id": "997"
+            },
+            {
+              "group_name": "ФТБ 4-11а",
+              "group_id": "1318"
+            },
+            {
+              "group_name": "ФТБ 4-12",
+              "group_id": "1003"
+            },
+            {
+              "group_name": "ФТБ 4-13",
+              "group_id": "1004"
+            },
+            {
+              "group_name": "ФТБ 4-14а",
+              "group_id": "1301"
+            },
+            {
+              "group_name": "ФТБ 4-1з",
+              "group_id": "1103"
+            },
+            {
+              "group_name": "ФТБ 4-2з",
+              "group_id": "1104"
+            },
+            {
+              "group_name": "ФТБ 4-3з",
+              "group_id": "1105"
+            },
+            {
+              "group_name": "ФТБ 4-4з",
+              "group_id": "1365"
+            },
+            {
+              "group_name": "ФТБ 4-5з",
+              "group_id": "1106"
+            },
+            {
+              "group_name": "ФТБ 4-6з",
+              "group_id": "1107"
+            },
+            {
+              "group_name": "ФТБ 4-8з",
+              "group_id": "2004"
+            }
+          ]
+        },
+        {
+          "course_number": "5",
+          "groups": [
+            {
+              "group_name": "ФТБ 5-1з",
+              "group_id": "2066"
+            },
+            {
+              "group_name": "ФТБ 5-2з",
+              "group_id": "280"
+            },
+            {
+              "group_name": "ФТБ 5-3з",
+              "group_id": "570"
+            },
+            {
+              "group_name": "ФТБ 5-4з",
+              "group_id": "609"
+            },
+            {
+              "group_name": "ФТБ 5-8з",
+              "group_id": "1322"
+            },
+            {
+              "group_name": "ФТБ 5-9з",
+              "group_id": "2067"
+            },
+            {
+              "group_name": "ФТБ 5-10з",
+              "group_id": "2003"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "faculty_name": "Факультет інформаційних технологій",
+      "faculty_id": "7",
+      "courses": [
+        {
+          "course_number": "1",
+          "groups": [
+            {
+              "group_name": "ФІТ 1-1",
+              "group_id": "3339"
+            },
+            {
+              "group_name": "ФІТ 1-1м",
+              "group_id": "3340"
+            },
+            {
+              "group_name": "ФІТ 1-2",
+              "group_id": "3777"
+            },
+            {
+              "group_name": "ФІТ 1-2м",
+              "group_id": "3345"
+            },
+            {
+              "group_name": "ФІТ 1-3",
+              "group_id": "3342"
+            },
+            {
+              "group_name": "ФІТ 1-3м",
+              "group_id": "3346"
+            },
+            {
+              "group_name": "ФІТ 1-4",
+              "group_id": "3343"
+            },
+            {
+              "group_name": "ФІТ 1-4м",
+              "group_id": "3350"
+            },
+            {
+              "group_name": "ФІТ 1-5",
+              "group_id": "3344"
+            },
+            {
+              "group_name": "ФІТ 1-5м",
+              "group_id": "3352"
+            },
+            {
+              "group_name": "ФІТ 1-6",
+              "group_id": "3341"
+            },
+            {
+              "group_name": "ФІТ 1-6ам",
+              "group_id": "3990"
+            },
+            {
+              "group_name": "ФІТ 1-7",
+              "group_id": "3778"
+            },
+            {
+              "group_name": "ФІТ 1-7м",
+              "group_id": "3356"
+            },
+            {
+              "group_name": "ФІТ 1-8",
+              "group_id": "3349"
+            },
+            {
+              "group_name": "ФІТ 1-8м",
+              "group_id": "3358"
+            },
+            {
+              "group_name": "ФІТ 1-9",
+              "group_id": "3347"
+            },
+            {
+              "group_name": "ФІТ 1-9ам",
+              "group_id": "3994"
+            },
+            {
+              "group_name": "ФІТ 1-10",
+              "group_id": "3348"
+            },
+            {
+              "group_name": "ФІТ 1-11",
+              "group_id": "3351"
+            },
+            {
+              "group_name": "ФІТ 1-12",
+              "group_id": "3890"
+            },
+            {
+              "group_name": "ФІТ 1-13",
+              "group_id": "3353"
+            },
+            {
+              "group_name": "ФІТ 1-14",
+              "group_id": "3354"
+            },
+            {
+              "group_name": "ФІТ 1-15",
+              "group_id": "3779"
+            },
+            {
+              "group_name": "ФІТ 1-16",
+              "group_id": "3355"
+            },
+            {
+              "group_name": "ФІТ 1-17",
+              "group_id": "3892"
+            },
+            {
+              "group_name": "ФІТ 1-18",
+              "group_id": "3357"
+            },
+            {
+              "group_name": "ФІТ 1-1з",
+              "group_id": "3927"
+            },
+            {
+              "group_name": "ФІТ 1-1мз",
+              "group_id": "4012"
+            },
+            {
+              "group_name": "ФІТ 1-2з",
+              "group_id": "3928"
+            },
+            {
+              "group_name": "ФІТ 1-2мз",
+              "group_id": "4013"
+            },
+            {
+              "group_name": "ФІТ 1-3з",
+              "group_id": "3929"
+            },
+            {
+              "group_name": "ФІТ 1-3мз",
+              "group_id": "4014"
+            },
+            {
+              "group_name": "ФІТ 1-4з",
+              "group_id": "3930"
+            },
+            {
+              "group_name": "ФІТ 1-4мз",
+              "group_id": "4015"
+            },
+            {
+              "group_name": "ФІТ 1-5з",
+              "group_id": "3931"
+            },
+            {
+              "group_name": "ФІТ 1-5мз",
+              "group_id": "4016"
+            },
+            {
+              "group_name": "ФІТ 1-6мз",
+              "group_id": "4017"
+            },
+            {
+              "group_name": "ФІТ 1-7мз",
+              "group_id": "4018"
+            }
+          ]
+        },
+        {
+          "course_number": "2",
+          "groups": [
+            {
+              "group_name": "ФІТ 2-1м",
+              "group_id": "2329"
+            },
+            {
+              "group_name": "ФІТ 2-2м",
+              "group_id": "2330"
+            },
+            {
+              "group_name": "ФІТ 2-3м",
+              "group_id": "2331"
+            },
+            {
+              "group_name": "ФІТ 2-4м",
+              "group_id": "2332"
+            },
+            {
+              "group_name": "ФІТ 2-1",
+              "group_id": "2317"
+            },
+            {
+              "group_name": "ФІТ 2-2",
+              "group_id": "2318"
+            },
+            {
+              "group_name": "ФІТ 2-3",
+              "group_id": "2319"
+            },
+            {
+              "group_name": "ФІТ 2-4",
+              "group_id": "2320"
+            },
+            {
+              "group_name": "ФІТ 2-5",
+              "group_id": "2321"
+            },
+            {
+              "group_name": "ФІТ 2-5м",
+              "group_id": "2333"
+            },
+            {
+              "group_name": "ФІТ 2-6",
+              "group_id": "2322"
+            },
+            {
+              "group_name": "ФІТ 2-6м",
+              "group_id": "2367"
+            },
+            {
+              "group_name": "ФІТ 2-7",
+              "group_id": "2323"
+            },
+            {
+              "group_name": "ФІТ 2-7м",
+              "group_id": "2334"
+            },
+            {
+              "group_name": "ФІТ 2-8",
+              "group_id": "2337"
+            },
+            {
+              "group_name": "ФІТ 2-8ам",
+              "group_id": "2465"
+            },
+            {
+              "group_name": "ФІТ 2-9м",
+              "group_id": "2335"
+            },
+            {
+              "group_name": "ФІТ 2-9",
+              "group_id": "2338"
+            },
+            {
+              "group_name": "ФІТ 2-10",
+              "group_id": "2339"
+            },
+            {
+              "group_name": "ФІТ 2-10м",
+              "group_id": "2336"
+            },
+            {
+              "group_name": "ФІТ 2-11",
+              "group_id": "3150"
+            },
+            {
+              "group_name": "ФІТ 2-11ам",
+              "group_id": "2945"
+            },
+            {
+              "group_name": "ФІТ 2-12",
+              "group_id": "2324"
+            },
+            {
+              "group_name": "ФІТ 2-13",
+              "group_id": "2326"
+            },
+            {
+              "group_name": "ФІТ 2-14",
+              "group_id": "2327"
+            },
+            {
+              "group_name": "ФІТ 2-15",
+              "group_id": "2325"
+            },
+            {
+              "group_name": "ФІТ 2-16",
+              "group_id": "3157"
+            },
+            {
+              "group_name": "ФІТ 2-17",
+              "group_id": "2328"
+            },
+            {
+              "group_name": "ФІТ 2-1з",
+              "group_id": "2925"
+            },
+            {
+              "group_name": "ФІТ 2-1мз",
+              "group_id": "2924"
+            },
+            {
+              "group_name": "ФІТ 2-2з",
+              "group_id": "2928"
+            },
+            {
+              "group_name": "ФІТ 2-2мз",
+              "group_id": "2926"
+            },
+            {
+              "group_name": "ФІТ 2-3з",
+              "group_id": "2930"
+            },
+            {
+              "group_name": "ФІТ 2-3мз",
+              "group_id": "2927"
+            },
+            {
+              "group_name": "ФІТ 2-4з",
+              "group_id": "2932"
+            },
+            {
+              "group_name": "ФІТ 2-4мз",
+              "group_id": "2929"
+            },
+            {
+              "group_name": "ФІТ 2-5з",
+              "group_id": "2934"
+            },
+            {
+              "group_name": "ФІТ 2-5мз",
+              "group_id": "2931"
+            },
+            {
+              "group_name": "ФІТ 2-6мз",
+              "group_id": "2933"
+            },
+            {
+              "group_name": "ФІТ 2-7мз",
+              "group_id": "2935"
+            },
+            {
+              "group_name": "ФІТ 2-6з",
+              "group_id": "3961"
+            }
+          ]
+        },
+        {
+          "course_number": "3",
+          "groups": [
+            {
+              "group_name": "ФІТ 3-1",
+              "group_id": "1605"
+            },
+            {
+              "group_name": "ФІТ 3-2",
+              "group_id": "1606"
+            },
+            {
+              "group_name": "ФІТ 3-3",
+              "group_id": "1607"
+            },
+            {
+              "group_name": "ФІТ 3-4",
+              "group_id": "1610"
+            },
+            {
+              "group_name": "ФІТ 3-5",
+              "group_id": "1609"
+            },
+            {
+              "group_name": "ФІТ 3-6",
+              "group_id": "1608"
+            },
+            {
+              "group_name": "ФІТ 3-7",
+              "group_id": "2813"
+            },
+            {
+              "group_name": "ФІТ 3-8",
+              "group_id": "1612"
+            },
+            {
+              "group_name": "ФІТ 3-9",
+              "group_id": "1611"
+            },
+            {
+              "group_name": "ФІТ 3-10",
+              "group_id": "2814"
+            },
+            {
+              "group_name": "ФІТ 3-11",
+              "group_id": "1613"
+            },
+            {
+              "group_name": "ФІТ 3-12",
+              "group_id": "1616"
+            },
+            {
+              "group_name": "ФІТ 3-13",
+              "group_id": "1615"
+            },
+            {
+              "group_name": "ФІТ 3-14",
+              "group_id": "1614"
+            },
+            {
+              "group_name": "ФІТ 3-15",
+              "group_id": "1617"
+            },
+            {
+              "group_name": "ФІТ 3-1з",
+              "group_id": "1684"
+            },
+            {
+              "group_name": "ФІТ 3-2з",
+              "group_id": "1685"
+            },
+            {
+              "group_name": "ФІТ 3-3з",
+              "group_id": "2056"
+            },
+            {
+              "group_name": "ФІТ 3-4з",
+              "group_id": "2058"
+            },
+            {
+              "group_name": "ФІТ 3-5з",
+              "group_id": "2059"
+            },
+            {
+              "group_name": "ФІТ 3-6з",
+              "group_id": "1686"
+            }
+          ]
+        },
+        {
+          "course_number": "4",
+          "groups": [
+            {
+              "group_name": "ФІТ 4-1",
+              "group_id": "1008"
+            },
+            {
+              "group_name": "ФІТ 4-2",
+              "group_id": "1308"
+            },
+            {
+              "group_name": "ФІТ 4-3",
+              "group_id": "1009"
+            },
+            {
+              "group_name": "ФІТ 4-4",
+              "group_id": "1010"
+            },
+            {
+              "group_name": "ФІТ 4-5",
+              "group_id": "1011"
+            },
+            {
+              "group_name": "ФІТ 4-6",
+              "group_id": "1012"
+            },
+            {
+              "group_name": "ФІТ 4-7",
+              "group_id": "1316"
+            },
+            {
+              "group_name": "ФІТ 4-8",
+              "group_id": "1013"
+            },
+            {
+              "group_name": "ФІТ 4-9",
+              "group_id": "1014"
+            },
+            {
+              "group_name": "ФІТ 4-10",
+              "group_id": "1015"
+            },
+            {
+              "group_name": "ФІТ 4-11",
+              "group_id": "1016"
+            },
+            {
+              "group_name": "ФІТ 4-12",
+              "group_id": "1310"
+            },
+            {
+              "group_name": "ФІТ 4-13",
+              "group_id": "1017"
+            },
+            {
+              "group_name": "ФІТ 4-14",
+              "group_id": "1018"
+            },
+            {
+              "group_name": "ФІТ 4-15",
+              "group_id": "1309"
+            },
+            {
+              "group_name": "ФІТ 4-16",
+              "group_id": "1019"
+            },
+            {
+              "group_name": "ФІТ 4-1з",
+              "group_id": "1091"
+            },
+            {
+              "group_name": "ФІТ 4-2з",
+              "group_id": "1092"
+            },
+            {
+              "group_name": "ФІТ 4-3з",
+              "group_id": "1093"
+            }
+          ]
+        },
+        {
+          "course_number": "5",
+          "groups": [
+            {
+              "group_name": "ФІТ 5-1з",
+              "group_id": "472"
+            },
+            {
+              "group_name": "ФІТ 5-2з",
+              "group_id": "746"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "faculty_name": "Факультет економіки, менеджменту та психології",
+      "faculty_id": "1",
+      "courses": [
+        {
+          "course_number": "1",
+          "groups": [
+            {
+              "group_name": "ФЕМП 1-1",
+              "group_id": "3312"
+            },
+            {
+              "group_name": "ФЕМП 1-1м",
+              "group_id": "3329"
+            },
+            {
+              "group_name": "ФЕМП 1-2",
+              "group_id": "3315"
+            },
+            {
+              "group_name": "ФЕМП 1-2м",
+              "group_id": "3330"
+            },
+            {
+              "group_name": "ФЕМП 1-3",
+              "group_id": "3751"
+            },
+            {
+              "group_name": "ФЕМП 1-3м",
+              "group_id": "3996"
+            },
+            {
+              "group_name": "ФЕМП 1-4",
+              "group_id": "3317"
+            },
+            {
+              "group_name": "ФЕМП 1-4м",
+              "group_id": "3331"
+            },
+            {
+              "group_name": "ФЕМП 1-5",
+              "group_id": "3318"
+            },
+            {
+              "group_name": "ФЕМП 1-5м",
+              "group_id": "3333"
+            },
+            {
+              "group_name": "ФЕМП 1-6",
+              "group_id": "3319"
+            },
+            {
+              "group_name": "ФЕМП 1-6м",
+              "group_id": "3334"
+            },
+            {
+              "group_name": "ФЕМП 1-7",
+              "group_id": "3320"
+            },
+            {
+              "group_name": "ФЕМП 1-7м",
+              "group_id": "3335"
+            },
+            {
+              "group_name": "ФЕМП 1-8",
+              "group_id": "3316"
+            },
+            {
+              "group_name": "ФЕМП 1-8м",
+              "group_id": "3903"
+            },
+            {
+              "group_name": "ФЕМП 1-9",
+              "group_id": "3752"
+            },
+            {
+              "group_name": "ФЕМП 1-9м",
+              "group_id": "3336"
+            },
+            {
+              "group_name": "ФЕМП 1-10",
+              "group_id": "3321"
+            },
+            {
+              "group_name": "ФЕМП 1-10м",
+              "group_id": "3337"
+            },
+            {
+              "group_name": "ФЕМП 1-11",
+              "group_id": "3322"
+            },
+            {
+              "group_name": "ФЕМП 1-11ам",
+              "group_id": "3332"
+            },
+            {
+              "group_name": "ФЕМП 1-12",
+              "group_id": "3323"
+            },
+            {
+              "group_name": "ФЕМП 1-12м",
+              "group_id": "3995"
+            },
+            {
+              "group_name": "ФЕМП 1-13м",
+              "group_id": "3338"
+            },
+            {
+              "group_name": "ФЕМП 1-13",
+              "group_id": "3753"
+            },
+            {
+              "group_name": "ФЕМП 1-14",
+              "group_id": "3324"
+            },
+            {
+              "group_name": "ФЕМП 1-15",
+              "group_id": "3325"
+            },
+            {
+              "group_name": "ФЕМП 1-16",
+              "group_id": "3754"
+            },
+            {
+              "group_name": "ФЕМП 1-17",
+              "group_id": "3326"
+            },
+            {
+              "group_name": "ФЕМП 1-18",
+              "group_id": "3327"
+            },
+            {
+              "group_name": "ФЕМП 1-19",
+              "group_id": "3755"
+            },
+            {
+              "group_name": "ФЕМП 1-20",
+              "group_id": "3756"
+            },
+            {
+              "group_name": "ФЕМП 1-21",
+              "group_id": "3901"
+            },
+            {
+              "group_name": "ФЕМП 1-23",
+              "group_id": "3328"
+            },
+            {
+              "group_name": "ФЕМП 1-22",
+              "group_id": "3757"
+            },
+            {
+              "group_name": "ФЕМП 1-1з",
+              "group_id": "3918"
+            },
+            {
+              "group_name": "ФЕМП 1-1мз",
+              "group_id": "4026"
+            },
+            {
+              "group_name": "ФЕМП 1-2з",
+              "group_id": "3919"
+            },
+            {
+              "group_name": "ФЕМП 1-2мз",
+              "group_id": "4027"
+            },
+            {
+              "group_name": "ФЕМП 1-3з",
+              "group_id": "3920"
+            },
+            {
+              "group_name": "ФЕМП 1-3мз",
+              "group_id": "4028"
+            },
+            {
+              "group_name": "ФЕМП 1-4з",
+              "group_id": "3922"
+            },
+            {
+              "group_name": "ФЕМП 1-4мз",
+              "group_id": "4029"
+            },
+            {
+              "group_name": "ФЕМП 1-5з",
+              "group_id": "3924"
+            },
+            {
+              "group_name": "ФЕМП 1-5мз",
+              "group_id": "4030"
+            },
+            {
+              "group_name": "ФЕМП 1-6з",
+              "group_id": "3925"
+            },
+            {
+              "group_name": "ФЕМП 1-6мз",
+              "group_id": "4031"
+            },
+            {
+              "group_name": "ФЕМП 1-7з",
+              "group_id": "3921"
+            },
+            {
+              "group_name": "ФЕМП 1-7мз",
+              "group_id": "4032"
+            },
+            {
+              "group_name": "ФЕМП 1-8з",
+              "group_id": "3926"
+            },
+            {
+              "group_name": "ФЕМП 1-8мз",
+              "group_id": "4033"
+            },
+            {
+              "group_name": "ФЕМП 1-9з",
+              "group_id": "3923"
+            },
+            {
+              "group_name": "ФЕМП 1-9мз",
+              "group_id": "4034"
+            }
+          ]
+        },
+        {
+          "course_number": "2",
+          "groups": [
+            {
+              "group_name": "ФЕМП 2-1",
+              "group_id": "2289"
+            },
+            {
+              "group_name": "ФЕМП 2-1м",
+              "group_id": "2305"
+            },
+            {
+              "group_name": "ФЕМП 2-2",
+              "group_id": "2290"
+            },
+            {
+              "group_name": "ФЕМП 2-2м",
+              "group_id": "2306"
+            },
+            {
+              "group_name": "ФЕМП 2-3",
+              "group_id": "2291"
+            },
+            {
+              "group_name": "ФЕМП 2-3м",
+              "group_id": "2307"
+            },
+            {
+              "group_name": "ФЕМП 2-4",
+              "group_id": "2292"
+            },
+            {
+              "group_name": "ФЕМП 2-4м",
+              "group_id": "2308"
+            },
+            {
+              "group_name": "ФЕМП 2-5",
+              "group_id": "2293"
+            },
+            {
+              "group_name": "ФЕМП 2-5м",
+              "group_id": "2309"
+            },
+            {
+              "group_name": "ФЕМП 2-6",
+              "group_id": "2294"
+            },
+            {
+              "group_name": "ФЕМП 2-6м",
+              "group_id": "2310"
+            },
+            {
+              "group_name": "ФЕМП 2-7",
+              "group_id": "2295"
+            },
+            {
+              "group_name": "ФЕМП 2-7ам",
+              "group_id": "2353"
+            },
+            {
+              "group_name": "ФЕМП 2-8",
+              "group_id": "2985"
+            },
+            {
+              "group_name": "ФЕМП 2-8м",
+              "group_id": "2311"
+            },
+            {
+              "group_name": "ФЕМП 2-9",
+              "group_id": "3056"
+            },
+            {
+              "group_name": "ФЕМП 2-9м",
+              "group_id": "2312"
+            },
+            {
+              "group_name": "ФЕМП 2-10",
+              "group_id": "2296"
+            },
+            {
+              "group_name": "ФЕМП 2-10м",
+              "group_id": "2313"
+            },
+            {
+              "group_name": "ФЕМП 2-11",
+              "group_id": "2297"
+            },
+            {
+              "group_name": "ФЕМП 2-11м",
+              "group_id": "2314"
+            },
+            {
+              "group_name": "ФЕМП 2-12",
+              "group_id": "2298"
+            },
+            {
+              "group_name": "ФЕМП 2-12ам",
+              "group_id": "2355"
+            },
+            {
+              "group_name": "ФЕМП 2-13",
+              "group_id": "2299"
+            },
+            {
+              "group_name": "ФЕМП 2-13м",
+              "group_id": "2315"
+            },
+            {
+              "group_name": "ФЕМП 2-14",
+              "group_id": "2300"
+            },
+            {
+              "group_name": "ФЕМП 2-14ам",
+              "group_id": "2356"
+            },
+            {
+              "group_name": "ФЕМП 2-15",
+              "group_id": "2301"
+            },
+            {
+              "group_name": "ФЕМП 2-15м",
+              "group_id": "2316"
+            },
+            {
+              "group_name": "ФЕМП 2- 16",
+              "group_id": "2302"
+            },
+            {
+              "group_name": "ФЕМП 2-17",
+              "group_id": "2303"
+            },
+            {
+              "group_name": "ФЕМП 2-18",
+              "group_id": "3057"
+            },
+            {
+              "group_name": "ФЕМП 2-19",
+              "group_id": "2304"
+            },
+            {
+              "group_name": "ФЕМП 2-1з",
+              "group_id": "2950"
+            },
+            {
+              "group_name": "ФЕМП 2-1мз",
+              "group_id": "2911"
+            },
+            {
+              "group_name": "ФЕМП 2-2з",
+              "group_id": "2914"
+            },
+            {
+              "group_name": "ФЕМП 2-2мз",
+              "group_id": "2913"
+            },
+            {
+              "group_name": "ФЕМП 2-3з",
+              "group_id": "2917"
+            },
+            {
+              "group_name": "ФЕМП 2-3мз",
+              "group_id": "2915"
+            },
+            {
+              "group_name": "ФЕМП 2-4мз",
+              "group_id": "3247"
+            },
+            {
+              "group_name": "ФЕМП 2-4з",
+              "group_id": "2919"
+            },
+            {
+              "group_name": "ФЕМП 2-5 мз",
+              "group_id": "3248"
+            },
+            {
+              "group_name": "ФЕМП 2-5з",
+              "group_id": "2921"
+            },
+            {
+              "group_name": "ФЕМП 2-6мз",
+              "group_id": "2916"
+            },
+            {
+              "group_name": "ФЕМП 2-6з",
+              "group_id": "3971"
+            },
+            {
+              "group_name": "ФЕМП 2-7мз",
+              "group_id": "2918"
+            },
+            {
+              "group_name": "ФЕМП 2-7з",
+              "group_id": "3970"
+            },
+            {
+              "group_name": "ФЕМП 2- 8мз",
+              "group_id": "2920"
+            },
+            {
+              "group_name": "ФЕМП 2-8з",
+              "group_id": "4124"
+            },
+            {
+              "group_name": "ФЕМП 2- 9мз",
+              "group_id": "2922"
+            }
+          ]
+        },
+        {
+          "course_number": "3",
+          "groups": [
+            {
+              "group_name": "ФЕМП 3-1",
+              "group_id": "1646"
+            },
+            {
+              "group_name": "ФЕМП 3-2",
+              "group_id": "1647"
+            },
+            {
+              "group_name": "ФЕМП 3-3",
+              "group_id": "1021"
+            },
+            {
+              "group_name": "ФЕМП 3-4",
+              "group_id": "1648"
+            },
+            {
+              "group_name": "ФЕМП 3-5",
+              "group_id": "1650"
+            },
+            {
+              "group_name": "ФЕМП 3-6",
+              "group_id": "1649"
+            },
+            {
+              "group_name": "ФЕМП 3-7",
+              "group_id": "2789"
+            },
+            {
+              "group_name": "ФЕМП 3-8",
+              "group_id": "1651"
+            },
+            {
+              "group_name": "ФЕМП 3-9",
+              "group_id": "1652"
+            },
+            {
+              "group_name": "ФЕМП 3-10",
+              "group_id": "2793"
+            },
+            {
+              "group_name": "ФЕМП 3-11",
+              "group_id": "1653"
+            },
+            {
+              "group_name": "ФЕМП 3-12",
+              "group_id": "1654"
+            },
+            {
+              "group_name": "ФЕМП 3-13",
+              "group_id": "1655"
+            },
+            {
+              "group_name": "ФЕМП 3-14",
+              "group_id": "1656"
+            },
+            {
+              "group_name": "ФЕМП 3-15",
+              "group_id": "1657"
+            },
+            {
+              "group_name": "ФЕМП 3-16",
+              "group_id": "1658"
+            },
+            {
+              "group_name": "ФЕМП 3-17",
+              "group_id": "1659"
+            },
+            {
+              "group_name": "ФЕМП 3-18",
+              "group_id": "3224"
+            },
+            {
+              "group_name": "ФЕМП 3-1.1з",
+              "group_id": "2113"
+            },
+            {
+              "group_name": "ФЕМП 3-1з",
+              "group_id": "1703"
+            },
+            {
+              "group_name": "ФЕМП 3-2з",
+              "group_id": "2112"
+            },
+            {
+              "group_name": "ФЕМП 3-3з",
+              "group_id": "1704"
+            },
+            {
+              "group_name": "ФЕМП 3-4з",
+              "group_id": "2111"
+            },
+            {
+              "group_name": "ФЕМП 3-5з",
+              "group_id": "1705"
+            },
+            {
+              "group_name": "ФЕМП 3-6з",
+              "group_id": "4125"
+            }
+          ]
+        },
+        {
+          "course_number": "4",
+          "groups": [
+            {
+              "group_name": "ФЕМП 4-1",
+              "group_id": "1020"
+            },
+            {
+              "group_name": "ФЕМП 4-2.2",
+              "group_id": "1022"
+            },
+            {
+              "group_name": "ФЕМП 4-2.1",
+              "group_id": "1023"
+            },
+            {
+              "group_name": "ФЕМП 4-3",
+              "group_id": "1024"
+            },
+            {
+              "group_name": "ФЕМП 4-4",
+              "group_id": "1306"
+            },
+            {
+              "group_name": "ФЕМП 4-5",
+              "group_id": "1025"
+            },
+            {
+              "group_name": "ФЕМП 4-6",
+              "group_id": "1026"
+            },
+            {
+              "group_name": "ФЕМП 4-7",
+              "group_id": "1027"
+            },
+            {
+              "group_name": "ФЕМП 4-8",
+              "group_id": "1033"
+            },
+            {
+              "group_name": "ФЕМП 4-9",
+              "group_id": "1031"
+            },
+            {
+              "group_name": "ФЕМП 4-10",
+              "group_id": "1307"
+            },
+            {
+              "group_name": "ФЕМП 4-11",
+              "group_id": "1034"
+            },
+            {
+              "group_name": "ФЕМП 4-12",
+              "group_id": "1030"
+            },
+            {
+              "group_name": "ФЕМП 4-13",
+              "group_id": "1028"
+            },
+            {
+              "group_name": "ФЕМП 4-14",
+              "group_id": "1029"
+            },
+            {
+              "group_name": "ФЕМП 4-15",
+              "group_id": "1317"
+            },
+            {
+              "group_name": "ФЕМП 4-16",
+              "group_id": "1035"
+            },
+            {
+              "group_name": "ФЕМП 4-1з",
+              "group_id": "1087"
+            },
+            {
+              "group_name": "ФЕМП 4-2з",
+              "group_id": "1088"
+            },
+            {
+              "group_name": "ФЕМП 4-3з",
+              "group_id": "1089"
+            },
+            {
+              "group_name": "ФЕМП 4-4з",
+              "group_id": "1090"
+            },
+            {
+              "group_name": "ФЕМП 4-5з",
+              "group_id": "2154"
+            },
+            {
+              "group_name": "ФЕМП 4-6з",
+              "group_id": "2155"
+            }
+          ]
+        },
+        {
+          "course_number": "5",
+          "groups": [
+            {
+              "group_name": "ФЕМП 5-1з",
+              "group_id": "811"
+            },
+            {
+              "group_name": "ФЕМП 5-2з",
+              "group_id": "810"
+            },
+            {
+              "group_name": "ФЕМП 5-3з",
+              "group_id": "813"
+            },
+            {
+              "group_name": "ФЕМП 5-4з",
+              "group_id": "808"
+            },
+            {
+              "group_name": "ФЕМП 5-9з",
+              "group_id": "2114"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "faculty_name": "Факультет міжнародної торгівлі та права",
+      "faculty_id": "8",
+      "courses": [
+        {
+          "course_number": "1",
+          "groups": [
+            {
+              "group_name": "ФМТП 1-1",
+              "group_id": "3424"
+            },
+            {
+              "group_name": "ФМТП 1-1м",
+              "group_id": "3704"
+            },
+            {
+              "group_name": "ФМТП 1-2",
+              "group_id": "3425"
+            },
+            {
+              "group_name": "ФМТП 1-2м",
+              "group_id": "3428"
+            },
+            {
+              "group_name": "ФМТП 1-3.1а",
+              "group_id": "3830"
+            },
+            {
+              "group_name": "ФМТП 1-3.2а",
+              "group_id": "3987"
+            },
+            {
+              "group_name": "ФМТП 1-3м",
+              "group_id": "3429"
+            },
+            {
+              "group_name": "ФМТП 1-4",
+              "group_id": "3426"
+            },
+            {
+              "group_name": "ФМТП 1-4м",
+              "group_id": "3432"
+            },
+            {
+              "group_name": "ФМТП 1-5ам",
+              "group_id": "3997"
+            },
+            {
+              "group_name": "ФМТП 1-5",
+              "group_id": "3775"
+            },
+            {
+              "group_name": "ФМТП 1-6",
+              "group_id": "3427"
+            },
+            {
+              "group_name": "ФМТП 1-6м",
+              "group_id": "3435"
+            },
+            {
+              "group_name": "ФМТП 1-7м",
+              "group_id": "3993"
+            },
+            {
+              "group_name": "ФМТП 1-7",
+              "group_id": "3703"
+            },
+            {
+              "group_name": "ФМТП 1-8",
+              "group_id": "3763"
+            },
+            {
+              "group_name": "ФМТП 1-8м",
+              "group_id": "3437"
+            },
+            {
+              "group_name": "ФМТП 1-9",
+              "group_id": "3430"
+            },
+            {
+              "group_name": "ФМТП 1-9м",
+              "group_id": "3438"
+            },
+            {
+              "group_name": "ФМТП 1-10",
+              "group_id": "3431"
+            },
+            {
+              "group_name": "ФМТП 1-10м",
+              "group_id": "3439"
+            },
+            {
+              "group_name": "ФМТП 1-11",
+              "group_id": "3770"
+            },
+            {
+              "group_name": "ФМТП 1-11м",
+              "group_id": "3440"
+            },
+            {
+              "group_name": "ФМТП 1-12м",
+              "group_id": "3448"
+            },
+            {
+              "group_name": "ФМТП 1-12а",
+              "group_id": "3831"
+            },
+            {
+              "group_name": "ФМТП 1-13",
+              "group_id": "3433"
+            },
+            {
+              "group_name": "ФМТП 1-13м",
+              "group_id": "3444"
+            },
+            {
+              "group_name": "ФМТП 1-14",
+              "group_id": "3434"
+            },
+            {
+              "group_name": "ФМТП 1-14м",
+              "group_id": "3447"
+            },
+            {
+              "group_name": "ФМТП 1-15",
+              "group_id": "3771"
+            },
+            {
+              "group_name": "ФМТП 1-16",
+              "group_id": "3436"
+            },
+            {
+              "group_name": "ФМТП 1-17",
+              "group_id": "3689"
+            },
+            {
+              "group_name": "ФМТП 1-18",
+              "group_id": "3772"
+            },
+            {
+              "group_name": "ФМТП 1-19",
+              "group_id": "3773"
+            },
+            {
+              "group_name": "ФМТП 1-20",
+              "group_id": "3443"
+            },
+            {
+              "group_name": "ФМТП 1-21",
+              "group_id": "3442"
+            },
+            {
+              "group_name": "ФМТП 1-22",
+              "group_id": "3441"
+            },
+            {
+              "group_name": "ФМТП 1-23",
+              "group_id": "3445"
+            },
+            {
+              "group_name": "ФМТП 1-24",
+              "group_id": "3446"
+            },
+            {
+              "group_name": "ФМТП 1-25",
+              "group_id": "3878"
+            },
+            {
+              "group_name": "ФМТП 1-26",
+              "group_id": "3982"
+            },
+            {
+              "group_name": "ФМТП 1-27",
+              "group_id": "3981"
+            },
+            {
+              "group_name": "ФМТП 1-1з",
+              "group_id": "3932"
+            },
+            {
+              "group_name": "ФМТП 1-1мз",
+              "group_id": "4035"
+            },
+            {
+              "group_name": "ФМТП 1-2з",
+              "group_id": "3933"
+            },
+            {
+              "group_name": "ФМТП 1-2мз",
+              "group_id": "4037"
+            },
+            {
+              "group_name": "ФМТП 1-3з",
+              "group_id": "3934"
+            },
+            {
+              "group_name": "ФМТП 1-3мз",
+              "group_id": "4038"
+            },
+            {
+              "group_name": "ФМТП 1-4з",
+              "group_id": "3935"
+            },
+            {
+              "group_name": "ФМТП 1-4мз",
+              "group_id": "4039"
+            },
+            {
+              "group_name": "ФМТП 1-5з",
+              "group_id": "3941"
+            },
+            {
+              "group_name": "ФМТП 1-5мз",
+              "group_id": "4040"
+            },
+            {
+              "group_name": "ФМТП 1-6з",
+              "group_id": "3942"
+            },
+            {
+              "group_name": "ФМТП 1-6мз",
+              "group_id": "4041"
+            },
+            {
+              "group_name": "ФМТП 1-7з",
+              "group_id": "3936"
+            },
+            {
+              "group_name": "ФМТП 1-7мз",
+              "group_id": "4042"
+            },
+            {
+              "group_name": "ФМТП 1-8з",
+              "group_id": "3938"
+            },
+            {
+              "group_name": "ФМТП 1-8мз",
+              "group_id": "4046"
+            },
+            {
+              "group_name": "ФМТП 1-9з",
+              "group_id": "3937"
+            },
+            {
+              "group_name": "ФМТП 1-9мз",
+              "group_id": "4043"
+            },
+            {
+              "group_name": "ФМТП 1-10з",
+              "group_id": "3940"
+            },
+            {
+              "group_name": "ФМТП 1-10мз",
+              "group_id": "4044"
+            },
+            {
+              "group_name": "ФМТП 1-11з",
+              "group_id": "3939"
+            },
+            {
+              "group_name": "ФМТП 1-11мз",
+              "group_id": "4045"
+            },
+            {
+              "group_name": "ФМТП 1-12мз",
+              "group_id": "4036"
+            },
+            {
+              "group_name": "ФМТП 1-13мз",
+              "group_id": "4047"
+            }
+          ]
+        },
+        {
+          "course_number": "2",
+          "groups": [
+            {
+              "group_name": "ФМТП 2-1",
+              "group_id": "2410"
+            },
+            {
+              "group_name": "ФМТП 2-1м",
+              "group_id": "2438"
+            },
+            {
+              "group_name": "ФМТП 2-2а",
+              "group_id": "2437"
+            },
+            {
+              "group_name": "ФМТП 2-2ам",
+              "group_id": "2439"
+            },
+            {
+              "group_name": "ФМТП 2-3",
+              "group_id": "2411"
+            },
+            {
+              "group_name": "ФМТП 2-3м",
+              "group_id": "2440"
+            },
+            {
+              "group_name": "ФМТП 2-4",
+              "group_id": "2412"
+            },
+            {
+              "group_name": "ФМТП 2-4м",
+              "group_id": "2441"
+            },
+            {
+              "group_name": "ФМТП 2-5",
+              "group_id": "2413"
+            },
+            {
+              "group_name": "ФМТП 2-5м",
+              "group_id": "2442"
+            },
+            {
+              "group_name": "ФМТП 2-6ам",
+              "group_id": "2459"
+            },
+            {
+              "group_name": "ФМТП 2-6",
+              "group_id": "3912"
+            },
+            {
+              "group_name": "ФМТП 2-7",
+              "group_id": "2414"
+            },
+            {
+              "group_name": "ФМТП 2-7м",
+              "group_id": "2443"
+            },
+            {
+              "group_name": "ФМТП 2-8",
+              "group_id": "2415"
+            },
+            {
+              "group_name": "ФМТП 2-8м",
+              "group_id": "2444"
+            },
+            {
+              "group_name": "ФМТП 2-9",
+              "group_id": "2416"
+            },
+            {
+              "group_name": "ФМТП 2-9м",
+              "group_id": "2445"
+            },
+            {
+              "group_name": "ФМТП 2-10",
+              "group_id": "2417"
+            },
+            {
+              "group_name": "ФМТП 2-10м",
+              "group_id": "2446"
+            },
+            {
+              "group_name": "ФМТП 2-11",
+              "group_id": "2983"
+            },
+            {
+              "group_name": "ФМТП 2-11м",
+              "group_id": "2447"
+            },
+            {
+              "group_name": "ФМТП 2-12",
+              "group_id": "2984"
+            },
+            {
+              "group_name": "ФМТП 2-12м",
+              "group_id": "2448"
+            },
+            {
+              "group_name": "ФМТП 2-13",
+              "group_id": "2426"
+            },
+            {
+              "group_name": "ФМТП 2-13м",
+              "group_id": "2449"
+            },
+            {
+              "group_name": "ФМТП 2-14",
+              "group_id": "2418"
+            },
+            {
+              "group_name": "ФМТП 2-14м",
+              "group_id": "2450"
+            },
+            {
+              "group_name": "ФМТП 2-15",
+              "group_id": "2433"
+            },
+            {
+              "group_name": "ФМТП 2-15м",
+              "group_id": "2451"
+            },
+            {
+              "group_name": "ФМТП 2-16",
+              "group_id": "2428"
+            },
+            {
+              "group_name": "ФМТП 2-17",
+              "group_id": "2430"
+            },
+            {
+              "group_name": "ФМТП 2-18",
+              "group_id": "2434"
+            },
+            {
+              "group_name": "ФМТП 2-19",
+              "group_id": "2435"
+            },
+            {
+              "group_name": "ФМТП 2-20",
+              "group_id": "3237"
+            },
+            {
+              "group_name": "ФМТП 2-10мз",
+              "group_id": "2967"
+            },
+            {
+              "group_name": "ФМТП 2-6з",
+              "group_id": "3239"
+            },
+            {
+              "group_name": "ФМТП 2-9мз",
+              "group_id": "2966"
+            },
+            {
+              "group_name": "ФМТП 2-1з",
+              "group_id": "2936"
+            },
+            {
+              "group_name": "ФМТП 2-1мз",
+              "group_id": "2937"
+            },
+            {
+              "group_name": "ФМТП 2-2з",
+              "group_id": "2938"
+            },
+            {
+              "group_name": "ФМТП 2-2мз",
+              "group_id": "2940"
+            },
+            {
+              "group_name": "ФМТП 2-4з",
+              "group_id": "2939"
+            },
+            {
+              "group_name": "ФМТП 2-3мз",
+              "group_id": "2942"
+            },
+            {
+              "group_name": "ФМТП 2-5з",
+              "group_id": "2941"
+            },
+            {
+              "group_name": "ФМТП 2-4мз",
+              "group_id": "2962"
+            },
+            {
+              "group_name": "ФМТП 2-5мз",
+              "group_id": "2963"
+            },
+            {
+              "group_name": "ФМТП 2-6мз",
+              "group_id": "2943"
+            },
+            {
+              "group_name": "ФМТП 2-7мз",
+              "group_id": "2964"
+            },
+            {
+              "group_name": "ФМТП 2-8з",
+              "group_id": "2952"
+            },
+            {
+              "group_name": "ФМТП 2-8мз",
+              "group_id": "2965"
+            },
+            {
+              "group_name": "ФМТП 2-9з",
+              "group_id": "4090"
+            },
+            {
+              "group_name": "ФМТП 2-3з",
+              "group_id": "3238"
+            },
+            {
+              "group_name": "ФМТП 2-7з",
+              "group_id": "2944"
+            }
+          ]
+        },
+        {
+          "course_number": "3",
+          "groups": [
+            {
+              "group_name": "ФМТП 3-1",
+              "group_id": "1580"
+            },
+            {
+              "group_name": "ФМТП 3-2а",
+              "group_id": "2801"
+            },
+            {
+              "group_name": "ФМТП 3-3",
+              "group_id": "1581"
+            },
+            {
+              "group_name": "ФМТП 3-4",
+              "group_id": "1582"
+            },
+            {
+              "group_name": "ФМТП 3-5а",
+              "group_id": "1111"
+            },
+            {
+              "group_name": "ФМТП 3-6",
+              "group_id": "1583"
+            },
+            {
+              "group_name": "ФМТП 3-7",
+              "group_id": "2802"
+            },
+            {
+              "group_name": "ФМТП 3-8",
+              "group_id": "2804"
+            },
+            {
+              "group_name": "ФМТП 3-9",
+              "group_id": "1584"
+            },
+            {
+              "group_name": "ФМТП 3-10",
+              "group_id": "1585"
+            },
+            {
+              "group_name": "ФМТП 3-11",
+              "group_id": "1586"
+            },
+            {
+              "group_name": "ФМТП 3-12",
+              "group_id": "1587"
+            },
+            {
+              "group_name": "ФМТП 3-13",
+              "group_id": "1588"
+            },
+            {
+              "group_name": "ФМТП 3-14",
+              "group_id": "1589"
+            },
+            {
+              "group_name": "ФМТП 3-15",
+              "group_id": "2805"
+            },
+            {
+              "group_name": "ФМТП 3-16",
+              "group_id": "1590"
+            },
+            {
+              "group_name": "ФМТП 3-17",
+              "group_id": "1591"
+            },
+            {
+              "group_name": "ФМТП 3-18",
+              "group_id": "1592"
+            },
+            {
+              "group_name": "ФМТП 3-19",
+              "group_id": "2806"
+            },
+            {
+              "group_name": "ФМТП 3-20",
+              "group_id": "1593"
+            },
+            {
+              "group_name": "ФМТП 3-21",
+              "group_id": "1594"
+            },
+            {
+              "group_name": "ФМТП 3-1з",
+              "group_id": "1726"
+            },
+            {
+              "group_name": "ФМТП 3-2з",
+              "group_id": "2088"
+            },
+            {
+              "group_name": "ФМТП 3-3з",
+              "group_id": "1727"
+            },
+            {
+              "group_name": "ФМТП 3-4з",
+              "group_id": "1728"
+            },
+            {
+              "group_name": "ФМТП 3-5з",
+              "group_id": "1729"
+            },
+            {
+              "group_name": "ФМТП 3-6з",
+              "group_id": "2089"
+            },
+            {
+              "group_name": "ФМТП 3-8з",
+              "group_id": "1732"
+            },
+            {
+              "group_name": "ФМТП 3-9з",
+              "group_id": "1733"
+            }
+          ]
+        },
+        {
+          "course_number": "4",
+          "groups": [
+            {
+              "group_name": "ФМТП 4-1",
+              "group_id": "916"
+            },
+            {
+              "group_name": "ФМТП 4-2а",
+              "group_id": "1059"
+            },
+            {
+              "group_name": "ФМТП 4-3.1",
+              "group_id": "1060"
+            },
+            {
+              "group_name": "ФМТП 4-3.2",
+              "group_id": "1061"
+            },
+            {
+              "group_name": "ФМТП 4-4",
+              "group_id": "1062"
+            },
+            {
+              "group_name": "ФМТП 4-5а",
+              "group_id": "1063"
+            },
+            {
+              "group_name": "ФМТП 4-6",
+              "group_id": "1064"
+            },
+            {
+              "group_name": "ФМТП 4-7",
+              "group_id": "1065"
+            },
+            {
+              "group_name": "ФМТП 4-8",
+              "group_id": "1069"
+            },
+            {
+              "group_name": "ФМТП 4-9",
+              "group_id": "1070"
+            },
+            {
+              "group_name": "ФМТП 4-10.1",
+              "group_id": "1067"
+            },
+            {
+              "group_name": "ФМТП 4-10.2",
+              "group_id": "1068"
+            },
+            {
+              "group_name": "ФМТП 4-11",
+              "group_id": "1066"
+            },
+            {
+              "group_name": "ФМТП 4-12",
+              "group_id": "1304"
+            },
+            {
+              "group_name": "ФМТП 4-13",
+              "group_id": "1071"
+            },
+            {
+              "group_name": "ФМТП 4-14.1",
+              "group_id": "1074"
+            },
+            {
+              "group_name": "ФМТП 4-14.2",
+              "group_id": "1073"
+            },
+            {
+              "group_name": "ФМТП 4-15",
+              "group_id": "1305"
+            },
+            {
+              "group_name": "ФМТП 4-16",
+              "group_id": "1072"
+            },
+            {
+              "group_name": "ФМТП 4-17",
+              "group_id": "1075"
+            },
+            {
+              "group_name": "ФМТП 4-18",
+              "group_id": "1076"
+            },
+            {
+              "group_name": "ФМТП 4-1з",
+              "group_id": "1094"
+            },
+            {
+              "group_name": "ФМТП 4-2з",
+              "group_id": "1095"
+            },
+            {
+              "group_name": "ФМТП 4-3з",
+              "group_id": "1096"
+            },
+            {
+              "group_name": "ФМТП 4-4з",
+              "group_id": "1363"
+            },
+            {
+              "group_name": "ФМТП 4-5з",
+              "group_id": "1097"
+            },
+            {
+              "group_name": "ФМТП 4-6з",
+              "group_id": "1098"
+            },
+            {
+              "group_name": "ФМТП 4-8з",
+              "group_id": "1100"
+            },
+            {
+              "group_name": "ФМТП 4-9з",
+              "group_id": "1101"
+            }
+          ]
+        },
+        {
+          "course_number": "5",
+          "groups": [
+            {
+              "group_name": "ФМТП 5-1з",
+              "group_id": "827"
+            },
+            {
+              "group_name": "ФМТП 5-2з",
+              "group_id": "829"
+            },
+            {
+              "group_name": "ФМТП 5-3з",
+              "group_id": "830"
+            },
+            {
+              "group_name": "ФМТП 5-4з",
+              "group_id": "832"
+            },
+            {
+              "group_name": "ФМТП 5-5з",
+              "group_id": "835"
+            },
+            {
+              "group_name": "ФМТП 5-6з",
+              "group_id": "836"
+            },
+            {
+              "group_name": "ФМТП 5-7з",
+              "group_id": "142"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "faculty_name": "Факультет торгівлі та маркетингу",
+      "faculty_id": "6",
+      "courses": [
+        {
+          "course_number": "1",
+          "groups": [
+            {
+              "group_name": "ФТМ 1-1",
+              "group_id": "3373"
+            },
+            {
+              "group_name": "ФТМ 1-1м",
+              "group_id": "3376"
+            },
+            {
+              "group_name": "ФТМ 1-2",
+              "group_id": "3374"
+            },
+            {
+              "group_name": "ФТМ 1-2м",
+              "group_id": "3380"
+            },
+            {
+              "group_name": "ФТМ 1-3",
+              "group_id": "3375"
+            },
+            {
+              "group_name": "ФТМ 1-3м",
+              "group_id": "3393"
+            },
+            {
+              "group_name": "ФТМ 1-4",
+              "group_id": "3781"
+            },
+            {
+              "group_name": "ФТМ 1-4м",
+              "group_id": "3394"
+            },
+            {
+              "group_name": "ФТМ 1-5",
+              "group_id": "3378"
+            },
+            {
+              "group_name": "ФТМ 1-5ам",
+              "group_id": "3988"
+            },
+            {
+              "group_name": "ФТМ 1-6м",
+              "group_id": "3395"
+            },
+            {
+              "group_name": "ФТМ 1-6",
+              "group_id": "3379"
+            },
+            {
+              "group_name": "ФТМ 1-7",
+              "group_id": "3377"
+            },
+            {
+              "group_name": "ФТМ 1-7м",
+              "group_id": "3396"
+            },
+            {
+              "group_name": "ФТМ 1-8",
+              "group_id": "3782"
+            },
+            {
+              "group_name": "ФТМ 1-8м",
+              "group_id": "3398"
+            },
+            {
+              "group_name": "ФТМ 1-9",
+              "group_id": "3783"
+            },
+            {
+              "group_name": "ФТМ 1-9м",
+              "group_id": "3401"
+            },
+            {
+              "group_name": "ФТМ 1-10",
+              "group_id": "3384"
+            },
+            {
+              "group_name": "ФТМ 1-10ам",
+              "group_id": "3989"
+            },
+            {
+              "group_name": "ФТМ 1-11",
+              "group_id": "3385"
+            },
+            {
+              "group_name": "ФТМ 1-11м",
+              "group_id": "3402"
+            },
+            {
+              "group_name": "ФТМ 1-12",
+              "group_id": "3386"
+            },
+            {
+              "group_name": "ФТМ 1-12м",
+              "group_id": "3404"
+            },
+            {
+              "group_name": "ФТМ 1-13",
+              "group_id": "3387"
+            },
+            {
+              "group_name": "ФТМ 1-13м",
+              "group_id": "3406"
+            },
+            {
+              "group_name": "ФТМ 1-14",
+              "group_id": "3388"
+            },
+            {
+              "group_name": "ФТМ 1-15",
+              "group_id": "3389"
+            },
+            {
+              "group_name": "ФТМ 1-16",
+              "group_id": "3390"
+            },
+            {
+              "group_name": "ФТМ 1-17",
+              "group_id": "3381"
+            },
+            {
+              "group_name": "ФТМ 1-18",
+              "group_id": "3382"
+            },
+            {
+              "group_name": "ФТМ 1-19",
+              "group_id": "3383"
+            },
+            {
+              "group_name": "ФТМ 1-20",
+              "group_id": "3784"
+            },
+            {
+              "group_name": "ФТМ 1-21",
+              "group_id": "3762"
+            },
+            {
+              "group_name": "ФТМ 1-22",
+              "group_id": "3391"
+            },
+            {
+              "group_name": "ФТМ 1-23",
+              "group_id": "3392"
+            },
+            {
+              "group_name": "ФТМ 1-24",
+              "group_id": "3786"
+            },
+            {
+              "group_name": "ФТМ 1-25",
+              "group_id": "3397"
+            },
+            {
+              "group_name": "ФТМ 1-26",
+              "group_id": "3787"
+            },
+            {
+              "group_name": "ФТМ 1-27",
+              "group_id": "3788"
+            },
+            {
+              "group_name": "ФТМ 1-28",
+              "group_id": "3791"
+            },
+            {
+              "group_name": "ФТМ 1-29",
+              "group_id": "3792"
+            },
+            {
+              "group_name": "ФТМ 1-30",
+              "group_id": "3685"
+            },
+            {
+              "group_name": "ФТМ 1-31",
+              "group_id": "3399"
+            },
+            {
+              "group_name": "ФТМ 1-32",
+              "group_id": "3400"
+            },
+            {
+              "group_name": "ФТМ 1-33",
+              "group_id": "3794"
+            },
+            {
+              "group_name": "ФТМ 1-34",
+              "group_id": "3684"
+            },
+            {
+              "group_name": "ФТМ 1-35",
+              "group_id": "3403"
+            },
+            {
+              "group_name": "ФТМ 1-36",
+              "group_id": "3405"
+            },
+            {
+              "group_name": "ФТМ 1-37",
+              "group_id": "3797"
+            },
+            {
+              "group_name": "ФТМ 1-38",
+              "group_id": "3886"
+            },
+            {
+              "group_name": "ФТМ 1-1з",
+              "group_id": "3952"
+            },
+            {
+              "group_name": "ФТМ 1-1мз",
+              "group_id": "4048"
+            },
+            {
+              "group_name": "ФТМ 1-2з",
+              "group_id": "3953"
+            },
+            {
+              "group_name": "ФТМ 1-2мз",
+              "group_id": "4049"
+            },
+            {
+              "group_name": "ФТМ 1-3з",
+              "group_id": "3954"
+            },
+            {
+              "group_name": "ФТМ 1-3мз",
+              "group_id": "4051"
+            },
+            {
+              "group_name": "ФТМ 1-4мз",
+              "group_id": "4052"
+            },
+            {
+              "group_name": "ФТМ 1-4з",
+              "group_id": "3955"
+            },
+            {
+              "group_name": "ФТМ 1-5з",
+              "group_id": "3956"
+            },
+            {
+              "group_name": "ФТМ 1-5мз",
+              "group_id": "4050"
+            },
+            {
+              "group_name": "ФТМ 1-6з",
+              "group_id": "3957"
+            },
+            {
+              "group_name": "ФТМ 1-6мз",
+              "group_id": "4053"
+            },
+            {
+              "group_name": "ФТМ 1-7з",
+              "group_id": "3958"
+            },
+            {
+              "group_name": "ФТМ 1-7мз",
+              "group_id": "4055"
+            },
+            {
+              "group_name": "ФТМ 1-8з",
+              "group_id": "3959"
+            },
+            {
+              "group_name": "ФТМ 1-8мз",
+              "group_id": "4054"
+            },
+            {
+              "group_name": "ФТМ 1-9мз",
+              "group_id": "4056"
+            },
+            {
+              "group_name": "ФТМ 1-9з",
+              "group_id": "3960"
+            }
+          ]
+        },
+        {
+          "course_number": "2",
+          "groups": [
+            {
+              "group_name": "ФТМ 2-1",
+              "group_id": "2374"
+            },
+            {
+              "group_name": "ФТМ 2-1м",
+              "group_id": "2392"
+            },
+            {
+              "group_name": "ФТМ 2-2",
+              "group_id": "2375"
+            },
+            {
+              "group_name": "ФТМ 2-2м",
+              "group_id": "2393"
+            },
+            {
+              "group_name": "ФТМ 2-3",
+              "group_id": "3027"
+            },
+            {
+              "group_name": "ФТМ 2-3м",
+              "group_id": "2394"
+            },
+            {
+              "group_name": "ФТМ 2-4",
+              "group_id": "2377"
+            },
+            {
+              "group_name": "ФТМ 2-4м",
+              "group_id": "2395"
+            },
+            {
+              "group_name": "ФТМ 2-5",
+              "group_id": "2376"
+            },
+            {
+              "group_name": "ФТМ 2-5ам",
+              "group_id": "2408"
+            },
+            {
+              "group_name": "ФТМ 2-6",
+              "group_id": "3028"
+            },
+            {
+              "group_name": "ФТМ 2-6м",
+              "group_id": "2396"
+            },
+            {
+              "group_name": "ФТМ 2-7",
+              "group_id": "2378"
+            },
+            {
+              "group_name": "ФТМ 2-7м",
+              "group_id": "2397"
+            },
+            {
+              "group_name": "ФТМ 2-8",
+              "group_id": "2381"
+            },
+            {
+              "group_name": "ФТМ 2-8м",
+              "group_id": "2398"
+            },
+            {
+              "group_name": "ФТМ 2-9",
+              "group_id": "2382"
+            },
+            {
+              "group_name": "ФТМ 2-9м",
+              "group_id": "2399"
+            },
+            {
+              "group_name": "ФТМ 2-10",
+              "group_id": "2383"
+            },
+            {
+              "group_name": "ФТМ 2-10м",
+              "group_id": "2400"
+            },
+            {
+              "group_name": "ФТМ 2-11",
+              "group_id": "2384"
+            },
+            {
+              "group_name": "ФТМ 2-11м",
+              "group_id": "2401"
+            },
+            {
+              "group_name": "ФТМ 2-12",
+              "group_id": "2385"
+            },
+            {
+              "group_name": "ФТМ 2-12ам",
+              "group_id": "2409"
+            },
+            {
+              "group_name": "ФТМ 2-13",
+              "group_id": "2379"
+            },
+            {
+              "group_name": "ФТМ 2-13м",
+              "group_id": "2402"
+            },
+            {
+              "group_name": "ФТМ 2-14",
+              "group_id": "2380"
+            },
+            {
+              "group_name": "ФТМ 2-14м",
+              "group_id": "2403"
+            },
+            {
+              "group_name": "ФТМ 2-21",
+              "group_id": "2405"
+            },
+            {
+              "group_name": "ФТМ 2-15",
+              "group_id": "3038"
+            },
+            {
+              "group_name": "ФТМ 2-15м",
+              "group_id": "2404"
+            },
+            {
+              "group_name": "ФТМ 2-16",
+              "group_id": "3045"
+            },
+            {
+              "group_name": "ФТМ 2-17",
+              "group_id": "3046"
+            },
+            {
+              "group_name": "ФТМ 2-18",
+              "group_id": "2386"
+            },
+            {
+              "group_name": "ФТМ 2-19",
+              "group_id": "2387"
+            },
+            {
+              "group_name": "ФТМ 2-20",
+              "group_id": "3052"
+            },
+            {
+              "group_name": "ФТМ 2-22",
+              "group_id": "2388"
+            },
+            {
+              "group_name": "ФТМ 2-23",
+              "group_id": "3053"
+            },
+            {
+              "group_name": "ФТМ 2-24",
+              "group_id": "2389"
+            },
+            {
+              "group_name": "ФТМ 2-25",
+              "group_id": "2390"
+            },
+            {
+              "group_name": "ФТМ 2-26",
+              "group_id": "2406"
+            },
+            {
+              "group_name": "ФТМ 2-27",
+              "group_id": "3054"
+            },
+            {
+              "group_name": "ФТМ 2-28",
+              "group_id": "2407"
+            },
+            {
+              "group_name": "ФТМ 2-29",
+              "group_id": "2391"
+            },
+            {
+              "group_name": "ФТМ 2-30",
+              "group_id": "3055"
+            },
+            {
+              "group_name": "ФТМ 2-31",
+              "group_id": "3893"
+            },
+            {
+              "group_name": "ФТМ 2-10мз",
+              "group_id": "2886"
+            },
+            {
+              "group_name": "ФТМ 2-1мз",
+              "group_id": "2896"
+            },
+            {
+              "group_name": "ФТМ 2-2мз",
+              "group_id": "2898"
+            },
+            {
+              "group_name": "ФТМ 2-3мз",
+              "group_id": "2901"
+            },
+            {
+              "group_name": "ФТМ 2-4мз",
+              "group_id": "2902"
+            },
+            {
+              "group_name": "ФТМ 2-5мз",
+              "group_id": "2903"
+            },
+            {
+              "group_name": "ФТМ 2-6мз",
+              "group_id": "2904"
+            },
+            {
+              "group_name": "ФТМ 2-7мз",
+              "group_id": "2905"
+            },
+            {
+              "group_name": "ФТМ 2-8мз",
+              "group_id": "2907"
+            },
+            {
+              "group_name": "ФТМ 2-9мз",
+              "group_id": "2908"
+            },
+            {
+              "group_name": "ФТМ 2-1з",
+              "group_id": "2895"
+            },
+            {
+              "group_name": "ФТМ 2-2з",
+              "group_id": "2897"
+            },
+            {
+              "group_name": "ФТМ 2-3з",
+              "group_id": "2899"
+            },
+            {
+              "group_name": "ФТМ 2-4з",
+              "group_id": "2923"
+            },
+            {
+              "group_name": "ФТМ 2-5з",
+              "group_id": "2900"
+            },
+            {
+              "group_name": "ФТМ 2-6з",
+              "group_id": "2906"
+            },
+            {
+              "group_name": "ФТМ 2-7з",
+              "group_id": "2951"
+            },
+            {
+              "group_name": "ФТМ 2-8з",
+              "group_id": "2909"
+            },
+            {
+              "group_name": "ФТМ 2-9з",
+              "group_id": "3967"
+            },
+            {
+              "group_name": "ФТМ 2-10з",
+              "group_id": "3968"
+            },
+            {
+              "group_name": "ФТМ 2-11мз",
+              "group_id": "2910"
+            }
+          ]
+        },
+        {
+          "course_number": "3",
+          "groups": [
+            {
+              "group_name": "ФТМ 3-1",
+              "group_id": "1547"
+            },
+            {
+              "group_name": "ФТМ 3-2",
+              "group_id": "1548"
+            },
+            {
+              "group_name": "ФТМ 3-3",
+              "group_id": "1549"
+            },
+            {
+              "group_name": "ФТМ 3-4",
+              "group_id": "1550"
+            },
+            {
+              "group_name": "ФТМ 3-5",
+              "group_id": "1551"
+            },
+            {
+              "group_name": "ФТМ 3-6",
+              "group_id": "1556"
+            },
+            {
+              "group_name": "ФТМ 3-7",
+              "group_id": "1555"
+            },
+            {
+              "group_name": "ФТМ 3-8",
+              "group_id": "1554"
+            },
+            {
+              "group_name": "ФТМ 3-9",
+              "group_id": "1553"
+            },
+            {
+              "group_name": "ФТМ 3-10",
+              "group_id": "1552"
+            },
+            {
+              "group_name": "ФТМ 3-11",
+              "group_id": "2815"
+            },
+            {
+              "group_name": "ФТМ 3-12",
+              "group_id": "2816"
+            },
+            {
+              "group_name": "ФТМ 3-13",
+              "group_id": "2817"
+            },
+            {
+              "group_name": "ФТМ 3-14",
+              "group_id": "2818"
+            },
+            {
+              "group_name": "ФТМ 3-15",
+              "group_id": "1557"
+            },
+            {
+              "group_name": "ФТМ 3-16",
+              "group_id": "1558"
+            },
+            {
+              "group_name": "ФТМ 3-17",
+              "group_id": "1559"
+            },
+            {
+              "group_name": "ФТМ 3-18",
+              "group_id": "1560"
+            },
+            {
+              "group_name": "ФТМ 3-19",
+              "group_id": "1058"
+            },
+            {
+              "group_name": "ФТМ 3-20",
+              "group_id": "1561"
+            },
+            {
+              "group_name": "ФТМ 3-21",
+              "group_id": "2819"
+            },
+            {
+              "group_name": "ФТМ 3-22",
+              "group_id": "1562"
+            },
+            {
+              "group_name": "ФТМ 3-23",
+              "group_id": "2820"
+            },
+            {
+              "group_name": "ФТМ 3-24",
+              "group_id": "1563"
+            },
+            {
+              "group_name": "ФТМ 3-25",
+              "group_id": "1564"
+            },
+            {
+              "group_name": "ФТМ 3-26",
+              "group_id": "3220"
+            },
+            {
+              "group_name": "ФТМ 3-8з",
+              "group_id": "3241"
+            },
+            {
+              "group_name": "ФТМ 3-1з",
+              "group_id": "2040"
+            },
+            {
+              "group_name": "ФТМ 3-2з",
+              "group_id": "1710"
+            },
+            {
+              "group_name": "ФТМ 3-3з",
+              "group_id": "1711"
+            },
+            {
+              "group_name": "ФТМ 3-4з",
+              "group_id": "1712"
+            },
+            {
+              "group_name": "ФТМ 3-5з",
+              "group_id": "1713"
+            },
+            {
+              "group_name": "ФТМ 3-6з",
+              "group_id": "1714"
+            },
+            {
+              "group_name": "ФТМ 3-7з",
+              "group_id": "2055"
+            },
+            {
+              "group_name": "ФТМ 3-9з",
+              "group_id": "3242"
+            }
+          ]
+        },
+        {
+          "course_number": "4",
+          "groups": [
+            {
+              "group_name": "ФТМ 4-1",
+              "group_id": "1038"
+            },
+            {
+              "group_name": "ФТМ 4-2",
+              "group_id": "1037"
+            },
+            {
+              "group_name": "ФТМ 4-3",
+              "group_id": "1039"
+            },
+            {
+              "group_name": "ФТМ 4-4",
+              "group_id": "1040"
+            },
+            {
+              "group_name": "ФТМ 4-5",
+              "group_id": "1041"
+            },
+            {
+              "group_name": "ФТМ 4-6",
+              "group_id": "1086"
+            },
+            {
+              "group_name": "ФТМ 4-7",
+              "group_id": "1047"
+            },
+            {
+              "group_name": "ФТМ 4-8",
+              "group_id": "1046"
+            },
+            {
+              "group_name": "ФТМ 4-9",
+              "group_id": "1045"
+            },
+            {
+              "group_name": "ФТМ 4-10",
+              "group_id": "1044"
+            },
+            {
+              "group_name": "ФТМ 4-11",
+              "group_id": "1043"
+            },
+            {
+              "group_name": "ФТМ 4-12",
+              "group_id": "1042"
+            },
+            {
+              "group_name": "ФТМ 4-13",
+              "group_id": "1048"
+            },
+            {
+              "group_name": "ФТМ 4-14",
+              "group_id": "1260"
+            },
+            {
+              "group_name": "ФТМ 4-15",
+              "group_id": "1057"
+            },
+            {
+              "group_name": "ФТМ 4-16",
+              "group_id": "1052"
+            },
+            {
+              "group_name": "ФТМ 4-17",
+              "group_id": "1056"
+            },
+            {
+              "group_name": "ФТМ 4-18",
+              "group_id": "1055"
+            },
+            {
+              "group_name": "ФТМ 4-19",
+              "group_id": "1051"
+            },
+            {
+              "group_name": "ФТМ 4-20",
+              "group_id": "1050"
+            },
+            {
+              "group_name": "ФТМ 4-21",
+              "group_id": "1054"
+            },
+            {
+              "group_name": "ФТМ 4-22",
+              "group_id": "1049"
+            },
+            {
+              "group_name": "ФТМ 4-1з",
+              "group_id": "1108"
+            },
+            {
+              "group_name": "ФТМ 4-2з",
+              "group_id": "1109"
+            },
+            {
+              "group_name": "ФТМ 4-3з",
+              "group_id": "1110"
+            },
+            {
+              "group_name": "ФТМ 4-4з",
+              "group_id": "1115"
+            },
+            {
+              "group_name": "ФТМ 4-5з",
+              "group_id": "1112"
+            },
+            {
+              "group_name": "ФТМ 4-6з",
+              "group_id": "2034"
+            }
+          ]
+        },
+        {
+          "course_number": "5",
+          "groups": [
+            {
+              "group_name": "ФТМ 5-1з",
+              "group_id": "446"
+            },
+            {
+              "group_name": "ФТМ 5-2з",
+              "group_id": "447"
+            },
+            {
+              "group_name": "ФТМ 5-3з",
+              "group_id": "449"
+            },
+            {
+              "group_name": "ФТМ 5-4з",
+              "group_id": "461"
+            },
+            {
+              "group_name": "ФТМ 5-5з",
+              "group_id": "463"
+            },
+            {
+              "group_name": "ФТМ 5-11з",
+              "group_id": "2129"
+            },
+            {
+              "group_name": "ФТМ 5-12з",
+              "group_id": "2132"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "faculty_name": "Факультет фінансів та обліку",
+      "faculty_id": "5",
+      "courses": [
+        {
+          "course_number": "1",
+          "groups": [
+            {
+              "group_name": "ФФО 1-7а",
+              "group_id": "3832"
+            },
+            {
+              "group_name": "ФФО 1-1",
+              "group_id": "3359"
+            },
+            {
+              "group_name": "ФФО 1-1м",
+              "group_id": "3360"
+            },
+            {
+              "group_name": "ФФО 1-2",
+              "group_id": "3745"
+            },
+            {
+              "group_name": "ФФО 1-2м",
+              "group_id": "3361"
+            },
+            {
+              "group_name": "ФФО 1-3",
+              "group_id": "3365"
+            },
+            {
+              "group_name": "ФФО 1-3м",
+              "group_id": "3362"
+            },
+            {
+              "group_name": "ФФО 1-4",
+              "group_id": "3746"
+            },
+            {
+              "group_name": "ФФО 1-4м",
+              "group_id": "3363"
+            },
+            {
+              "group_name": "ФФО 1-5",
+              "group_id": "3367"
+            },
+            {
+              "group_name": "ФФО 1-5м",
+              "group_id": "3364"
+            },
+            {
+              "group_name": "ФФО 1-7м",
+              "group_id": "3366"
+            },
+            {
+              "group_name": "ФФО 1-6",
+              "group_id": "3748"
+            },
+            {
+              "group_name": "ФФО 1-6м",
+              "group_id": "3372"
+            },
+            {
+              "group_name": "ФФО 1-8",
+              "group_id": "3368"
+            },
+            {
+              "group_name": "ФФО 1-8м",
+              "group_id": "3371"
+            },
+            {
+              "group_name": "ФФО 1-9",
+              "group_id": "3370"
+            },
+            {
+              "group_name": "ФФО 1-10",
+              "group_id": "3750"
+            },
+            {
+              "group_name": "ФФО 1-1з",
+              "group_id": "3915"
+            },
+            {
+              "group_name": "ФФО 1-1мз",
+              "group_id": "4019"
+            },
+            {
+              "group_name": "ФФО 1-2з",
+              "group_id": "3917"
+            },
+            {
+              "group_name": "ФФО 1-2мз",
+              "group_id": "4020"
+            },
+            {
+              "group_name": "ФФО 1-3з",
+              "group_id": "3916"
+            },
+            {
+              "group_name": "ФФО 1-3мз",
+              "group_id": "4021"
+            },
+            {
+              "group_name": "ФФО 1-4мз",
+              "group_id": "4022"
+            },
+            {
+              "group_name": "ФФО 1-5мз",
+              "group_id": "4023"
+            },
+            {
+              "group_name": "ФФО 1-6мз",
+              "group_id": "4024"
+            },
+            {
+              "group_name": "ФФО 1-7мз",
+              "group_id": "4025"
+            }
+          ]
+        },
+        {
+          "course_number": "2",
+          "groups": [
+            {
+              "group_name": "ФФО 2-1",
+              "group_id": "2419"
+            },
+            {
+              "group_name": "ФФО 2-1м",
+              "group_id": "2422"
+            },
+            {
+              "group_name": "ФФО 2-2",
+              "group_id": "2420"
+            },
+            {
+              "group_name": "ФФО 2-2м",
+              "group_id": "2424"
+            },
+            {
+              "group_name": "ФФО 2-3",
+              "group_id": "2436"
+            },
+            {
+              "group_name": "ФФО 2-3м",
+              "group_id": "2427"
+            },
+            {
+              "group_name": "ФФО 2-4",
+              "group_id": "2452"
+            },
+            {
+              "group_name": "ФФО 2-4м",
+              "group_id": "2429"
+            },
+            {
+              "group_name": "ФФО 2-5а",
+              "group_id": "2461"
+            },
+            {
+              "group_name": "ФФО 2-5м",
+              "group_id": "2431"
+            },
+            {
+              "group_name": "ФФО 2-6",
+              "group_id": "2454"
+            },
+            {
+              "group_name": "ФФО 2-6м",
+              "group_id": "2432"
+            },
+            {
+              "group_name": "ФФО 2-7",
+              "group_id": "2455"
+            },
+            {
+              "group_name": "ФФО 2-7м",
+              "group_id": "2462"
+            },
+            {
+              "group_name": "ФФО 2-8",
+              "group_id": "2456"
+            },
+            {
+              "group_name": "ФФО 2-8ам",
+              "group_id": "2463"
+            },
+            {
+              "group_name": "ФФО 2-9",
+              "group_id": "2464"
+            },
+            {
+              "group_name": "ФФО 2-9м",
+              "group_id": "2453"
+            },
+            {
+              "group_name": "ФФО 2-10м",
+              "group_id": "2460"
+            },
+            {
+              "group_name": "ФФО 2-11м",
+              "group_id": "2457"
+            },
+            {
+              "group_name": "ФФО 2-1мз",
+              "group_id": "2969"
+            },
+            {
+              "group_name": "ФФО 2-2з",
+              "group_id": "2959"
+            },
+            {
+              "group_name": "ФФО 2-2мз",
+              "group_id": "2970"
+            },
+            {
+              "group_name": "ФФО 2-3з",
+              "group_id": "2958"
+            },
+            {
+              "group_name": "ФФО 2-3мз",
+              "group_id": "2955"
+            },
+            {
+              "group_name": "ФФО 2-4мз",
+              "group_id": "2956"
+            },
+            {
+              "group_name": "ФФО 2-5мз",
+              "group_id": "2957"
+            },
+            {
+              "group_name": "ФФО 2-6мз",
+              "group_id": "2960"
+            },
+            {
+              "group_name": "ФФО 2-7мз",
+              "group_id": "2971"
+            },
+            {
+              "group_name": "ФФО 2-1з",
+              "group_id": "2954"
+            }
+          ]
+        },
+        {
+          "course_number": "3",
+          "groups": [
+            {
+              "group_name": "ФФО 3-1",
+              "group_id": "1532"
+            },
+            {
+              "group_name": "ФФО 3-2",
+              "group_id": "2807"
+            },
+            {
+              "group_name": "ФФО 3-3",
+              "group_id": "1533"
+            },
+            {
+              "group_name": "ФФО 3-4",
+              "group_id": "2809"
+            },
+            {
+              "group_name": "ФФО 3-5а",
+              "group_id": "2812"
+            },
+            {
+              "group_name": "ФФО 3-6",
+              "group_id": "2810"
+            },
+            {
+              "group_name": "ФФО 3-7.2",
+              "group_id": "2811"
+            },
+            {
+              "group_name": "ФФО 3-7.1",
+              "group_id": "1534"
+            },
+            {
+              "group_name": "ФФО 3-8",
+              "group_id": "1535"
+            },
+            {
+              "group_name": "ФФО 3-1з",
+              "group_id": "1692"
+            },
+            {
+              "group_name": "ФФО 3-2з",
+              "group_id": "1694"
+            },
+            {
+              "group_name": "ФФО 3-3з",
+              "group_id": "1693"
+            }
+          ]
+        },
+        {
+          "course_number": "4",
+          "groups": [
+            {
+              "group_name": "ФФО 4-1",
+              "group_id": "1078"
+            },
+            {
+              "group_name": "ФФО 4-2.1",
+              "group_id": "1077"
+            },
+            {
+              "group_name": "ФФО 4-2.2",
+              "group_id": "1079"
+            },
+            {
+              "group_name": "ФФО 4-3.1",
+              "group_id": "1082"
+            },
+            {
+              "group_name": "ФФО 4-3.2",
+              "group_id": "1083"
+            },
+            {
+              "group_name": "ФФО 4-4.3",
+              "group_id": "1080"
+            },
+            {
+              "group_name": "ФФО 4-4.2",
+              "group_id": "1081"
+            },
+            {
+              "group_name": "ФФО 4-4.1",
+              "group_id": "1084"
+            },
+            {
+              "group_name": "ФФО 4-5",
+              "group_id": "1085"
+            },
+            {
+              "group_name": "ФФО 4-1з",
+              "group_id": "1116"
+            },
+            {
+              "group_name": "ФФО 4-3з",
+              "group_id": "1119"
+            },
+            {
+              "group_name": "ФФО 4-4з",
+              "group_id": "1120"
+            },
+            {
+              "group_name": "ФФО 4-5з",
+              "group_id": "1370"
+            },
+            {
+              "group_name": "ФФО 4-6з",
+              "group_id": "4123"
+            }
+          ]
+        },
+        {
+          "course_number": "5",
+          "groups": [
+            {
+              "group_name": "ФФО 5-2з",
+              "group_id": "491"
+            },
+            {
+              "group_name": "ФФО 5-3з",
+              "group_id": "862"
+            },
+            {
+              "group_name": "ФФО 5-4з",
+              "group_id": "493"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "faculty_name": "Аспірантура і докторантура",
+      "faculty_id": "9",
+      "courses": [
+        {
+          "course_number": "1",
+          "groups": [
+            {
+              "group_name": "АСП С1 1-З",
+              "group_id": "4085"
+            },
+            {
+              "group_name": "АСП D3 1-З",
+              "group_id": "4088"
+            },
+            {
+              "group_name": "АСП D8 1-З",
+              "group_id": "4087"
+            },
+            {
+              "group_name": "АСП С1 1-О",
+              "group_id": "4086"
+            },
+            {
+              "group_name": "АСП С1 1-ОАнг.",
+              "group_id": "4122"
+            },
+            {
+              "group_name": "АСП C2 1-О",
+              "group_id": "3905"
+            },
+            {
+              "group_name": "АСП C4 1-О",
+              "group_id": "3906"
+            },
+            {
+              "group_name": "АСП D1 1-О",
+              "group_id": "3907"
+            },
+            {
+              "group_name": "АСП D2 1-О",
+              "group_id": "3908"
+            },
+            {
+              "group_name": "АСП D3 1-О",
+              "group_id": "3909"
+            },
+            {
+              "group_name": "АСП D4 1-О",
+              "group_id": "3910"
+            },
+            {
+              "group_name": "АСП D5 1-О",
+              "group_id": "3911"
+            },
+            {
+              "group_name": "АСП D7 1-О",
+              "group_id": "3913"
+            },
+            {
+              "group_name": "АСП D8 1-О",
+              "group_id": "3963"
+            },
+            {
+              "group_name": "АСП F3 1-О",
+              "group_id": "3965"
+            },
+            {
+              "group_name": "АСП F4 1-О",
+              "group_id": "3966"
+            },
+            {
+              "group_name": "АСП G13 1-О",
+              "group_id": "3980"
+            },
+            {
+              "group_name": "АСП В10 1-О",
+              "group_id": "3900"
+            }
+          ]
+        },
+        {
+          "course_number": "2",
+          "groups": [
+            {
+              "group_name": "АСП 053 2-З",
+              "group_id": "3254"
+            },
+            {
+              "group_name": "АСП 081 2-З",
+              "group_id": "3257"
+            },
+            {
+              "group_name": "АСП 033 2",
+              "group_id": "2423"
+            },
+            {
+              "group_name": "АСП 051 2",
+              "group_id": "2421"
+            },
+            {
+              "group_name": "АСП 052 2",
+              "group_id": "2425"
+            },
+            {
+              "group_name": "АСП 053 2",
+              "group_id": "2986"
+            },
+            {
+              "group_name": "АСП 071 2",
+              "group_id": "2987"
+            },
+            {
+              "group_name": "АСП 072 2",
+              "group_id": "2988"
+            },
+            {
+              "group_name": "АСП 073 2",
+              "group_id": "2989"
+            },
+            {
+              "group_name": "АСП 075 2-О",
+              "group_id": "2990"
+            },
+            {
+              "group_name": "АСП 076 2",
+              "group_id": "2991"
+            },
+            {
+              "group_name": "АСП 081 2",
+              "group_id": "2992"
+            },
+            {
+              "group_name": "АСП 122 2-О",
+              "group_id": "2993"
+            },
+            {
+              "group_name": "АСП 124 2",
+              "group_id": "3000"
+            },
+            {
+              "group_name": "АСП 181 2",
+              "group_id": "3001"
+            },
+            {
+              "group_name": "АСП 281 2",
+              "group_id": "3002"
+            },
+            {
+              "group_name": "АСП 292 2",
+              "group_id": "3003"
+            },
+            {
+              "group_name": "АСП 293 2",
+              "group_id": "3004"
+            }
+          ]
+        },
+        {
+          "course_number": "3",
+          "groups": [
+            {
+              "group_name": "АСП 071 3-З",
+              "group_id": "2236"
+            },
+            {
+              "group_name": "072 2023-З",
+              "group_id": "1530"
+            },
+            {
+              "group_name": "АСП 076 3-З",
+              "group_id": "2227"
+            },
+            {
+              "group_name": "081 2023-З",
+              "group_id": "1531"
+            },
+            {
+              "group_name": "АСП 122 3-З",
+              "group_id": "2230"
+            },
+            {
+              "group_name": "281 2023-З",
+              "group_id": "2225"
+            },
+            {
+              "group_name": "АСП 292 3-З",
+              "group_id": "2233"
+            },
+            {
+              "group_name": "АСП 293 3-З",
+              "group_id": "2258"
+            },
+            {
+              "group_name": "АСП 033 3-О",
+              "group_id": "1392"
+            },
+            {
+              "group_name": "АСП 051 3-O",
+              "group_id": "1394"
+            },
+            {
+              "group_name": "АСП 052 3-О",
+              "group_id": "1393"
+            },
+            {
+              "group_name": "053 2023-О",
+              "group_id": "1519"
+            },
+            {
+              "group_name": "071 2023-О",
+              "group_id": "1520"
+            },
+            {
+              "group_name": "072 2023-О",
+              "group_id": "1521"
+            },
+            {
+              "group_name": "073 2023-О",
+              "group_id": "1522"
+            },
+            {
+              "group_name": "075 2023-О",
+              "group_id": "1523"
+            },
+            {
+              "group_name": "076 2023-О",
+              "group_id": "1524"
+            },
+            {
+              "group_name": "081 2023-О",
+              "group_id": "1525"
+            },
+            {
+              "group_name": "122- Здобувачі",
+              "group_id": "2266"
+            },
+            {
+              "group_name": "122 2023-О",
+              "group_id": "1526"
+            },
+            {
+              "group_name": "181 2023-О",
+              "group_id": "1743"
+            },
+            {
+              "group_name": "281 2023-О",
+              "group_id": "1527"
+            },
+            {
+              "group_name": "292 2023-О",
+              "group_id": "1528"
+            },
+            {
+              "group_name": "293 2023-О",
+              "group_id": "1529"
+            }
+          ]
+        },
+        {
+          "course_number": "4",
+          "groups": [
+            {
+              "group_name": "051 2022-З",
+              "group_id": "1249"
+            },
+            {
+              "group_name": "071 2022-З",
+              "group_id": "1279"
+            },
+            {
+              "group_name": "281 2022-З",
+              "group_id": "1254"
+            },
+            {
+              "group_name": "АСП 033 4-О",
+              "group_id": "1247"
+            },
+            {
+              "group_name": "АСП 051 4-О",
+              "group_id": "1248"
+            },
+            {
+              "group_name": "052 2022-О",
+              "group_id": "1251"
+            },
+            {
+              "group_name": "071 2022-О",
+              "group_id": "1255"
+            },
+            {
+              "group_name": "072 2022-О",
+              "group_id": "1257"
+            },
+            {
+              "group_name": "073 2022-О",
+              "group_id": "1261"
+            },
+            {
+              "group_name": "075 2022-О",
+              "group_id": "1269"
+            },
+            {
+              "group_name": "АСП 076 4-О",
+              "group_id": "1284"
+            },
+            {
+              "group_name": "081 2022-О",
+              "group_id": "1266"
+            },
+            {
+              "group_name": "122 2022-О",
+              "group_id": "1270"
+            },
+            {
+              "group_name": "181 2022-Здобувач О",
+              "group_id": "1283"
+            },
+            {
+              "group_name": "281 2022-О",
+              "group_id": "1273"
+            },
+            {
+              "group_name": "292 2022-О",
+              "group_id": "1274"
+            },
+            {
+              "group_name": "293 2022-О",
+              "group_id": "1277"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

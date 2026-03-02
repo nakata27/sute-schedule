@@ -97,7 +97,7 @@ class MIAScheduleApp {
 
     async loadTranslations() {
         try {
-            const response = await fetch(`/api/translations/${this.currentLang}`);
+            const response = await fetch(`/data/translations/${this.currentLang}.json`);
             const data = await response.json();
             if (data.success) {
                 this.translations = data.data;
@@ -109,7 +109,7 @@ class MIAScheduleApp {
 
     async loadGroupsStructure() {
         try {
-            const response = await fetch('/api/groups');
+            const response = await fetch('/data/groups.json');
             const data = await response.json();
             if (data.success) {
                 this.groupsStructure = data.data;
@@ -220,15 +220,13 @@ class MIAScheduleApp {
 
     async loadSchedule(forceRefresh = false) {
         try {
-            const params = new URLSearchParams({
-                faculty_id: this.selectedGroup.faculty_id,
-                faculty_name: this.selectedGroup.faculty_name,
-                course: this.selectedGroup.course,
-                group_name: this.selectedGroup.group_name,
-                force_refresh: forceRefresh
-            });
-
-            const response = await fetch(`/api/schedule/${this.selectedGroup.group_id}?${params}`);
+            const response = await fetch(`/data/schedules/${this.selectedGroup.group_id}.json`);
+            if (!response.ok) {
+                const msg = this.translations.no_schedule_available || 'Розклад для цієї групи не доступний';
+                document.getElementById('schedule-content').innerHTML = `<div class="empty-state"><div class="empty-icon">📅</div><p>${msg}</p></div>`;
+                document.getElementById('empty-state').style.display = 'none';
+                return;
+            }
             const data = await response.json();
 
             if (data.success) {
@@ -236,11 +234,11 @@ class MIAScheduleApp {
                 this.currentWeekIndex = this.findCurrentWeek();
                 this.renderSchedule();
             } else {
-                alert('Помилка завантаження розкладу');
+                alert(this.translations.error_loading || 'Помилка завантаження розкладу');
             }
         } catch (error) {
             console.error('Error loading schedule:', error);
-            alert('Помилка мережі');
+            alert(this.translations.error_network || 'Помилка мережі');
         }
     }
 
@@ -464,7 +462,7 @@ class MIAScheduleApp {
     }
 
     async showContactsModal() {
-        const response = await fetch('/api/contacts');
+        const response = await fetch('/data/contacts.json');
         const data = await response.json();
 
         if (data.success) {
