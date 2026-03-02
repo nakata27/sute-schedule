@@ -66,6 +66,9 @@ TRANSLATIONS = {
         "announcement": "Оголошення",
         "offline_title": "Немає з'єднання",
         "offline_message": "Ви можете переглядати раніше завантажені розклади",
+        "ios_step_1": "Натисніть кнопку «Поділитися» (кнопка Share) внизу браузера",
+        "ios_step_2": "Оберіть «Додати на домашній екран»",
+        "ios_step_3": "Натисніть «Встановити як веб-додаток» та підтвердіть встановлення",
     },
     "en": {
         "app_name": "SUTE Schedule",
@@ -132,6 +135,9 @@ TRANSLATIONS = {
         "add_to_homescreen": "Add to Home Screen",
         "offline_title": "No Connection",
         "offline_message": "You can view previously downloaded schedules",
+        "ios_step_1": "Press the \u00abShare\u00bb button at the bottom of the browser",
+        "ios_step_2": "Select \u00abAdd to Home Screen\u00bb",
+        "ios_step_3": "Press \u00abInstall as Web App\u00bb and confirm the installation",
     }
 }
 

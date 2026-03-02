@@ -695,6 +695,20 @@ class MIAScheduleApp {
         // Обновляем empty state
         const emptyStateTitle = document.querySelector('.empty-state h3');
         if (emptyStateTitle) emptyStateTitle.textContent = t.no_lessons || 'Немає занять';
+
+        // Обновляем шаги инструкции установки
+        const iosStep1 = document.getElementById('ios-step-1');
+        if (iosStep1) iosStep1.textContent = t.ios_step_1 || 'Натисніть кнопку «Поділитися» (кнопка Share) внизу браузера';
+        const iosStep2 = document.getElementById('ios-step-2');
+        if (iosStep2) iosStep2.textContent = t.ios_step_2 || 'Оберіть «Додати на домашній екран»';
+        const iosStep3 = document.getElementById('ios-step-3');
+        if (iosStep3) iosStep3.textContent = t.ios_step_3 || 'Натисніть «Встановити як веб-додаток» та підтвердіть встановлення';
+        const genericStep1 = document.getElementById('generic-step-1');
+        if (genericStep1) genericStep1.textContent = t.ios_step_1 || 'Натисніть кнопку «Поділитися» (кнопка Share) внизу браузера';
+        const genericStep2 = document.getElementById('generic-step-2');
+        if (genericStep2) genericStep2.textContent = t.ios_step_2 || 'Оберіть «Додати на домашній екран»';
+        const genericStep3 = document.getElementById('generic-step-3');
+        if (genericStep3) genericStep3.textContent = t.ios_step_3 || 'Натисніть «Встановити як веб-додаток» та підтвердіть встановлення';
     }
 
     updateHeaderDate() {
