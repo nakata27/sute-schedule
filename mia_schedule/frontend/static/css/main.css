@@ -329,6 +329,7 @@ body {
 
 .install-guide-body {
     padding: 8px 0;
+    overflow: hidden;
 }
 
 .install-guide-intro {
