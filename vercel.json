@@ -1,5 +1,6 @@
 {
   "buildCommand": "pip install --break-system-packages -r mia_schedule/requirements.txt",
+  "outputDirectory": ".",
   "functions": {
     "api/index.py": {
       "memory": 512,
