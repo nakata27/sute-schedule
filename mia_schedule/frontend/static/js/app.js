@@ -524,7 +524,7 @@ class MIAScheduleApp {
         document.querySelector('#btn-bell-schedule .sidebar-btn-text').textContent = t.bell_schedule || 'Розклад дзвінків';
 
         // Обновляем дату в сайдбаре
-        this.updateSidebarDate();
+        this.updateHeaderDate();
 
         // Обновляем название языка
         const langNames = {
@@ -592,8 +592,8 @@ class MIAScheduleApp {
         if (emptyStateTitle) emptyStateTitle.textContent = t.no_lessons || 'Немає занять';
     }
 
-    updateSidebarDate() {
-        const el = document.getElementById('sidebar-date');
+    updateHeaderDate() {
+        const el = document.getElementById('header-date');
         if (!el) return;
         const now = new Date();
         const locale = this.currentLang === 'uk' ? 'uk-UA' : 'en-GB';

@@ -35,7 +35,6 @@
         <div class="sidebar-header">
             <div class="sidebar-header-info">
                 <h2 id="sidebar-title">SUTE Розклад</h2>
-                <div id="sidebar-date" class="sidebar-date"></div>
             </div>
             <button id="sidebar-close" class="sidebar-close-btn" aria-label="Close menu">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -118,7 +117,10 @@
                 </svg>
             </button>
 
-            <h1 class="app-title">{% block header_title %}Розклад{% endblock %}</h1>
+            <div class="app-title-block">
+                <h1 class="app-title">{% block header_title %}Розклад{% endblock %}</h1>
+                <div id="header-date" class="header-date"></div>
+            </div>
 
             <button id="refresh-btn" class="refresh-btn" aria-label="Refresh">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
