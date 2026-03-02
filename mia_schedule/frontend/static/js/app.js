@@ -421,6 +421,11 @@ class MIAScheduleApp {
             const data = await response.json();
             if (data.html) {
                 contentEl.innerHTML = data.html;
+                // Ensure all links open in a new tab (e.g. Teams links)
+                contentEl.querySelectorAll('a').forEach(a => {
+                    a.target = '_blank';
+                    a.rel = 'noopener noreferrer';
+                });
             } else {
                 contentEl.textContent = data.error || (this.translations.error || 'Помилка завантаження');
             }

@@ -796,10 +796,14 @@ body {
     margin-top: 8px;
     font-size: 14px;
     line-height: 1.5;
-    white-space: pre-wrap;
     word-break: break-word;
-    max-height: 300px;
     overflow-y: auto;
+}
+
+#announcement-content a {
+    color: var(--accent-primary);
+    text-decoration: underline;
+    word-break: break-all;
 }
 
 .contact-link {
@@ -926,9 +930,14 @@ body.modal-open {
 /* Bell indicator on lesson cards */
 .lesson-announcement-indicator {
     position: absolute;
-    bottom: 8px;
-    right: 8px;
-    font-size: 16px;
+    bottom: 12px;
+    right: 12px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
     line-height: 1;
     opacity: 0.8;
 }

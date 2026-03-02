@@ -141,10 +141,7 @@ def get_announcement():
             timeout=10
         )
         resp.raise_for_status()
-        return jsonify({
-            'success': True,
-            'html': resp.text
-        })
+        return jsonify(resp.json())
     except Exception as e:
         logger.error(f"Error in /api/announcement: {e}")
         return jsonify({'error': 'Failed to load announcement'}), 500
