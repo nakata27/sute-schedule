@@ -1,7 +1,7 @@
 {
   "buildCommand": "pip install -r mia_schedule/requirements.txt",
   "functions": {
-    "mia_schedule/app.py": {
+    "api/index.py": {
       "memory": 512,
       "maxDuration": 30
     }
@@ -9,7 +9,7 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "mia_schedule/app.py"
+      "dest": "api/index.py"
     }
   ],
   "env": {
