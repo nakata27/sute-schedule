@@ -421,6 +421,13 @@ class MIAScheduleApp {
         const announcementModal = document.getElementById('announcement-modal');
         const contentEl = document.getElementById('announcement-content');
 
+        // Show loading state immediately
+        contentEl.innerHTML = '<p class="announcement-loading">Завантаження...</p>';
+
+        // Close lesson modal, open announcement modal with standard scale animation
+        lessonModal.classList.remove('active');
+        announcementModal.classList.add('active');
+
         // Fetch announcement HTML
         try {
             let url = `/api/announcement?r1=${encodeURIComponent(r1)}`;
@@ -440,28 +447,15 @@ class MIAScheduleApp {
         } catch (error) {
             contentEl.textContent = this.translations.error || 'Помилка завантаження';
         }
-
-        // Slide lesson modal out to left, announcement modal in from right
-        lessonModal.querySelector('.modal-content').classList.add('modal-slide-left');
-        const annContent = announcementModal.querySelector('.modal-content');
-        annContent.classList.remove('modal-slide-right-out');
-        annContent.classList.add('modal-slide-right-in');
-        announcementModal.classList.add('active');
     }
 
     backToLessonModal() {
         const lessonModal = document.getElementById('lesson-modal');
         const announcementModal = document.getElementById('announcement-modal');
-        const annContent = announcementModal.querySelector('.modal-content');
 
-        // Slide announcement modal out to right, lesson modal back from left
-        annContent.classList.remove('modal-slide-right-in');
-        annContent.classList.add('modal-slide-right-out');
-        lessonModal.querySelector('.modal-content').classList.remove('modal-slide-left');
-
-        setTimeout(() => {
-            announcementModal.classList.remove('active');
-        }, 350);
+        // Close announcement modal, re-open lesson modal with standard scale animation
+        announcementModal.classList.remove('active');
+        lessonModal.classList.add('active');
     }
 
     getLessonTypeText(type) {
@@ -694,13 +688,6 @@ class MIAScheduleApp {
         document.querySelectorAll('.modal').forEach(modal => {
             modal.classList.remove('active');
         });
-        // Reset slide animation classes on all modal contents
-        document.querySelectorAll('.modal-content').forEach(el => {
-            el.classList.remove('modal-slide-left', 'modal-slide-right-in');
-            // Restore announcement modal to off-screen right position
-        });
-        const annContent = document.querySelector('#announcement-modal .modal-content');
-        if (annContent) annContent.classList.add('modal-slide-right-out');
         document.body.classList.remove('modal-open');
     }
 

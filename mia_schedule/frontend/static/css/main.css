@@ -927,6 +927,12 @@ body.modal-open {
     min-height: 120px;
 }
 
+/* Announcement loading text */
+.announcement-loading {
+    text-align: center;
+    color: var(--text-secondary);
+}
+
 /* Bell indicator on lesson cards */
 .lesson-announcement-indicator {
     position: absolute;

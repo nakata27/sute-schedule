@@ -135,6 +135,8 @@ def get_announcement():
     """Proxy announcement request to upstream MIA server."""
     r1 = request.args.get('r1', '')
     r2 = request.args.get('r2', '')
+    if not r1:
+        return jsonify({'error': 'Відсутній параметр r1'}), 400
     try:
         params = {'r1': r1}
         if r2:
@@ -142,13 +144,38 @@ def get_announcement():
         resp = http_requests.get(
             'https://mia1.knute.edu.ua/time-table/show-ads',
             params=params,
-            timeout=10
+            timeout=15,
+            headers={'Accept': 'application/json, text/html, */*'}
         )
         resp.raise_for_status()
-        return jsonify(resp.json())
+        content_type = resp.headers.get('Content-Type', '')
+        if 'json' in content_type:
+            try:
+                data = resp.json()
+                if 'html' in data:
+                    return jsonify(data)
+                # JSON without html field – log and return readable fallback
+                logger.warning(f"Unexpected JSON from upstream (no 'html' key): {list(data.keys())}")
+                return jsonify({'html': '<p>Оголошення недоступне (несподіваний формат відповіді)</p>'})
+            except ValueError:
+                pass
+        # Upstream returned HTML or plain text – wrap it
+        text = resp.text.strip()
+        if not text:
+            return jsonify({'html': '<p>Оголошення відсутнє</p>'})
+        return jsonify({'html': text})
+    except http_requests.exceptions.Timeout:
+        logger.error("Announcement request timed out")
+        return jsonify({'error': 'Сервер не відповідає (таймаут)'}), 504
+    except http_requests.exceptions.ConnectionError as e:
+        logger.error(f"Announcement connection error: {e}")
+        return jsonify({'error': 'Помилка з\'єднання з сервером'}), 502
+    except http_requests.exceptions.HTTPError as e:
+        logger.error(f"Announcement HTTP error: {e}")
+        return jsonify({'error': f'Сервер повернув помилку: {e.response.status_code}'}), 502
     except Exception as e:
         logger.error(f"Error in /api/announcement: {e}")
-        return jsonify({'error': 'Failed to load announcement'}), 500
+        return jsonify({'error': 'Помилка завантаження оголошення'}), 500
 
 
 @app.route('/api/contacts')
