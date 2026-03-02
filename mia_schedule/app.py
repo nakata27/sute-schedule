@@ -147,10 +147,7 @@ def get_announcement():
         })
     except Exception as e:
         logger.error(f"Error in /api/announcement: {e}")
-        return jsonify({
-            'success': False,
-            'error': str(e)
-        }), 500
+        return jsonify({'error': 'Failed to load announcement'}), 500
 
 
 @app.route('/api/contacts')

@@ -95,11 +95,12 @@ class MIAScheduleApp {
                 e.stopPropagation();
                 const r1 = btn.dataset.r1;
                 if (r1) this.showAnnouncementModal(r1);
+                return;
             }
         });
 
         // Announcement back button
-        document.getElementById('btn-announcement-back').addEventListener('click', () => this.backToLessonModal());
+        document.querySelector('.modal-back-btn').addEventListener('click', () => this.backToLessonModal());
 
         // Language options
         document.querySelectorAll('.language-option').forEach(el => {
@@ -350,7 +351,7 @@ class MIAScheduleApp {
         card.addEventListener('click', () => this.showLessonModal(lesson));
 
         const periodLabel = this.getLessonPeriodLabel(lesson.lesson_number);
-        const bellIcon = lesson.announcement ? '<div class="lesson-bell-icon">🔔</div>' : '';
+        const bellIcon = lesson.announcement ? '<div class="lesson-announcement-indicator">🔔</div>' : '';
 
         card.innerHTML = `
             <div class="lesson-header-info">
@@ -398,6 +399,7 @@ class MIAScheduleApp {
         const adsBtn = modal.querySelector('.btn-show-ads');
         if (lesson.announcement && lesson.announcement.startsWith('ads:')) {
             adsBtn.dataset.r1 = lesson.announcement.slice(4);
+            adsBtn.textContent = this.translations.announcement || 'Оголошення';
             adsBtn.style.display = '';
         } else {
             adsBtn.style.display = 'none';
@@ -411,28 +413,42 @@ class MIAScheduleApp {
     async showAnnouncementModal(r1) {
         const lessonModal = document.getElementById('lesson-modal');
         const announcementModal = document.getElementById('announcement-modal');
+        const contentEl = document.getElementById('announcement-content');
 
         // Fetch announcement HTML
         try {
             const response = await fetch(`/api/announcement?r1=${encodeURIComponent(r1)}`);
             const data = await response.json();
-            document.getElementById('announcement-content').innerHTML = data.html || '';
+            if (data.html) {
+                contentEl.innerHTML = data.html;
+            } else {
+                contentEl.textContent = data.error || (this.translations.error || 'Помилка завантаження');
+            }
         } catch (error) {
-            document.getElementById('announcement-content').textContent = 'Помилка завантаження';
+            contentEl.textContent = this.translations.error || 'Помилка завантаження';
         }
 
         // Slide lesson modal out to left, announcement modal in from right
-        lessonModal.classList.add('slide-left');
+        lessonModal.querySelector('.modal-content').classList.add('modal-slide-left');
+        const annContent = announcementModal.querySelector('.modal-content');
+        annContent.classList.remove('modal-slide-right-out');
+        annContent.classList.add('modal-slide-right-in');
         announcementModal.classList.add('active');
     }
 
     backToLessonModal() {
         const lessonModal = document.getElementById('lesson-modal');
         const announcementModal = document.getElementById('announcement-modal');
+        const annContent = announcementModal.querySelector('.modal-content');
 
         // Slide announcement modal out to right, lesson modal back from left
-        announcementModal.classList.remove('active');
-        lessonModal.classList.remove('slide-left');
+        annContent.classList.remove('modal-slide-right-in');
+        annContent.classList.add('modal-slide-right-out');
+        lessonModal.querySelector('.modal-content').classList.remove('modal-slide-left');
+
+        setTimeout(() => {
+            announcementModal.classList.remove('active');
+        }, 350);
     }
 
     getLessonTypeText(type) {
@@ -620,8 +636,13 @@ class MIAScheduleApp {
         // Обновляем модальные окна заголовки
         const modalTitles = document.querySelectorAll('.modal-title');
         if (modalTitles[0]) modalTitles[0].textContent = t.lesson_info || 'Інформація про пару';
-        if (modalTitles[1]) modalTitles[1].textContent = t.developer_contacts || 'Контакти розробника';
-        if (modalTitles[2]) modalTitles[2].textContent = t.language || 'Мова';
+        if (modalTitles[1]) modalTitles[1].textContent = t.announcement || 'Оголошення';
+        if (modalTitles[2]) modalTitles[2].textContent = t.developer_contacts || 'Контакти розробника';
+        if (modalTitles[3]) modalTitles[3].textContent = t.language || 'Мова';
+
+        // Оновлюємо текст кнопки оголошення у lesson-modal
+        const adsBtn = document.querySelector('.btn-show-ads');
+        if (adsBtn) adsBtn.textContent = t.announcement || 'Оголошення';
 
         // Находим labels в модальном окне lesson-modal
         const lessonModal = document.getElementById('lesson-modal');
@@ -660,7 +681,13 @@ class MIAScheduleApp {
         document.querySelectorAll('.modal').forEach(modal => {
             modal.classList.remove('active');
         });
-        document.getElementById('lesson-modal').classList.remove('slide-left');
+        // Reset slide animation classes on all modal contents
+        document.querySelectorAll('.modal-content').forEach(el => {
+            el.classList.remove('modal-slide-left', 'modal-slide-right-in');
+            // Restore announcement modal to off-screen right position
+        });
+        const annContent = document.querySelector('#announcement-modal .modal-content');
+        if (annContent) annContent.classList.add('modal-slide-right-out');
         document.body.classList.remove('modal-open');
     }
 

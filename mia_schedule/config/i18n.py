@@ -61,6 +61,7 @@ TRANSLATIONS = {
         "install_app": "Встановити додаток",
         "install_desc": "Встановіть SUTE Schedule на ваш пристрій для швидкого доступу",
         "install": "Встановити",
+        "announcement": "Оголошення",
         "offline_title": "Немає з'єднання",
         "offline_message": "Ви можете переглядати раніше завантажені розклади",
     },

@@ -434,6 +434,22 @@ body {
     cursor: not-allowed;
 }
 
+.btn-secondary {
+    background-color: var(--bg-tertiary);
+    color: var(--text-primary);
+}
+
+.btn-secondary:hover:not(:disabled) {
+    background-color: var(--accent-primary);
+    color: white;
+}
+
+.btn-sm {
+    width: auto;
+    padding: 8px 16px;
+    font-size: 14px;
+}
+
 /* Week Navigation */
 .week-navigation {
     display: flex;
@@ -866,27 +882,24 @@ body.modal-open {
 }
 
 /* Slide animations for lesson ↔ announcement navigation */
-/* Lesson modal content: slides out to left when announcement opens */
-#lesson-modal .modal-content {
-    transition: transform 400ms ease-in-out;
+.modal-content {
+    transition: transform 350ms ease-in-out;
 }
 
-#lesson-modal.slide-left .modal-content {
+.modal-slide-left {
     transform: translateX(-100%);
 }
 
-/* Announcement modal content: starts off-screen right, slides in */
-#announcement-modal .modal-content {
-    transform: translateX(100%);
-    transition: transform 400ms ease-in-out;
-}
-
-#announcement-modal.active .modal-content {
+.modal-slide-right-in {
     transform: translateX(0);
 }
 
+.modal-slide-right-out {
+    transform: translateX(100%);
+}
+
 /* Back button in modal header */
-.modal-back {
+.modal-back-btn {
     width: 32px;
     height: 32px;
     border: none;
@@ -901,7 +914,7 @@ body.modal-open {
     font-size: 20px;
 }
 
-.modal-back:hover {
+.modal-back-btn:hover {
     background-color: var(--bg-tertiary);
 }
 
@@ -911,12 +924,13 @@ body.modal-open {
 }
 
 /* Bell indicator on lesson cards */
-.lesson-bell-icon {
+.lesson-announcement-indicator {
     position: absolute;
     bottom: 8px;
     right: 8px;
-    font-size: 12px;
+    font-size: 16px;
     line-height: 1;
+    opacity: 0.8;
 }
 
 /* Sidebar header info */
