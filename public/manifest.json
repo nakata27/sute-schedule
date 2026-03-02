@@ -1,0 +1,28 @@
+{
+  "name": "SUTE Schedule - University Timetable",
+  "short_name": "SUTE",
+  "description": "Dynamic university schedule management system with automatic course tracking",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1a1a1a",
+  "theme_color": "#2c3e50",
+  "orientation": "portrait",
+  "lang": "uk",
+  "dir": "ltr",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "/icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    }
+  ],
+  "categories": ["education", "productivity"],
+  "prefer_related_applications": false
+}

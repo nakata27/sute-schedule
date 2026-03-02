@@ -1,0 +1,38 @@
+"""Application configuration."""
+
+import os
+from pathlib import Path
+
+# Project root: 3 levels up from backend/config/settings.py
+_ROOT = Path(__file__).parent.parent.parent
+
+DATA_DIR = Path(os.getenv("DATA_DIR", str(_ROOT / "data")))
+GROUPS_FILE = Path(os.getenv("GROUPS_FILE", str(_ROOT / "Get Groups" / "mia_structure.json")))
+
+APP_NAME = "SUTE Schedule"
+APP_VERSION = "1.0.0"
+DEBUG = os.getenv("DEBUG", "False").lower() == "true"
+
+HOST = os.getenv("HOST", "0.0.0.0")
+PORT = int(os.getenv("PORT", "3000"))
+
+USE_CACHE = os.getenv("USE_CACHE", "True").lower() == "true"
+CACHE_LIFETIME_HOURS = int(os.getenv("CACHE_LIFETIME_HOURS", "24"))
+USE_SQLITE = os.getenv("USE_SQLITE", "False").lower() == "true"
+
+RATE_LIMIT_DELAY = float(os.getenv("RATE_LIMIT_DELAY", "1.0"))
+MAX_RETRIES = int(os.getenv("MAX_RETRIES", "3"))
+REQUEST_TIMEOUT = int(os.getenv("REQUEST_TIMEOUT", "10"))
+
+LOG_LEVEL = os.getenv("LOG_LEVEL", "INFO")
+
+SUPPORTED_LANGUAGES = ["uk", "en"]
+DEFAULT_LANGUAGE = "uk"
+
+DEVELOPER_CONTACTS = {
+    "github": "https://github.com/nakata27",
+    "telegram": "https://t.me/nakata27"
+}
+
+DATA_DIR.mkdir(parents=True, exist_ok=True)
+(DATA_DIR / "schedules").mkdir(exist_ok=True)

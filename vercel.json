@@ -2,14 +2,25 @@
   "version": 2,
   "builds": [
     {
-      "src": "mia_schedule/app.py",
+      "src": "api/index.py",
       "use": "@vercel/python"
+    },
+    {
+      "src": "public/**",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
     {
+      "src": "/api/(.*)",
+      "dest": "api/index.py"
+    },
+    {
+      "handle": "filesystem"
+    },
+    {
       "src": "/(.*)",
-      "dest": "mia_schedule/app.py"
+      "dest": "/public/index.html"
     }
   ],
   "env": {
