@@ -57,6 +57,15 @@ class MIAScheduleApp {
         document.getElementById('btn-theme').addEventListener('click', () => this.toggleTheme());
         document.getElementById('btn-developer-contacts').addEventListener('click', () => this.showContactsModal());
 
+        // Install app button (only visible when PWA install is available)
+        const btnInstall = document.getElementById('btn-install-app');
+        if (btnInstall) {
+            btnInstall.addEventListener('click', () => {
+                this.toggleSidebar();
+                installPWA();
+            });
+        }
+
         // Refresh button
         document.getElementById('refresh-btn').addEventListener('click', () => this.refreshSchedule());
 
@@ -615,6 +624,12 @@ class MIAScheduleApp {
         const contactBtn = document.querySelector('#btn-developer-contacts span');
         if (contactBtn) {
             contactBtn.textContent = t.developer_contacts || 'Контакти розробника';
+        }
+
+        // Обновляем кнопку установки
+        const installBtn = document.getElementById('btn-install-app-text');
+        if (installBtn) {
+            installBtn.textContent = t.download_app || 'Завантажити';
         }
 
         // Обновляем welcome screen

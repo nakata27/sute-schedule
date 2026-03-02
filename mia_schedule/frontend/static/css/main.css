@@ -323,6 +323,10 @@ body {
     color: var(--text-primary);
 }
 
+#btn-install-app {
+    margin-bottom: 8px;
+}
+
 /* Main Content */
 .main-content {
     min-height: 100vh;
