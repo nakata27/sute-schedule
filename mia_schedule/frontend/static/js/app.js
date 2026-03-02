@@ -2,14 +2,16 @@
  * MIA Schedule App - Main JavaScript
  */
 
+const SCHEDULE_CACHE_TTL_MS = 24 * 60 * 60 * 1000; // 24 hours
+
 class MIAScheduleApp {
     constructor() {
         this.currentLang = localStorage.getItem('language') || 'uk';
         this.currentTheme = localStorage.getItem('theme') || 'dark';
 
-        // Правильно загружаем выбранную группу из localStorage
-        const savedGroup = localStorage.getItem('selectedGroup');
-        this.selectedGroup = savedGroup && savedGroup !== 'null' ? JSON.parse(savedGroup) : null;
+        // Загружаем выбранную группу из персистентных настроек
+        const savedConfig = localStorage.getItem('user_config');
+        this.selectedGroup = savedConfig && savedConfig !== 'null' ? JSON.parse(savedConfig) : null;
 
         this.schedule = null;
         this.currentWeekIndex = 0;
@@ -233,7 +235,7 @@ class MIAScheduleApp {
 
     async saveGroup() {
         this.selectedGroup = this.tempGroup;
-        localStorage.setItem('selectedGroup', JSON.stringify(this.selectedGroup));
+        localStorage.setItem('user_config', JSON.stringify(this.selectedGroup));
 
         this.showLoading();
         await this.loadSchedule();
@@ -242,6 +244,25 @@ class MIAScheduleApp {
     }
 
     async loadSchedule(forceRefresh = false) {
+        // Use cache when not forcing a refresh
+        if (!forceRefresh) {
+            try {
+                const cached = localStorage.getItem('schedule_cache');
+                if (cached) {
+                    const parsed = JSON.parse(cached);
+                    if (parsed && parsed.data && typeof parsed.timestamp === 'number' &&
+                            Date.now() - parsed.timestamp < SCHEDULE_CACHE_TTL_MS) {
+                        this.schedule = parsed.data;
+                        this.currentWeekIndex = this.findCurrentWeek();
+                        this.renderSchedule();
+                        return;
+                    }
+                }
+            } catch (e) {
+                // Ignore invalid cache
+            }
+        }
+
         try {
             const params = new URLSearchParams({
                 faculty_id: this.selectedGroup.faculty_id,
@@ -256,6 +277,7 @@ class MIAScheduleApp {
 
             if (data.success) {
                 this.schedule = data.data;
+                localStorage.setItem('schedule_cache', JSON.stringify({ data: data.data, timestamp: Date.now() }));
                 this.currentWeekIndex = this.findCurrentWeek();
                 this.renderSchedule();
             } else {
@@ -548,7 +570,8 @@ class MIAScheduleApp {
 
     changeGroup() {
         this.selectedGroup = null;
-        localStorage.removeItem('selectedGroup');
+        localStorage.removeItem('user_config');
+        localStorage.removeItem('schedule_cache');
         this.toggleSidebar();
         this.showWelcomeScreen();
         this.loadGroupsStructure();
