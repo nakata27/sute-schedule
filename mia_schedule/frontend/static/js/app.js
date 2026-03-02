@@ -543,6 +543,7 @@ class MIAScheduleApp {
     toggleSidebar() {
         document.getElementById('sidebar').classList.toggle('open');
         document.getElementById('sidebar-overlay').classList.toggle('active');
+        document.body.classList.toggle('modal-open');
     }
 
     changeGroup() {
