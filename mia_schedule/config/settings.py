@@ -30,7 +30,8 @@ DEFAULT_LANGUAGE = "uk"
 
 DEVELOPER_CONTACTS = {
     "github": "https://github.com/nakata27",
-    "telegram": "https://t.me/nakata27"
+    "telegram": "https://t.me/nakata27",
+    "telegram_channel": "https://t.me/nakataTG"
 }
 
 

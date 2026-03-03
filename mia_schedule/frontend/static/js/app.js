@@ -602,6 +602,7 @@ class MIAScheduleApp {
         if (data.success) {
             document.getElementById('contact-github').href = data.data.github;
             document.getElementById('contact-telegram').href = data.data.telegram;
+            document.getElementById('contact-telegram-channel').href = data.data.telegram_channel;
         }
 
         document.getElementById('contacts-modal').classList.add('active');
