@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Офлайн - SUTE Schedule</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: #ecf0f1;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .offline-container {
+            text-align: center;
+            max-width: 500px;
+        }
+
+        .offline-icon {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 30px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 10px;
+            opacity: 0.9;
+        }
+
+        .lang-toggle {
+            margin: 30px 0;
+        }
+
+        .lang-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            color: #ecf0f1;
+            padding: 8px 20px;
+            margin: 0 5px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.9em;
+            transition: all 0.3s;
+        }
+
+        .lang-btn.active {
+            background: #3498db;
+            border-color: #3498db;
+        }
+
+        .retry-btn {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-size: 1em;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: all 0.3s;
+        }
+
+        .retry-btn:hover {
+            background: #2980b9;
+            transform: translateY(-2px);
+        }
+
+        .cached-info {
+            margin-top: 30px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            font-size: 0.9em;
+        }
+
+        .lang-content {
+            display: none;
+        }
+
+        .lang-content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="offline-container">
+        <div class="offline-icon">📡</div>
+
+        <div class="lang-content active" data-lang="uk">
+            <h1>Немає з'єднання</h1>
+            <p>Схоже, ви офлайн. Перевірте підключення до інтернету.</p>
+            <p>Ви можете переглядати раніше завантажені розклади.</p>
+        </div>
+
+        <div class="lang-content" data-lang="en">
+            <h1>No Connection</h1>
+            <p>It looks like you're offline. Please check your internet connection.</p>
+            <p>You can view previously downloaded schedules.</p>
+        </div>
+
+        <div class="lang-toggle">
+            <button class="lang-btn active" data-lang="uk">Українська</button>
+            <button class="lang-btn" data-lang="en">English</button>
+        </div>
+
+        <button class="retry-btn" onclick="window.location.reload()">
+            <span data-lang="uk">Спробувати знову</span>
+            <span data-lang="en" style="display:none">Try Again</span>
+        </button>
+
+        <div class="cached-info">
+            <p data-lang="uk">💾 Кешовані дані доступні в офлайн режимі</p>
+            <p data-lang="en" style="display:none">💾 Cached data available offline</p>
+        </div>
+    </div>
+
+    <script>
+        const langButtons = document.querySelectorAll('.lang-btn');
+        const langContents = document.querySelectorAll('.lang-content');
+
+        langButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const lang = btn.getAttribute('data-lang');
+
+                langButtons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                langContents.forEach(content => {
+                    if (content.getAttribute('data-lang') === lang) {
+                        content.classList.add('active');
+                    } else {
+                        content.classList.remove('active');
+                    }
+                });
+
+                document.querySelectorAll('[data-lang]').forEach(el => {
+                    if (el.getAttribute('data-lang') === lang) {
+                        el.style.display = '';
+                    } else if (el !== btn && !el.classList.contains('lang-content')) {
+                        el.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
