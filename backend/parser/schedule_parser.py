@@ -1,10 +1,8 @@
-"""
-Schedule Parser - парсинг HTML расписания в структурированные данные
-"""
+"""Schedule parser — converts timetable HTML into structured data models."""
 
 from bs4 import BeautifulSoup
 from typing import List, Optional, Dict, Any
-from datetime import datetime, date, timedelta
+from datetime import datetime, date
 import re
 import logging
 

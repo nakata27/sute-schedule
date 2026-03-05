@@ -1,6 +1,4 @@
-"""
-Модели данных для приложения расписания MIA
-"""
+"""Data models for schedule responses."""
 
 from .schedule import (
     LessonType,

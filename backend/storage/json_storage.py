@@ -1,6 +1,4 @@
-"""
-JSON Storage - сохранение расписания в JSON файлы
-"""
+"""JSON storage backend for schedule caching."""
 
 import json
 import os
@@ -15,14 +13,12 @@ logger = logging.getLogger(__name__)
 
 
 class JsonStorage:
-    """
-    Хранилище расписания в JSON формате
-    """
+    """JSON file storage for schedule caching."""
 
     def __init__(self, base_dir: str = None):
         """
         Args:
-            base_dir: Базовая директория для хранения данных
+            base_dir: Base directory for storing schedule files.
         """
         if base_dir is None:
             base_dir = os.environ.get("STORAGE_DIR", "/tmp/mia_schedule/schedules")

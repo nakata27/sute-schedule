@@ -1,6 +1,4 @@
-"""
-Модели данных расписания
-"""
+"""Data models for schedule entries, groups, and API responses."""
 
 from enum import Enum
 from typing import Optional, List

@@ -1,6 +1,4 @@
-"""
-Backend модуль приложения расписания MIA
-"""
+"""Backend package — schedule fetching, parsing, storage, and service layer."""
 
 from .fetcher import ScheduleFetcher
 from .parser import ScheduleParser

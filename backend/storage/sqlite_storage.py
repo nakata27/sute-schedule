@@ -1,12 +1,9 @@
-"""
-SQLite Storage - сохранение расписания в SQLite БД (опциональное)
-"""
+"""SQLite storage backend for schedule caching (optional alternative to JSON)."""
 
 import sqlite3
 from pathlib import Path
 from typing import Optional, List
 from datetime import datetime, date
-import json
 import logging
 
 from ..models.schedule import (
@@ -22,21 +19,19 @@ logger = logging.getLogger(__name__)
 
 
 class SqliteStorage:
-    """
-    Хранилище расписания в SQLite базе данных
-    """
+    """SQLite database storage for schedule data."""
 
     def __init__(self, db_path: str = "data/schedules.db"):
         """
         Args:
-            db_path: Путь к файлу базы данных
+            db_path: Path to the SQLite database file.
         """
         self.db_path = Path(db_path)
         self.db_path.parent.mkdir(parents=True, exist_ok=True)
         self._init_db()
 
     def _init_db(self):
-        """Инициализирует структуру базы данных"""
+        """Initialize database schema."""
         with sqlite3.connect(self.db_path) as conn:
             cursor = conn.cursor()
 

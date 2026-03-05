@@ -1,6 +1,4 @@
-"""
-Parser модуль - парсинг HTML расписания
-"""
+"""Parser module — parses schedule HTML into data models."""
 
 from .schedule_parser import ScheduleParser
 

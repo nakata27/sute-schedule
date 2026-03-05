@@ -1,13 +1,10 @@
-"""
-Schedule Fetcher - получение расписания с сайта MIA КНУТЭ
-"""
+"""Schedule fetcher — retrieves timetable HTML from the MIA KNUTE site."""
 
 import requests
-from typing import Optional, Dict, Any
+from typing import Optional
 from bs4 import BeautifulSoup
 import time
 import logging
-from datetime import datetime
 
 logger = logging.getLogger(__name__)
 

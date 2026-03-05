@@ -5,7 +5,7 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).parent.parent
 DATA_DIR = BASE_DIR / "data"
-GROUPS_FILE = BASE_DIR.parent / "Get Groups" / "mia_structure.json"
+GROUPS_FILE = DATA_DIR / "mia_structure.json"
 
 APP_NAME = "SUTE Schedule"
 APP_VERSION = "1.0.0"

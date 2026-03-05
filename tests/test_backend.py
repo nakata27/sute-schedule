@@ -1,19 +1,15 @@
-"""
-Тестовый скрипт для проверки работы backend
-"""
+"""Backend test script — verifies schedule fetching, parsing, and caching."""
 
 import sys
 import json
 import logging
 from pathlib import Path
 
-# Добавляем путь к модулю
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from backend.schedule_service import ScheduleService
 from config.settings import GROUPS_FILE
 
-# Настройка логирования
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
@@ -23,13 +19,13 @@ logger = logging.getLogger(__name__)
 
 
 def load_groups_data():
-    """Загружает данные о группах"""
+    """Load group structure from the JSON data file."""
     with open(GROUPS_FILE, 'r', encoding='utf-8') as f:
         return json.load(f)
 
 
 def test_backend():
-    """Тестирует backend"""
+    """Run backend integration tests."""
 
     print("\n" + "="*60)
     print("ТЕСТИРОВАНИЕ BACKEND")
