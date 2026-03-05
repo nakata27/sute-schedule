@@ -168,8 +168,8 @@ USE_SQLITE = False  # False = JSON, True = SQLite
 
 ## 👨‍💻 Разработчик
 
-- GitHub: [yourusername](https://github.com/yourusername)
-- Telegram: [@yourusername](https://t.me/yourusername)
+- GitHub: [nakata27](https://github.com/nakata27)
+- Telegram: [@nakata27](https://t.me/nakata27)
 
 ## 📄 Лицензия
 

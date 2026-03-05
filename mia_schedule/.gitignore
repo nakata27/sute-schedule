@@ -32,6 +32,7 @@ env/
 *.swo
 *~
 .DS_Store
+Thumbs.db
 
 *.log
 *.db
@@ -39,8 +40,13 @@ env/
 *.sqlite3
 
 .pytest_cache/
+.mypy_cache/
+.cache/
 htmlcov/
 .coverage
 
 .vercel
 node_modules/
+
+# Cached schedule data
+data/schedules/*.json

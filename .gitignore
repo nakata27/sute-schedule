@@ -32,6 +32,7 @@ env/
 *.swo
 *~
 .DS_Store
+Thumbs.db
 
 *.log
 *.db
@@ -39,12 +40,19 @@ env/
 *.sqlite3
 
 .pytest_cache/
+.mypy_cache/
+.cache/
 htmlcov/
 .coverage
+coverage.xml
 
 .vercel
 node_modules/
 
+# Cached schedule data
+mia_schedule/data/schedules/*.json
+
+# Research/scratch files
 api_research.py
 form_research.py
 parse_html_research.py
@@ -52,4 +60,3 @@ api_response_sample.html
 schedule_body.html
 schedule_full_response.html
 schedule_page_pretty.html
-

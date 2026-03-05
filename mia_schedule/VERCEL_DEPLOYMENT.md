@@ -16,11 +16,11 @@ git init
 git add .
 git commit -m "Initial commit: SUTE Schedule PWA"
 git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/sute-schedule.git
+git remote add origin https://github.com/nakata27/sute-schedule.git
 git push -u origin main
 ```
 
-Replace `YOUR_USERNAME` with your GitHub username.
+If forking, update the repository URL to match your GitHub username.
 
 ### 2. Deploy on Vercel
 
