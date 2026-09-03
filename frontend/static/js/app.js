@@ -155,6 +155,17 @@ class MIAScheduleApp {
         return `${this.selectedGroup.group_id}|${this.selectedGroup.faculty_id}|${this.selectedGroup.course}`;
     }
 
+    getCurrentAcademicYearStartYear(date = new Date()) {
+        const year = date.getFullYear();
+        const month = date.getMonth(); // 0-11
+        return month >= 8 ? year : year - 1;
+    }
+
+    getCurrentAcademicYearLabel() {
+        const startYear = this.getCurrentAcademicYearStartYear();
+        return `${startYear}-${startYear + 1}`;
+    }
+
     findGroupById(groupId) {
         if (!this.groupsStructure || !groupId) return null;
         for (const faculty of this.groupsStructure) {
@@ -196,8 +207,15 @@ class MIAScheduleApp {
             group_name: record.group.group_name,
             faculty_id: record.faculty.faculty_id,
             faculty_name: record.faculty.faculty_name,
-            course: record.course.course_number
+            course: record.course.course_number,
+            academic_year: this.getCurrentAcademicYearLabel()
         };
+    }
+
+    shouldProgressSavedGroup(savedGroup) {
+        if (!savedGroup || !savedGroup.course) return false;
+        if (!savedGroup.academic_year) return true;
+        return savedGroup.academic_year !== this.getCurrentAcademicYearLabel();
     }
 
     tryFindProgressedGroup(savedGroup) {
@@ -233,11 +251,14 @@ class MIAScheduleApp {
             return null;
         }
 
+        const progressedGroup = this.tryFindProgressedGroup(savedGroup);
         const exactById = this.findGroupById(savedGroup.group_id);
         const sameNameSameFaculty = this.findGroupByName(savedGroup.group_name, savedGroup.faculty_id);
-        const progressedGroup = this.tryFindProgressedGroup(savedGroup);
         const sameNameAnyFaculty = this.findGroupByName(savedGroup.group_name);
-        const fallback = exactById || sameNameSameFaculty || progressedGroup || sameNameAnyFaculty;
+        const shouldProgress = this.shouldProgressSavedGroup(savedGroup);
+        const fallback = shouldProgress && progressedGroup
+            ? progressedGroup
+            : (exactById || sameNameSameFaculty || sameNameAnyFaculty || progressedGroup);
 
         if (!fallback) {
             localStorage.removeItem('user_config');
@@ -251,7 +272,8 @@ class MIAScheduleApp {
             savedGroup.group_name !== actualGroup.group_name ||
             savedGroup.faculty_id !== actualGroup.faculty_id ||
             savedGroup.faculty_name !== actualGroup.faculty_name ||
-            savedGroup.course !== actualGroup.course
+            savedGroup.course !== actualGroup.course ||
+            savedGroup.academic_year !== actualGroup.academic_year
         );
 
         if (changed) {
@@ -341,7 +363,8 @@ class MIAScheduleApp {
                 group_name: group.group_name,
                 faculty_id: this.selectedFaculty.faculty_id,
                 faculty_name: this.selectedFaculty.faculty_name,
-                course: this.selectedCourse.course_number
+                course: this.selectedCourse.course_number,
+                academic_year: this.getCurrentAcademicYearLabel()
             };
 
             btn.disabled = false;
