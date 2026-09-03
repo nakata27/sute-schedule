@@ -70,6 +70,18 @@ See [`VERCEL_DEPLOYMENT.md`](VERCEL_DEPLOYMENT.md) for step-by-step instructions
 python tests/test_backend.py
 ```
 
+## Refresh groups data from MIA
+
+```bash
+python scripts/update_mia_structure.py
+```
+
+If SSL validation fails in your environment, run with:
+
+```bash
+MIA_VERIFY_SSL=false python scripts/update_mia_structure.py
+```
+
 ## Author
 
 **nakata** — [github.com/nakata27](https://github.com/nakata27)
