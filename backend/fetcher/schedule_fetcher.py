@@ -1,5 +1,6 @@
 """Schedule fetcher — retrieves timetable HTML from the MIA KNUTE site."""
 
+import os
 import requests
 from typing import Optional
 from bs4 import BeautifulSoup
@@ -32,24 +33,61 @@ class ScheduleFetcher:
         self,
         rate_limit_delay: float = 1.0,
         max_retries: int = 3,
-        timeout: int = 10
+        timeout: int = 10,
+        verify_ssl: Optional[bool] = None
     ):
         """
         Args:
             rate_limit_delay: Задержка между запросами (в секундах)
             max_retries: Максимальное количество попыток
             timeout: Таймаут запроса (в секундах)
+            verify_ssl: Проверять SSL сертификат (None -> из MIA_VERIFY_SSL)
         """
         self.rate_limit_delay = rate_limit_delay
         self.max_retries = max_retries
         self.timeout = timeout
+        if verify_ssl is None:
+            verify_ssl = os.getenv("MIA_VERIFY_SSL", "true").lower() != "false"
+        self.verify_ssl = verify_ssl
         self.last_request_time = 0.0
         self.session = requests.Session()
         self.session.headers.update({
-            'User-Agent': 'MIA Schedule App/1.0',
+            'User-Agent': (
+                'Mozilla/5.0 (Windows NT 10.0; Win64; x64) '
+                'AppleWebKit/537.36 (KHTML, like Gecko) '
+                'Chrome/127.0.0.0 Safari/537.36'
+            ),
             'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
             'Accept-Language': 'uk,en;q=0.9',
+            'Connection': 'keep-alive',
+            'Upgrade-Insecure-Requests': '1',
         })
+
+    def _request(self, method: str, url: str, **kwargs):
+        """HTTP request with SSL fallback and request logging."""
+        request_kwargs = {"timeout": self.timeout, "verify": self.verify_ssl}
+        request_kwargs.update(kwargs)
+        try:
+            response = self.session.request(method, url, **request_kwargs)
+            logger.info(
+                "MIA request: %s %s -> %s (verify_ssl=%s)",
+                method.upper(), url, response.status_code, request_kwargs.get("verify")
+            )
+            return response
+        except requests.exceptions.SSLError:
+            if request_kwargs.get("verify", True):
+                logger.warning(
+                    "SSL validation failed for %s %s, retrying with verify=False",
+                    method.upper(), url
+                )
+                request_kwargs["verify"] = False
+                response = self.session.request(method, url, **request_kwargs)
+                logger.info(
+                    "MIA request: %s %s -> %s (verify_ssl=%s, ssl-fallback)",
+                    method.upper(), url, response.status_code, request_kwargs.get("verify")
+                )
+                return response
+            raise
 
     def _wait_for_rate_limit(self):
         """Ожидание для соблюдения rate limit"""
@@ -72,7 +110,7 @@ class ScheduleFetcher:
         """
         try:
             self._wait_for_rate_limit()
-            response = self.session.get(self.SCHEDULE_URL, timeout=self.timeout)
+            response = self._request('GET', self.SCHEDULE_URL)
             response.raise_for_status()
 
             soup = BeautifulSoup(response.text, 'html.parser')
@@ -133,10 +171,10 @@ class ScheduleFetcher:
             self._wait_for_rate_limit()
 
             # Отправляем POST запрос
-            response = self.session.post(
+            response = self._request(
+                'POST',
                 f"{self.SCHEDULE_URL}?type=0",
-                data=form_data,
-                timeout=self.timeout
+                data=form_data
             )
 
             # Проверяем статус
@@ -186,4 +224,3 @@ class ScheduleFetcher:
 
     def __exit__(self, exc_type, exc_val, exc_tb):
         self.close()
-
