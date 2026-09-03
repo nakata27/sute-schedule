@@ -15,6 +15,9 @@ on:
       - "requirements.txt"
       - "tests/**"
 
+permissions:
+  contents: read
+
 jobs:
   smoke:
     runs-on: ubuntu-latest
