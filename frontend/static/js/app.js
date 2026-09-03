@@ -168,10 +168,11 @@ class MIAScheduleApp {
 
     findGroupById(groupId) {
         if (!this.groupsStructure || !groupId) return null;
+        const normalizedGroupId = this.normalizeValue(groupId);
         for (const faculty of this.groupsStructure) {
             for (const course of faculty.courses || []) {
                 for (const group of course.groups || []) {
-                    if (group.group_id === groupId) {
+                    if (this.normalizeValue(group.group_id) === normalizedGroupId) {
                         return { faculty, course, group };
                     }
                 }
@@ -184,13 +185,20 @@ class MIAScheduleApp {
         return (value || '').trim().toLowerCase();
     }
 
+    normalizeValue(value) {
+        if (value === null || value === undefined) return '';
+        return String(value).trim();
+    }
+
     findGroupByName(name, facultyId = null, courseNumber = null) {
         if (!this.groupsStructure || !name) return null;
         const normalizedName = this.normalizeGroupName(name);
+        const normalizedFacultyId = facultyId === null ? null : this.normalizeValue(facultyId);
+        const normalizedCourseNumber = courseNumber === null ? null : this.normalizeValue(courseNumber);
         for (const faculty of this.groupsStructure) {
-            if (facultyId && faculty.faculty_id !== facultyId) continue;
+            if (normalizedFacultyId && this.normalizeValue(faculty.faculty_id) !== normalizedFacultyId) continue;
             for (const course of faculty.courses || []) {
-                if (courseNumber && course.course_number !== courseNumber) continue;
+                if (normalizedCourseNumber && this.normalizeValue(course.course_number) !== normalizedCourseNumber) continue;
                 for (const group of course.groups || []) {
                     if (this.normalizeGroupName(group.group_name) === normalizedName) {
                         return { faculty, course, group };
@@ -219,7 +227,7 @@ class MIAScheduleApp {
     }
 
     tryFindProgressedGroup(savedGroup) {
-        const currentCourse = parseInt(savedGroup.course, 10);
+        const currentCourse = parseInt(this.normalizeValue(savedGroup.course), 10);
         if (Number.isNaN(currentCourse)) return null;
         const nextCourse = String(currentCourse + 1);
 
@@ -230,7 +238,8 @@ class MIAScheduleApp {
         );
         if (sameNameNextCourse) return sameNameNextCourse;
 
-        const prefix = `${savedGroup.course}-`;
+        const currentCourseStr = String(currentCourse);
+        const prefix = `${currentCourseStr}-`;
         const idx = savedGroup.group_name.indexOf(prefix);
         if (idx === -1) return null;
 
@@ -268,11 +277,11 @@ class MIAScheduleApp {
 
         const actualGroup = this.buildSavedGroup(fallback);
         const changed = (
-            savedGroup.group_id !== actualGroup.group_id ||
+            this.normalizeValue(savedGroup.group_id) !== this.normalizeValue(actualGroup.group_id) ||
             savedGroup.group_name !== actualGroup.group_name ||
-            savedGroup.faculty_id !== actualGroup.faculty_id ||
+            this.normalizeValue(savedGroup.faculty_id) !== this.normalizeValue(actualGroup.faculty_id) ||
             savedGroup.faculty_name !== actualGroup.faculty_name ||
-            savedGroup.course !== actualGroup.course ||
+            this.normalizeValue(savedGroup.course) !== this.normalizeValue(actualGroup.course) ||
             savedGroup.academic_year !== actualGroup.academic_year
         );
 
