@@ -33,12 +33,14 @@ class MIAScheduleApp {
         // Setup event listeners
         this.setupEventListeners();
 
+        await this.loadGroupsStructure();
+        this.selectedGroup = this.reconcileSavedGroup(this.selectedGroup);
+
         // Check if group is selected
         if (this.selectedGroup) {
             await this.loadSchedule();
             this.showScheduleScreen();
         } else {
-            await this.loadGroupsStructure();
             this.showWelcomeScreen();
         }
 
@@ -139,10 +141,125 @@ class MIAScheduleApp {
             if (data.success) {
                 this.groupsStructure = data.data;
                 this.populateFaculties();
+                return true;
             }
         } catch (error) {
             console.error('Error loading groups:', error);
         }
+        this.groupsStructure = [];
+        return false;
+    }
+
+    getSelectedGroupCacheKey() {
+        if (!this.selectedGroup) return '';
+        return `${this.selectedGroup.group_id}|${this.selectedGroup.faculty_id}|${this.selectedGroup.course}`;
+    }
+
+    findGroupById(groupId) {
+        if (!this.groupsStructure || !groupId) return null;
+        for (const faculty of this.groupsStructure) {
+            for (const course of faculty.courses || []) {
+                for (const group of course.groups || []) {
+                    if (group.group_id === groupId) {
+                        return { faculty, course, group };
+                    }
+                }
+            }
+        }
+        return null;
+    }
+
+    normalizeGroupName(value) {
+        return (value || '').trim().toLowerCase();
+    }
+
+    findGroupByName(name, facultyId = null, courseNumber = null) {
+        if (!this.groupsStructure || !name) return null;
+        const normalizedName = this.normalizeGroupName(name);
+        for (const faculty of this.groupsStructure) {
+            if (facultyId && faculty.faculty_id !== facultyId) continue;
+            for (const course of faculty.courses || []) {
+                if (courseNumber && course.course_number !== courseNumber) continue;
+                for (const group of course.groups || []) {
+                    if (this.normalizeGroupName(group.group_name) === normalizedName) {
+                        return { faculty, course, group };
+                    }
+                }
+            }
+        }
+        return null;
+    }
+
+    buildSavedGroup(record) {
+        return {
+            group_id: record.group.group_id,
+            group_name: record.group.group_name,
+            faculty_id: record.faculty.faculty_id,
+            faculty_name: record.faculty.faculty_name,
+            course: record.course.course_number
+        };
+    }
+
+    tryFindProgressedGroup(savedGroup) {
+        const currentCourse = parseInt(savedGroup.course, 10);
+        if (Number.isNaN(currentCourse)) return null;
+        const nextCourse = String(currentCourse + 1);
+
+        const sameNameNextCourse = this.findGroupByName(
+            savedGroup.group_name,
+            savedGroup.faculty_id,
+            nextCourse
+        );
+        if (sameNameNextCourse) return sameNameNextCourse;
+
+        const prefix = `${savedGroup.course}-`;
+        const idx = savedGroup.group_name.indexOf(prefix);
+        if (idx === -1) return null;
+
+        const progressedName = `${savedGroup.group_name.slice(0, idx)}${nextCourse}-${savedGroup.group_name.slice(idx + prefix.length)}`;
+        return this.findGroupByName(progressedName, savedGroup.faculty_id, nextCourse);
+    }
+
+    reconcileSavedGroup(savedGroup) {
+        if (!savedGroup) {
+            return null;
+        }
+
+        if (!this.groupsStructure || !this.groupsStructure.length) {
+            return savedGroup;
+        }
+
+        if (!savedGroup.group_id || !savedGroup.group_name) {
+            return null;
+        }
+
+        const exactById = this.findGroupById(savedGroup.group_id);
+        const sameNameSameFaculty = this.findGroupByName(savedGroup.group_name, savedGroup.faculty_id);
+        const progressedGroup = this.tryFindProgressedGroup(savedGroup);
+        const sameNameAnyFaculty = this.findGroupByName(savedGroup.group_name);
+        const fallback = exactById || sameNameSameFaculty || progressedGroup || sameNameAnyFaculty;
+
+        if (!fallback) {
+            localStorage.removeItem('user_config');
+            localStorage.removeItem('schedule_cache');
+            return null;
+        }
+
+        const actualGroup = this.buildSavedGroup(fallback);
+        const changed = (
+            savedGroup.group_id !== actualGroup.group_id ||
+            savedGroup.group_name !== actualGroup.group_name ||
+            savedGroup.faculty_id !== actualGroup.faculty_id ||
+            savedGroup.faculty_name !== actualGroup.faculty_name ||
+            savedGroup.course !== actualGroup.course
+        );
+
+        if (changed) {
+            localStorage.setItem('user_config', JSON.stringify(actualGroup));
+            localStorage.removeItem('schedule_cache');
+        }
+
+        return actualGroup;
     }
 
     populateFaculties() {
@@ -234,8 +351,12 @@ class MIAScheduleApp {
     }
 
     async saveGroup() {
+        const previousKey = this.getSelectedGroupCacheKey();
         this.selectedGroup = this.tempGroup;
         localStorage.setItem('user_config', JSON.stringify(this.selectedGroup));
+        if (previousKey && previousKey !== this.getSelectedGroupCacheKey()) {
+            localStorage.removeItem('schedule_cache');
+        }
 
         this.showLoading();
         await this.loadSchedule();
@@ -250,7 +371,11 @@ class MIAScheduleApp {
                 const cached = localStorage.getItem('schedule_cache');
                 if (cached) {
                     const parsed = JSON.parse(cached);
-                    if (parsed && parsed.data && typeof parsed.timestamp === 'number' &&
+                    if (
+                            parsed &&
+                            parsed.data &&
+                            parsed.groupKey === this.getSelectedGroupCacheKey() &&
+                            typeof parsed.timestamp === 'number' &&
                             Date.now() - parsed.timestamp < SCHEDULE_CACHE_TTL_MS) {
                         this.schedule = parsed.data;
                         this.currentWeekIndex = this.findCurrentWeek();
@@ -277,7 +402,11 @@ class MIAScheduleApp {
 
             if (data.success) {
                 this.schedule = data.data;
-                localStorage.setItem('schedule_cache', JSON.stringify({ data: data.data, timestamp: Date.now() }));
+                localStorage.setItem('schedule_cache', JSON.stringify({
+                    data: data.data,
+                    groupKey: this.getSelectedGroupCacheKey(),
+                    timestamp: Date.now()
+                }));
                 this.currentWeekIndex = this.findCurrentWeek();
                 this.renderSchedule();
             } else {
@@ -821,4 +950,3 @@ class MIAScheduleApp {
 document.addEventListener('DOMContentLoaded', () => {
     window.app = new MIAScheduleApp();
 });
-
